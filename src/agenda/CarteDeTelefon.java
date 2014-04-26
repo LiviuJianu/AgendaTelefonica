@@ -18,15 +18,20 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.PatternSyntaxException;
+import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.ListSelectionModel;
 import javax.swing.RowFilter;
 import javax.swing.SwingUtilities;
@@ -56,7 +61,7 @@ public class CarteDeTelefon extends JFrame {
     private final JTextField telefonText = new JTextField(10);
     private final JTextField cautareText = new JTextField(10);
 
-	//Constructorul clasei in care se deschide conexiunea catre
+    //Constructorul clasei in care se deschide conexiunea catre
     //baza de date si se apeleaza metoda de afisare
     public CarteDeTelefon() {
         conn = MySQL.getConnection();
@@ -180,6 +185,86 @@ public class CarteDeTelefon extends JFrame {
     private void afisare() {
         actualizareTabel();
         dezactivareInput();
+        
+        /**
+         * File Menu declaration
+         */
+        JMenuBar topMenu = new JMenuBar();
+        ImageIcon iconNou = new ImageIcon("icon/new.png");
+        ImageIcon iconEditare = new ImageIcon("icon/edit.png");
+        ImageIcon iconCauta = new ImageIcon("icon/search.png");
+        ImageIcon iconSalveaza = new ImageIcon("icon/save.png");
+        ImageIcon iconHelp = new ImageIcon("icon/help.png");
+        ImageIcon iconSerial = new ImageIcon("icon/key.png");
+        ImageIcon iconIesire = new ImageIcon("icon/exit.png");
+        
+        JMenu file = new JMenu("Fisier");
+        file.setMnemonic(KeyEvent.VK_F);
+                
+        JMenu abonati = new JMenu("Abonati");
+        abonati.setMnemonic(KeyEvent.VK_B);
+        
+        JMenuItem abonatNou = new JMenuItem("Adaugare",iconNou);
+        abonatNou.setMnemonic(KeyEvent.VK_A);
+        abonatNou.setToolTipText("Activare introducere abonat nou");
+        abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,ActionEvent.CTRL_MASK));
+        abonatNou.addActionListener(new ActivareInput());
+        
+        JMenuItem cautaAbonat = new JMenuItem("Cautare",iconCauta);
+        cautaAbonat.setMnemonic(KeyEvent.VK_C);
+        cautaAbonat.setToolTipText("Cautare abonat ");
+        cautaAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,ActionEvent.CTRL_MASK));
+        cautaAbonat.addActionListener(new CautaAbonat());
+        
+        JMenuItem salvareAbonat = new JMenuItem("Salvare",iconSalveaza);
+        salvareAbonat.setMnemonic(KeyEvent.VK_S);
+        salvareAbonat.setToolTipText("Salvare date abonat");
+        salvareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,ActionEvent.CTRL_MASK));
+
+        salvareAbonat.addActionListener(new  SalveazaAbonat());
+        
+        JMenuItem iesire = new JMenuItem("Iesire",iconIesire);
+        iesire.setMnemonic(KeyEvent.VK_I);
+        iesire.setToolTipText("Iesire din aplicatie");
+        iesire.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W,ActionEvent.CTRL_MASK));
+        iesire.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.exit(0);
+            }
+        });
+        
+        JMenu helpMenu = new JMenu("Help");
+        helpMenu.setMnemonic(KeyEvent.VK_H);
+        
+        JMenuItem manual = new JMenuItem("Manual",iconHelp);
+        manual.setMnemonic(KeyEvent.VK_M);
+        manual.setToolTipText("Manual de utilizare");
+        manual.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,ActionEvent.CTRL_MASK));
+        
+        JMenuItem inregistrare = new JMenuItem("Inregistrare",iconSerial);
+        inregistrare.setMnemonic(KeyEvent.VK_I);
+        inregistrare.setToolTipText("Introducere cod inregistrare");
+        
+        helpMenu.add(manual);
+        helpMenu.add(inregistrare);
+        
+        file.add(abonatNou);
+        file.add(iesire);
+        
+        abonati.add(cautaAbonat);
+        abonati.add(salvareAbonat);
+        abonati.addSeparator();
+        
+
+        
+        topMenu.add(file);
+        topMenu.add(abonati);
+        topMenu.add(helpMenu);
+        
+        setJMenuBar(topMenu);
+        
         JPanel panouPrincipal = new JPanel(new GridBagLayout());
         this.getContentPane().add(panouPrincipal);
 
@@ -249,7 +334,7 @@ public class CarteDeTelefon extends JFrame {
         telefonText.setText(null);
     }
 
-	//metoda pentru actualizarea informatiilor din tabel la schimbarea 
+    //metoda pentru actualizarea informatiilor din tabel la schimbarea 
     //datelor (adaugare/modificare/stergere)
     void actualizareTabel() {
         ResultSet rs = null;
@@ -260,12 +345,12 @@ public class CarteDeTelefon extends JFrame {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
-			//folosirea TableRowSorter pentru a ordona datele din tabel prin
+            //folosirea TableRowSorter pentru a ordona datele din tabel prin
             //selectarea unui titlu de coloana
             final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
             tabelPopulat.setRowSorter(sorter);
 
-			//adaugare listener pentru input-ul de cautare pentru
+            //adaugare listener pentru input-ul de cautare pentru
             //filtrarea datelor din tabel
             cautareText.getDocument().addDocumentListener(new DocumentListener() {
                 private void searchFieldChangedUpdate(DocumentEvent evt) {
@@ -325,7 +410,7 @@ public class CarteDeTelefon extends JFrame {
         }
     }
 
-	//Metoda pentru activarea casutelor de input la selectarea prin click 
+    //Metoda pentru activarea casutelor de input la selectarea prin click 
     //a unui rand din tabel 
     void selecteazaRand() {
         activareInput();
