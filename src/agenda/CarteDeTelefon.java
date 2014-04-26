@@ -191,8 +191,11 @@ public class CarteDeTelefon extends JFrame {
          */
         JMenuBar topMenu = new JMenuBar();
         ImageIcon iconNou = new ImageIcon("icon/new.png");
+        ImageIcon iconIncarca = new ImageIcon("icon/open.png");
+        ImageIcon iconActualizare = new ImageIcon("icon/update.png");
         ImageIcon iconEditare = new ImageIcon("icon/edit.png");
         ImageIcon iconCauta = new ImageIcon("icon/search.png");
+        ImageIcon iconSterge = new ImageIcon("icon/trash.png");
         ImageIcon iconSalveaza = new ImageIcon("icon/save.png");
         ImageIcon iconHelp = new ImageIcon("icon/help.png");
         ImageIcon iconSerial = new ImageIcon("icon/key.png");
@@ -200,28 +203,14 @@ public class CarteDeTelefon extends JFrame {
         
         JMenu file = new JMenu("Fisier");
         file.setMnemonic(KeyEvent.VK_F);
-                
-        JMenu abonati = new JMenu("Abonati");
-        abonati.setMnemonic(KeyEvent.VK_B);
         
-        JMenuItem abonatNou = new JMenuItem("Adaugare",iconNou);
-        abonatNou.setMnemonic(KeyEvent.VK_A);
-        abonatNou.setToolTipText("Activare introducere abonat nou");
-        abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,ActionEvent.CTRL_MASK));
-        abonatNou.addActionListener(new ActivareInput());
+        JMenuItem incarcaDate = new JMenuItem("Incarcare DB",iconIncarca);
+        incarcaDate.setMnemonic(KeyEvent.VK_D);
+        incarcaDate.setToolTipText("Incarcare baza de date");
         
-        JMenuItem cautaAbonat = new JMenuItem("Cautare",iconCauta);
-        cautaAbonat.setMnemonic(KeyEvent.VK_C);
-        cautaAbonat.setToolTipText("Cautare abonat ");
-        cautaAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,ActionEvent.CTRL_MASK));
-        cautaAbonat.addActionListener(new CautaAbonat());
-        
-        JMenuItem salvareAbonat = new JMenuItem("Salvare",iconSalveaza);
-        salvareAbonat.setMnemonic(KeyEvent.VK_S);
-        salvareAbonat.setToolTipText("Salvare date abonat");
-        salvareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,ActionEvent.CTRL_MASK));
-
-        salvareAbonat.addActionListener(new  SalveazaAbonat());
+        JMenuItem salvareDate = new JMenuItem("Salvare DB",iconSalveaza);
+        salvareDate.setMnemonic(KeyEvent.VK_A);
+        salvareDate.setToolTipText("Salvare baza de date");
         
         JMenuItem iesire = new JMenuItem("Iesire",iconIesire);
         iesire.setMnemonic(KeyEvent.VK_I);
@@ -235,6 +224,54 @@ public class CarteDeTelefon extends JFrame {
             }
         });
         
+        
+
+        
+        JMenu abonatiMeniu = new JMenu("Abonati");
+        abonatiMeniu.setMnemonic(KeyEvent.VK_B);
+        
+        JMenuItem abonatNou = new JMenuItem("Adaugare",iconNou);
+        abonatNou.setMnemonic(KeyEvent.VK_A);
+        abonatNou.setToolTipText("Activare introducere abonat nou");
+        abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,ActionEvent.CTRL_MASK));
+        //abonatNou.addActionListener(new ActivareInput());
+        abonatNou.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                activareInput();
+                JFrame popupAbonat = new JFrame("Adaugare abonat nou");
+                popupAbonat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                popupAbonat.getContentPane().add(interfataAdaugare());
+                popupAbonat.pack();
+                popupAbonat.setVisible(true);
+            }
+        });
+        
+        JMenuItem actualizareAbonat = new JMenuItem("Actualizare",iconActualizare);
+        actualizareAbonat.setMnemonic(KeyEvent.VK_U);
+        actualizareAbonat.setToolTipText("Actualizare abonat ");
+        actualizareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U,ActionEvent.CTRL_MASK));
+        actualizareAbonat.addActionListener(new ActualizeazaAbonat());
+        
+        JMenuItem cautaAbonat = new JMenuItem("Cautare",iconCauta);
+        cautaAbonat.setMnemonic(KeyEvent.VK_C);
+        cautaAbonat.setToolTipText("Cautare abonat ");
+        cautaAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,ActionEvent.CTRL_MASK));
+        cautaAbonat.addActionListener(new CautaAbonat());
+        
+        JMenuItem salvareAbonat = new JMenuItem("Salvare",iconSalveaza);
+        salvareAbonat.setMnemonic(KeyEvent.VK_S);
+        salvareAbonat.setToolTipText("Salvare date abonat");
+        salvareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,ActionEvent.CTRL_MASK));
+        salvareAbonat.addActionListener(new  SalveazaAbonat());
+        
+        JMenuItem stergeAbonat = new JMenuItem("Sterge", iconSterge);
+        stergeAbonat.setMnemonic(KeyEvent.VK_R);
+        stergeAbonat.setToolTipText("Sterge abonat");
+        stergeAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R,ActionEvent.CTRL_MASK));
+        stergeAbonat.addActionListener(new StergeAbonat());
+        
         JMenu helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
         
@@ -244,23 +281,34 @@ public class CarteDeTelefon extends JFrame {
         manual.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M,ActionEvent.CTRL_MASK));
         
         JMenuItem inregistrare = new JMenuItem("Inregistrare",iconSerial);
-        inregistrare.setMnemonic(KeyEvent.VK_I);
+        inregistrare.setMnemonic(KeyEvent.VK_R);
         inregistrare.setToolTipText("Introducere cod inregistrare");
+        inregistrare.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JOptionPane.showInputDialog("Codul de inregistrare");
+            }
+        });
         
-        helpMenu.add(manual);
-        helpMenu.add(inregistrare);
-        
-        file.add(abonatNou);
+        file.add(incarcaDate);
+        file.add(salvareDate);
+        file.addSeparator();
         file.add(iesire);
         
-        abonati.add(cautaAbonat);
-        abonati.add(salvareAbonat);
-        abonati.addSeparator();
-        
+        abonatiMeniu.add(abonatNou);
+        abonatiMeniu.add(actualizareAbonat);
+        abonatiMeniu.add(salvareAbonat);
+        abonatiMeniu.add(stergeAbonat);
+        abonatiMeniu.addSeparator();
+        abonatiMeniu.add(cautaAbonat);        
 
+        helpMenu.add(inregistrare);
+        helpMenu.addSeparator();
+        helpMenu.add(manual);
         
         topMenu.add(file);
-        topMenu.add(abonati);
+        topMenu.add(abonatiMeniu);
         topMenu.add(helpMenu);
         
         setJMenuBar(topMenu);
@@ -303,7 +351,7 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridwidth = 1;
         gbc.gridheight = 2;
         gbc.anchor = GridBagConstraints.NORTH;
-        panouPrincipal.add(interfataAdaugare(), gbc);
+        panouPrincipal.add(interfataCautare(), gbc);
 
         this.pack();
         this.setVisible(true);
@@ -552,6 +600,43 @@ public class CarteDeTelefon extends JFrame {
 
         return panouInterfataAdaugare;
     }
+    
+        //interfata din partea dreapta a aplicatie pentru adaugare/modificare abonati
+    private JPanel interfataCautare() {
+        JPanel panouInterfataCautare = new JPanel();
+        panouInterfataCautare.setMinimumSize(new Dimension(200, 200));
+        JLabel cautareLabel = new JLabel("Cauta ");
+        JButton cautaAbonat = new JButton("Cautare");
+        cautaAbonat.addActionListener(new CautaAbonat());
+
+        panouInterfataCautare.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(2, 2, 2, 2);
+        gbc.anchor = GridBagConstraints.NORTHEAST;
+
+        cautareText.setMinimumSize(cautareText.getPreferredSize());
+
+        int i = 0;
+
+        gbc.gridx = 0;
+        gbc.gridy = i;
+        panouInterfataCautare.add(cautareLabel, gbc);
+
+        gbc.gridx = 1;
+        gbc.gridy = i;
+        gbc.gridwidth = 2;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panouInterfataCautare.add(cautareText, gbc);
+
+        i++;
+
+        gbc.gridx = 1;
+        gbc.gridy = i;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        panouInterfataCautare.add(cautaAbonat, gbc);
+
+        return panouInterfataCautare;
+    }
 
     //interfata de afisare a butoanelor principale
     private JPanel interfataButoanePrincipale() {
@@ -671,9 +756,7 @@ public class CarteDeTelefon extends JFrame {
         try {
             String textCautat = cautareText.getText().trim();
 
-            if (textCautat != null && textCautat.length() > 0) {
-                JOptionPane.showMessageDialog(null, "Completati campul de cautare!");
-            } else {
+            if (textCautat != null && !textCautat.equals("")) {
                 String sql = "SELECT nume,prenume,cnp,telefon from abonat "
                         + "where nume like '%" + textCautat + "%' "
                         + "or prenume like '%" + textCautat + "%' "
@@ -706,14 +789,16 @@ public class CarteDeTelefon extends JFrame {
                     telefonText.setText(rs.getString("telefon"));
                 } else if (rezultate > 1) {
                     JOptionPane.showMessageDialog(null, "Am gasit : " + rezultate + " rezultate. Cautati dupa telefon sau CNP pentru rezultate unice!");
-                    rs.next();
-                    numeText.setText(rs.getString("nume"));
-                    prenumeText.setText(rs.getString("prenume"));
-                    cnpText.setText(rs.getString("cnp"));
-                    telefonText.setText(rs.getString("telefon"));
+//                    rs.next();
+//                    numeText.setText(rs.getString("nume"));
+//                    prenumeText.setText(rs.getString("prenume"));
+//                    cnpText.setText(rs.getString("cnp"));
+//                    telefonText.setText(rs.getString("telefon"));
                 } else {
                     JOptionPane.showMessageDialog(null, "Niciun rezultat gasit!");
                 }
+            } else {
+                JOptionPane.showMessageDialog(null, "Completati campul de cautare!");
             }
         } catch (HeadlessException | SQLException ex) {
             JOptionPane.showMessageDialog(null, "Eroare: " + ex.getMessage());
