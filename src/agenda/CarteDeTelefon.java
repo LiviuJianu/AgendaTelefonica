@@ -77,6 +77,23 @@ public class CarteDeTelefon extends JFrame {
             activareInput();
         }
     }
+    
+    class AdaugareAbonatPopup implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+                activareInput();
+                JFrame popupAbonat = new JFrame("Adaugare abonat nou");
+                JPanel  panouAbonat = new JPanel(new GridBagLayout());
+                popupAbonat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                panouAbonat.add(interfataAdaugare());
+                panouAbonat.add(interfataButoaneTabel());
+                popupAbonat.getContentPane().add(panouAbonat);
+                popupAbonat.pack();
+                popupAbonat.setVisible(true);
+        }
+        
+    }
 
     class SalveazaAbonat implements ActionListener {
 
@@ -235,18 +252,7 @@ public class CarteDeTelefon extends JFrame {
         abonatNou.setToolTipText("Activare introducere abonat nou");
         abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,ActionEvent.CTRL_MASK));
         //abonatNou.addActionListener(new ActivareInput());
-        abonatNou.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                activareInput();
-                JFrame popupAbonat = new JFrame("Adaugare abonat nou");
-                popupAbonat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                popupAbonat.getContentPane().add(interfataAdaugare());
-                popupAbonat.pack();
-                popupAbonat.setVisible(true);
-            }
-        });
+        abonatNou.addActionListener(new AdaugareAbonatPopup());
         
         JMenuItem actualizareAbonat = new JMenuItem("Actualizare",iconActualizare);
         actualizareAbonat.setMnemonic(KeyEvent.VK_U);
@@ -324,7 +330,8 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
-        panouPrincipal.add(eticheta, gbc);
+        //panouPrincipal.add(eticheta, gbc);
+        panouPrincipal.add(interfataCautare(), gbc);
 
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.gridx = 0;
@@ -334,24 +341,35 @@ public class CarteDeTelefon extends JFrame {
         gbc.weighty = 1.0;
         panouPrincipal.add(new JScrollPane(tabelPopulat), gbc);
 
-        gbc.fill = GridBagConstraints.NONE;
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
-        panouPrincipal.add(interfataButoaneTabel(), gbc);
+//        gbc.fill = GridBagConstraints.NONE;
+//        gbc.gridx = 0;
+//        gbc.gridy = 2;
+//        gbc.weightx = 0;
+//        gbc.weighty = 0;
+//        panouPrincipal.add(interfataButoaneTabel(), gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 2;
         gbc.gridwidth = 2;
         panouPrincipal.add(interfataButoanePrincipale(), gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.gridwidth = 1;
-        gbc.gridheight = 2;
-        gbc.anchor = GridBagConstraints.NORTH;
-        panouPrincipal.add(interfataCautare(), gbc);
+//        gbc.gridx = 1;
+//        gbc.gridy = 1;
+//        gbc.gridwidth = 1;
+//        gbc.gridheight = 1;
+//        gbc.anchor = GridBagConstraints.NORTH;
+//        panouPrincipal.add(interfataAdaugare(),gbc);
+        
+        
+        
+        
+        // TODO De adaugat interfata editare
+//        gbc.gridx = 1;
+//        gbc.gridy = 2;
+//        gbc.gridwidth = 1;
+//        gbc.gridheight = 1;
+//        gbc.anchor = GridBagConstraints.NORTH;
+//        panouPrincipal.add(interfataCautare(), gbc);
 
         this.pack();
         this.setVisible(true);
@@ -503,9 +521,6 @@ public class CarteDeTelefon extends JFrame {
     private JPanel interfataAdaugare() {
         JPanel panouInterfataAdaugare = new JPanel();
         panouInterfataAdaugare.setMinimumSize(new Dimension(200, 200));
-        JLabel cautareLabel = new JLabel("Cauta ");
-        JButton cautaAbonat = new JButton("Cautare");
-        cautaAbonat.addActionListener(new CautaAbonat());
 
         JLabel numeLabel = new JLabel("Nume");
         JLabel prenumeLabel = new JLabel("Prenume");
@@ -524,18 +539,6 @@ public class CarteDeTelefon extends JFrame {
         telefonText.setMinimumSize(cautareText.getPreferredSize());
 
         int i = 0;
-
-        gbc.gridx = 0;
-        gbc.gridy = i;
-        panouInterfataAdaugare.add(cautareLabel, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = i;
-        gbc.gridwidth = 2;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouInterfataAdaugare.add(cautareText, gbc);
-
-        i++;
 
         gbc.gridx = 0;
         gbc.gridy = i;
@@ -591,13 +594,6 @@ public class CarteDeTelefon extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panouInterfataAdaugare.add(telefonText, gbc);
 
-        i++;
-
-        gbc.gridx = 1;
-        gbc.gridy = i;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouInterfataAdaugare.add(cautaAbonat, gbc);
-
         return panouInterfataAdaugare;
     }
     
@@ -605,8 +601,8 @@ public class CarteDeTelefon extends JFrame {
     private JPanel interfataCautare() {
         JPanel panouInterfataCautare = new JPanel();
         panouInterfataCautare.setMinimumSize(new Dimension(200, 200));
-        JLabel cautareLabel = new JLabel("Cauta ");
-        JButton cautaAbonat = new JButton("Cautare");
+        JLabel cautareLabel = new JLabel("Filtrare abonati ");
+        JButton cautaAbonat = new JButton("Cauta");
         cautaAbonat.addActionListener(new CautaAbonat());
 
         panouInterfataCautare.setLayout(new GridBagLayout());
@@ -624,14 +620,14 @@ public class CarteDeTelefon extends JFrame {
 
         gbc.gridx = 1;
         gbc.gridy = i;
-        gbc.gridwidth = 2;
+        gbc.ipadx = 8;
+        gbc.ipady = 8;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panouInterfataCautare.add(cautareText, gbc);
-
-        i++;
-
-        gbc.gridx = 1;
+        
+        gbc.gridx = 2;
         gbc.gridy = i;
+        gbc.ipady = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panouInterfataCautare.add(cautaAbonat, gbc);
 
@@ -686,11 +682,25 @@ public class CarteDeTelefon extends JFrame {
 
     //interfata de afisare a butoanelor din tabel - fara functionalitate inca
     private JPanel interfataButoaneTabel() {
-        JPanel panouButoaneTabel = new JPanel();
+        JPanel panouButoaneTabel = new JPanel(new GridBagLayout());
 
-        panouButoaneTabel.add(new JButton("Adaugare"));
-        panouButoaneTabel.add(new JButton("Stergere"));
-        panouButoaneTabel.add(new JButton("Modificare"));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(1, 1, 1, 1);
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.ipadx = 5;
+        panouButoaneTabel.add(new JButton("Adaugare"),gbc);
+        
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.ipadx = 10;
+        panouButoaneTabel.add(new JButton("Stergere"),gbc);
+        
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.ipadx = 0;
+        panouButoaneTabel.add(new JButton("Modificare"),gbc);
 
         return panouButoaneTabel;
     }
