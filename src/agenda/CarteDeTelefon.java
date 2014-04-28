@@ -61,6 +61,12 @@ public class CarteDeTelefon extends JFrame {
     private final JTextField telefonText = new JTextField(10);
     private final JTextField cautareText = new JTextField(10);
 
+    private final  JButton activeazaInput = new JButton("Activare");
+    private final  JButton salveazaAbonat = new JButton("Adaugare");
+    private final  JButton stergeAbonat = new JButton("Stergere");
+    private final  JButton actualizeazaAbonat = new JButton("Actualizare");
+    private final  JButton anuleazaInregistrare = new JButton("Anulare");
+    
     //Constructorul clasei in care se deschide conexiunea catre
     //baza de date si se apeleaza metoda de afisare
     public CarteDeTelefon() {
@@ -78,7 +84,7 @@ public class CarteDeTelefon extends JFrame {
         }
     }
     
-    class AdaugareAbonatPopup implements ActionListener {
+    class AbonatPopup implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -87,7 +93,7 @@ public class CarteDeTelefon extends JFrame {
                 JPanel  panouAbonat = new JPanel(new GridBagLayout());
                 popupAbonat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 panouAbonat.add(interfataAdaugare());
-                panouAbonat.add(interfataButoaneTabel());
+                panouAbonat.add(interfataButoaneFereastra());
                 popupAbonat.getContentPane().add(panouAbonat);
                 popupAbonat.pack();
                 popupAbonat.setVisible(true);
@@ -252,7 +258,7 @@ public class CarteDeTelefon extends JFrame {
         abonatNou.setToolTipText("Activare introducere abonat nou");
         abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,ActionEvent.CTRL_MASK));
         //abonatNou.addActionListener(new ActivareInput());
-        abonatNou.addActionListener(new AdaugareAbonatPopup());
+        abonatNou.addActionListener(new AbonatPopup());
         
         JMenuItem actualizareAbonat = new JMenuItem("Actualizare",iconActualizare);
         actualizareAbonat.setMnemonic(KeyEvent.VK_U);
@@ -608,8 +614,6 @@ public class CarteDeTelefon extends JFrame {
         panouInterfataCautare.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(2, 2, 2, 2);
-        gbc.anchor = GridBagConstraints.NORTHEAST;
-
         cautareText.setMinimumSize(cautareText.getPreferredSize());
 
         int i = 0;
@@ -618,14 +622,16 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridy = i;
         panouInterfataCautare.add(cautareLabel, gbc);
 
-        gbc.gridx = 1;
+        i++; 
+        
+        gbc.gridx = 0;
         gbc.gridy = i;
         gbc.ipadx = 8;
         gbc.ipady = 8;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panouInterfataCautare.add(cautareText, gbc);
         
-        gbc.gridx = 2;
+        gbc.gridx = 1;
         gbc.gridy = i;
         gbc.ipady = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -637,18 +643,13 @@ public class CarteDeTelefon extends JFrame {
     //interfata de afisare a butoanelor principale
     private JPanel interfataButoanePrincipale() {
         JPanel panouButoanePrincipale = new JPanel(new GridBagLayout());
-        JButton adaugaAbonat = new JButton("Activare");
-        JButton salveazaAbonat = new JButton("Adaugare");
-        JButton stergeAbonat = new JButton("Stergere");
-        JButton actualizeazaAbonat = new JButton("Actualizare");
-        JButton anuleazaInregistrare = new JButton("Anulare");
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.anchor = GridBagConstraints.NORTHWEST;
         gbc.insets = new Insets(1, 1, 1, 1);
 
-        adaugaAbonat.addActionListener(new ActivareInput());
-        salveazaAbonat.addActionListener(new SalveazaAbonat());
+        activeazaInput.addActionListener(new AbonatPopup());
+        salveazaAbonat.addActionListener(new AbonatPopup());
         stergeAbonat.addActionListener(new StergeAbonat());
         actualizeazaAbonat.addActionListener(new ActualizeazaAbonat());
         anuleazaInregistrare.addActionListener(new AnuleazaInput());
@@ -657,7 +658,7 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridy = 0;
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouButoanePrincipale.add(adaugaAbonat, gbc);
+        panouButoanePrincipale.add(activeazaInput, gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
@@ -681,28 +682,37 @@ public class CarteDeTelefon extends JFrame {
     }
 
     //interfata de afisare a butoanelor din tabel - fara functionalitate inca
-    private JPanel interfataButoaneTabel() {
-        JPanel panouButoaneTabel = new JPanel(new GridBagLayout());
+    private JPanel interfataButoaneFereastra() {
+        JPanel panouButoaneFereastra = new JPanel(new GridBagLayout());
 
+        JButton butonFereastraAdauga = new JButton("Adauga");
+        butonFereastraAdauga.addActionListener(new SalveazaAbonat());
+        
+        JButton butonFereastraSterge = new JButton("Sterge");
+        butonFereastraSterge.addActionListener(new StergeAbonat());        
+
+        JButton butonFereastraActualizeaza = new JButton("Modifica");
+        butonFereastraActualizeaza.addActionListener(new ActualizeazaAbonat());
+        
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(1, 1, 1, 1);
 
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.ipadx = 5;
-        panouButoaneTabel.add(new JButton("Adaugare"),gbc);
+        panouButoaneFereastra.add(butonFereastraAdauga,gbc);
         
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.ipadx = 10;
-        panouButoaneTabel.add(new JButton("Stergere"),gbc);
+        panouButoaneFereastra.add(butonFereastraSterge,gbc);
         
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.ipadx = 0;
-        panouButoaneTabel.add(new JButton("Modificare"),gbc);
+        panouButoaneFereastra.add(butonFereastraActualizeaza,gbc);
 
-        return panouButoaneTabel;
+        return panouButoaneFereastra;
     }
 
     /*
