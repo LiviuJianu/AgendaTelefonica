@@ -14,7 +14,7 @@ public class TipNumarTelefon {
 
 	public NrTel getTipNumarTel(String numarTel) throws Exception {
 		if((numarTel==null) || (numarTel.length() != lungimeNumar)) {
-			throw new Exception("Formatul numarlui introdus este incorect!");
+			throw new Exception("Formatul numarului introdus este incorect!");
 		}
 		
 		
