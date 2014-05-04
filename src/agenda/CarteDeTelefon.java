@@ -9,10 +9,14 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 import java.awt.Insets;
+import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -54,7 +58,8 @@ public class CarteDeTelefon extends JFrame {
     private final transient TipNumarTelefon nrTel = new TipNumarTelefon();
     private final transient Connection conn;
     private transient Statement stmt;
-
+    private boolean appRegistered  = false;
+    
     private DefaultTableModel model;
     private final JTable tabelPopulat = new JTable();
     private static int randSelectat = 0;
@@ -186,6 +191,33 @@ public class CarteDeTelefon extends JFrame {
         }
     }
 
+    class EditareAbonatClick implements MouseListener {
+
+        @Override
+        public void mouseClicked(MouseEvent me) {
+        }
+
+        @Override
+        public void mousePressed(MouseEvent me) {
+            if (me.getClickCount() == 2) {
+                popupAbonat();
+            }
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent me) {
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent me) {
+        }
+
+        @Override
+        public void mouseExited(MouseEvent me) {
+        }
+        
+    }
 
     /*
      *Clasa pentru stergerea abonatului la apasarea tastei DELETE
@@ -227,7 +259,8 @@ public class CarteDeTelefon extends JFrame {
     }
 
     private boolean isAppRegistered(String serial) {
-        return serial.equals("123abc");
+        appRegistered = serial.equals("123abc");
+        return appRegistered;
     }
 
     private String getFilePath() {
@@ -586,6 +619,7 @@ public class CarteDeTelefon extends JFrame {
             tabelPopulat.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             tabelPopulat.getSelectionModel().addListSelectionListener(new SelectieTabel());
             tabelPopulat.addKeyListener(new StergereRandAbonat());
+            tabelPopulat.addMouseListener(new EditareAbonatClick());
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Eroare: " + ex.getMessage());
         } finally {
@@ -811,7 +845,8 @@ public class CarteDeTelefon extends JFrame {
         ImageIcon icon3 = new ImageIcon("images/java3.png");
         JPanel panouReclame = new JPanel();
         JLabel imagineFundal = new JLabel();
-
+        
+        
         imagineFundal.setIcon(icon1);
         panouReclame.add(imagineFundal);
 
@@ -1059,18 +1094,4 @@ public class CarteDeTelefon extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-
-            @Override
-            public void run() {
-                CarteDeTelefon agenda = new CarteDeTelefon();
-                agenda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                agenda.setLocationRelativeTo(null);
-                agenda.setTitle("Agenda Telefonica");
-                agenda.pack();
-                agenda.setVisible(true);
-            }
-        });
-    }
 }
