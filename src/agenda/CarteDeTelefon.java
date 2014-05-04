@@ -323,7 +323,11 @@ public class CarteDeTelefon extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                System.exit(0);
+                int dialogButton = JOptionPane.YES_NO_OPTION;
+                int dialogIesire = JOptionPane.showConfirmDialog(null, "Doriti sa iesiti din aplicatie?","Iesire aplicatie", dialogButton);
+                if(dialogIesire == JOptionPane.YES_OPTION) {
+                    System.exit(0);
+                }
             }
         });
 
