@@ -3,18 +3,17 @@
  */
 package agenda;
 
+import agenda.view.Reclame;
 import database.MySQL;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
 import java.awt.Insets;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.BufferedReader;
@@ -42,7 +41,6 @@ import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 import javax.swing.ListSelectionModel;
 import javax.swing.RowFilter;
-import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.event.ListSelectionEvent;
@@ -419,8 +417,6 @@ public class CarteDeTelefon extends JFrame {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 0, 0, 0);
 
-        JLabel eticheta = new JLabel("Abonati");
-
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
@@ -441,7 +437,9 @@ public class CarteDeTelefon extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 3;
-        panouPrincipal.add(interfataReclame(), gbc);
+        gbc.gridheight = 2;
+        gbc.anchor = GridBagConstraints.NORTH;
+        panouPrincipal.add(new Reclame(), gbc);
 
         this.pack();
         this.setVisible(true);
@@ -841,20 +839,6 @@ public class CarteDeTelefon extends JFrame {
         panouButoanePrincipale.add(butonActualizeazaAbonat, gbc);
 
         return panouButoanePrincipale;
-    }
-
-    private JPanel interfataReclame() {
-        ImageIcon icon1 = new ImageIcon("images/java1.png");
-        ImageIcon icon2 = new ImageIcon("images/java2.png");
-        ImageIcon icon3 = new ImageIcon("images/java3.png");
-        JPanel panouReclame = new JPanel();
-        JLabel imagineFundal = new JLabel();
-        
-        
-        imagineFundal.setIcon(icon1);
-        panouReclame.add(imagineFundal);
-
-        return panouReclame;
     }
 
     //interfata de afisare a butoanelor din tabel - fara functionalitate inca
