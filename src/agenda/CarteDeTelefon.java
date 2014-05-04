@@ -5,7 +5,6 @@ package agenda;
 
 import database.MySQL;
 import java.awt.Dimension;
-import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.HeadlessException;
@@ -14,10 +13,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,7 +22,6 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.PatternSyntaxException;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -405,10 +401,10 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridy = 2;
         gbc.gridwidth = 2;
         panouPrincipal.add(interfataButoanePrincipale(), gbc);
-        
+
         gbc.gridx = 0;
         gbc.gridy = 3;
-        panouPrincipal.add(interfataReclame(),gbc);
+        panouPrincipal.add(interfataReclame(), gbc);
 
         this.pack();
         this.setVisible(true);
@@ -809,21 +805,20 @@ public class CarteDeTelefon extends JFrame {
         return panouButoanePrincipale;
     }
 
-     private JPanel interfataReclame() {
+    private JPanel interfataReclame() {
         ImageIcon icon1 = new ImageIcon("images/java1.png");
         ImageIcon icon2 = new ImageIcon("images/java2.png");
         ImageIcon icon3 = new ImageIcon("images/java3.png");
         JPanel panouReclame = new JPanel();
         JLabel imagineFundal = new JLabel();
-        
+
         imagineFundal.setIcon(icon1);
         panouReclame.add(imagineFundal);
-        
+
         return panouReclame;
     }
 
     //interfata de afisare a butoanelor din tabel - fara functionalitate inca
-
     private JPanel interfataButoaneFereastra() {
         JPanel panouButoaneFereastra = new JPanel(new GridBagLayout());
 
