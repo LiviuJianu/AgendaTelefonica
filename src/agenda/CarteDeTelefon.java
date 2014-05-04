@@ -375,15 +375,15 @@ public class CarteDeTelefon extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                JOptionPane panouInregistare = new JOptionPane();
-                String serialNumber = panouInregistare.showInputDialog("Codul de inregistrare");
-                if (isAppRegistered(serialNumber)) {
-                    activeazaAplicatie();
-                    JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Cod de inregistrare incorect!");
-                }
-
+                String serialNumber = JOptionPane.showInputDialog("Codul de inregistrare");
+                if(serialNumber != null) {
+                    if (isAppRegistered(serialNumber)) {
+                        activeazaAplicatie();
+                        JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Cod de inregistrare incorect!");
+                    }
+                } 
             }
         });
 
