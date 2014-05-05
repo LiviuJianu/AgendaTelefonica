@@ -437,9 +437,8 @@ public class CarteDeTelefon extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 3;
-        gbc.gridheight = 2;
-        gbc.anchor = GridBagConstraints.NORTH;
         panouPrincipal.add(new Reclame(), gbc);
+
 
         this.pack();
         this.setVisible(true);
