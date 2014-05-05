@@ -17,8 +17,8 @@ public class Reclame extends JPanel {
     private ImageIcon imagineFundal1;
     private ImageIcon imagineFundal2;
     private ImageIcon imagineFundal3;
-    private int noDoubles;
-    private int currRand;
+    private int numarAleator;
+    private static final int DURATA_BANNER = 2000; //milisecunde
     Random rand = new Random();
 
     Thread threadPrincipal = null;
@@ -39,35 +39,35 @@ public class Reclame extends JPanel {
             @Override
             public void run() {
                 while (true) {
-                    currRand = rand.nextInt(4);
+                    numarAleator = rand.nextInt(4);
 
-                    if (currRand == 3) {
+                    if (numarAleator == 3) {
                         System.out.println("3");
                         imagineFundal3 = new ImageIcon("images/java3.png");
                         labelImagine.setIcon(imagineFundal3);
                         repaint();
                         try {
-                            sleep(2000);
+                            sleep(DURATA_BANNER);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                    } else if (currRand == 2) {
+                    } else if (numarAleator == 2) {
                         System.out.println("2");
                         imagineFundal2 = new ImageIcon("images/java2.png");
                         labelImagine.setIcon(imagineFundal2);
                         repaint();
                         try {
-                            sleep(2000);
+                            sleep(DURATA_BANNER);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                    } else if (currRand == 1) {
+                    } else if (numarAleator == 1) {
                         System.out.println("1");
                         imagineFundal1 = new ImageIcon("images/java1.png");
                         labelImagine.setIcon(imagineFundal1);
                         repaint();
                         try {
-                            sleep(2000);
+                            sleep(DURATA_BANNER);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
                         }

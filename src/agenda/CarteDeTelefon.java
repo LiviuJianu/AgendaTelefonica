@@ -439,7 +439,6 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridy = 3;
         panouPrincipal.add(new Reclame(), gbc);
 
-
         this.pack();
         this.setVisible(true);
     }
