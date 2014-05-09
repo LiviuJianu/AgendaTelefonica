@@ -329,16 +329,19 @@ public class CarteDeTelefon extends JFrame {
      * Metoda pentru obtinere caii pentru deschiderea/citirea din fisier
      * @return path Calea catre fisier
      */
-    private String getFilePath() {
+    private String getFisierBazaDate() {
 
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Selectati locatia fisierului ");
-        int returnVal = chooser.showOpenDialog(this);
+        int returnVal = chooser.showSaveDialog(this);
         String path = "";
+        String file = "";
+        String separator = System.getProperty("file.separator");
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            path = chooser.getSelectedFile().getAbsolutePath();
+            file = chooser.getSelectedFile().getName();
+            path = chooser.getCurrentDirectory().toString();
         }
-        return path;
+        return path + separator + file;
     }
 
     /**
@@ -798,7 +801,8 @@ public class CarteDeTelefon extends JFrame {
         int n = 0;
 
         try {
-            reader = new BufferedReader(new FileReader("inregistrari.db"));
+            String fisierBazaDate = getFisierBazaDate();
+            reader = new BufferedReader(new FileReader(fisierBazaDate));
 
             while ((linie = reader.readLine()) != null) {
                 nume = linie.split(",")[1];
@@ -847,7 +851,8 @@ public class CarteDeTelefon extends JFrame {
         ResultSet rs = null;
         BufferedWriter writer;
         try {
-            writer = new BufferedWriter(new FileWriter("inregistrari.db"));
+            String fisierBazaDate = getFisierBazaDate();
+            writer = new BufferedWriter(new FileWriter(fisierBazaDate));
 
             String sql = "select * from abonat";
             stmt = conn.createStatement();
