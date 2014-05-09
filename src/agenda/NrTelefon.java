@@ -4,7 +4,7 @@ package agenda;
  * Obiect NumarTelefon - clasa parinte pentru <code>NrFix</code> si <code>NrMobil</code>
  * @author Liviu Jianu
  */
-public abstract class NrTel {
+public abstract class NrTelefon {
 	
 	private String numar;
 	
@@ -12,7 +12,7 @@ public abstract class NrTel {
      * Constructor
      * @param numar sir de caractere care reprezinta numarul de telefon generic
      */
-    public NrTel(String numar) {
+    public NrTelefon(String numar) {
 		this.numar = numar;
 	}
 

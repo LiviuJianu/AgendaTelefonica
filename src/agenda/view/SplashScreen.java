@@ -34,9 +34,7 @@ public class SplashScreen extends JFrame {
         JLabel labelAutor = new JLabel("Autor Liviu Jianu");
         add(labelAutor);
         labelAutor.setBounds(225, 210, 100, 20);
-        
-        
-        
+
         baraProgres = new JProgressBar();
         baraProgres.setMinimum(0);
         baraProgres.setMaximum(100);
@@ -58,7 +56,8 @@ public class SplashScreen extends JFrame {
                     try {
                         sleep(35);
                     } catch (InterruptedException ex) {
-                        Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(SplashScreen.class.getName()).
+                                log(Level.SEVERE, null, ex);
                     }
                     i++;
                 }

@@ -4,7 +4,7 @@ package agenda;
  * Obiect NumarMobil extinde NumarTelefon
  * @author Liviu Jianu
  */
-public class NrMobil extends NrTel{
+public class NrMobil extends NrTelefon{
 
 	private String mobil;
 	

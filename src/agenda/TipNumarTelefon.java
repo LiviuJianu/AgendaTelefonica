@@ -1,9 +1,9 @@
 package agenda;
 
 /**
- * Clasa de construire a obiectelor de tip NrTel
+ * Clasa de construire a obiectelor de tip NrTelefon
  * <p>Verificare tipului de numar intors si intoarcerea
- * unui obiect corespunzator de tip NrMobil sau de tip NrFix</p>
+ * unui obiect corespunzator de tip <code>NrMobil</code> sau de tip <code>NrFix</code></p>
  * @author Liviu Jianu
  */
 
@@ -21,12 +21,11 @@ public class TipNumarTelefon {
          * @throws Exception exceptie in cazul in care numarul de telefon 
          * introdus este incorect.
          */
-	public NrTel getTipNumarTel(String numarTel) throws Exception {
+	public NrTelefon getTipNumarTel(String numarTel) throws Exception {
 		if((numarTel==null) || (numarTel.length() != LUNGIME_NUMAR)) {
 			throw new Exception("Formatul numarului introdus este incorect!");
 		}
-		
-		
+
 		if(numarTel.startsWith(identificareNumarMobil)){
 			return new NrMobil(numarTel);
 		} else if(numarTel.startsWith(identificareNumarFix)){

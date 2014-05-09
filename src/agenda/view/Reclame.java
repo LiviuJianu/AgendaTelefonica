@@ -11,8 +11,10 @@ import java.util.logging.Logger;
 
 /**
  * Afisarea reclamelor in partea de jos a aplicatie
- * <p>Obiectul creat este de tip JPanel si foloseste 3 imagini
- * pe care le roteste aleator si (aproape) unic la fiecare 2 secunde</p>
+ * <p>
+ * Obiectul creat este de tip JPanel si foloseste 3 imagini pe care le roteste
+ * aleator si (aproape) unic la fiecare 2 secunde</p>
+ *
  * @author Liviu Jianu
  */
 public class Reclame extends JPanel {
@@ -28,13 +30,11 @@ public class Reclame extends JPanel {
     Thread threadPrincipal = null;
 
     /**
-     * Constructorul clasei
-     * Se initializeaza un nou thread, care ruleaza permanent si la 
-     * fiecare 2 secunde schimba imaginea de fundal
+     * Constructorul clasei Se initializeaza un nou thread, care ruleaza
+     * permanent si la fiecare 2 secunde schimba imaginea de fundal
      */
     public Reclame() {
         setSize(468, 60);
-        //setLayout(null);
 
         imagineFundal1 = new ImageIcon("images/java1.png");
         imagineFundal2 = new ImageIcon("images/java2.png");
@@ -51,7 +51,6 @@ public class Reclame extends JPanel {
                     numarAleator = rand.nextInt(4);
 
                     if (numarAleator == 3) {
-                        System.out.println("3");
                         imagineFundal3 = new ImageIcon("images/java3.png");
                         labelImagine.setIcon(imagineFundal3);
                         repaint();
@@ -61,7 +60,6 @@ public class Reclame extends JPanel {
                             Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     } else if (numarAleator == 2) {
-                        System.out.println("2");
                         imagineFundal2 = new ImageIcon("images/java2.png");
                         labelImagine.setIcon(imagineFundal2);
                         repaint();
@@ -71,7 +69,6 @@ public class Reclame extends JPanel {
                             Logger.getLogger(SplashScreen.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     } else if (numarAleator == 1) {
-                        System.out.println("1");
                         imagineFundal1 = new ImageIcon("images/java1.png");
                         labelImagine.setIcon(imagineFundal1);
                         repaint();

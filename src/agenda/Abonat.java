@@ -2,6 +2,7 @@ package agenda;
 
 /**
  * Obiect de tip <code>Abonat</code>
+ * Orice Abonat are Nume, CNP si un Numar de telefon care este de tip NrTel
  * @author Liviu Jianu
  */
 public class Abonat {
@@ -9,7 +10,7 @@ public class Abonat {
 	private String nume;
 	private String prenume;
 	private String cnp;
-	private NrTel numarTelefon;
+	private NrTelefon numarTelefon;
 	
     /**
      * Constructor <code>Abonat(numeAbonat,prenumeAbonat,cnpAbonat,telefonAbonat)</code> 
@@ -19,7 +20,7 @@ public class Abonat {
      * @param cnpAbonat CNP-ul abonatului
      * @param telefonAbonat Telefonul abonatului
      */
-    public Abonat(String numeAbonat, String prenumeAbonat, String cnpAbonat, NrTel telefonAbonat ) {
+    public Abonat(String numeAbonat, String prenumeAbonat, String cnpAbonat, NrTelefon telefonAbonat ) {
 		nume = numeAbonat;
 		prenume = prenumeAbonat;
 		cnp = cnpAbonat;
@@ -79,7 +80,7 @@ public class Abonat {
      * Getter
      * @return numarTelefon Numar de telefon
      */
-    public NrTel getNumarTelefon() {
+    public NrTelefon getNumarTelefon() {
 		return numarTelefon;
 	}
 
@@ -87,7 +88,7 @@ public class Abonat {
      * Setter
      * @param numarTelefon Modificare numar de telefon
      */
-    public void setNumarTelefon(NrTel numarTelefon) {
+    public void setNumarTelefon(NrTelefon numarTelefon) {
 		this.numarTelefon = numarTelefon;
 	}
 
@@ -101,6 +102,4 @@ public class Abonat {
 				+ ", numarTelefon=" + getNumarTelefon() + "]\n";
 	}
 	
-	
-
 }
