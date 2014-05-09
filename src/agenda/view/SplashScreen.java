@@ -1,16 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package agenda.view;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
- 
+/**
+ * SplashScreen afisat la pornirea aplicatiei
+ * @author Liviu Jianu
+ */
 public class SplashScreen extends JFrame {
  
     private final JLabel labelImagine;
@@ -18,6 +15,9 @@ public class SplashScreen extends JFrame {
     private static JProgressBar baraProgres;
     Thread threadPrincipal = null;
  
+    /**
+     * Constructorul care initializeaza splash screen-ul
+     */
     public SplashScreen() {
         super("Initializare Agenda Telefonica");
         setSize(340, 280);
@@ -66,6 +66,10 @@ public class SplashScreen extends JFrame {
         };
 
     }
+
+    /**
+     * Metoda de start prin care se porneste thread-ul de Splash Screen
+     */
     public void start() {
         threadPrincipal.start();
     }

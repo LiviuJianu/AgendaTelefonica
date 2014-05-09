@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Pachet view pentru <code>SplashScreen</code> si <code>Reclame</code>
  */
 package agenda.view;
 
@@ -11,6 +9,12 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Afisarea reclamelor in partea de jos a aplicatie
+ * <p>Obiectul creat este de tip JPanel si foloseste 3 imagini
+ * pe care le roteste aleator si (aproape) unic la fiecare 2 secunde</p>
+ * @author Liviu Jianu
+ */
 public class Reclame extends JPanel {
 
     private JLabel labelImagine;
@@ -23,6 +27,11 @@ public class Reclame extends JPanel {
 
     Thread threadPrincipal = null;
 
+    /**
+     * Constructorul clasei
+     * Se initializeaza un nou thread, care ruleaza permanent si la 
+     * fiecare 2 secunde schimba imaginea de fundal
+     */
     public Reclame() {
         setSize(468, 60);
         //setLayout(null);

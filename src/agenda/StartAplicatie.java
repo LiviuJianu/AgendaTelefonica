@@ -1,15 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package agenda;
 
 import agenda.view.SplashScreen;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+
+/**
+ * Clasa principala pentru lansarea aplicatiei
+ * Foloseste un obiect de tip SplashScreen, dupa care initializeaza 
+ * aplicatia apeland clasa <code>CarteDeTelefon</code>
+ * @author Liviu Jianu
+ */
 public class StartAplicatie {
+
+    /**
+     * Metoda <code>main</code>
+     * @param args argumentele cu care se apeleaza metoda main
+     * @throws Exception exceptie in cazul in care nu se poate initializa un nou
+     * thread.
+     */
     public static void main(String args[])throws Exception
     {
         SplashScreen splashScreen=new SplashScreen();
