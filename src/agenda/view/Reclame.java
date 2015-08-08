@@ -4,6 +4,7 @@
 package agenda.view;
 
 import static java.lang.Thread.sleep;
+
 import javax.swing.*;
 import java.util.Random;
 import java.util.logging.Level;

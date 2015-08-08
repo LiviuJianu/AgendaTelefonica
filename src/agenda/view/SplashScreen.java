@@ -4,17 +4,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 /**
  * SplashScreen afisat la pornirea aplicatiei
+ *
  * @author Liviu Jianu
  */
 public class SplashScreen extends JFrame {
- 
+
     private final JLabel labelImagine;
     private final ImageIcon imagineFundal;
     private static JProgressBar baraProgres;
     Thread threadPrincipal = null;
- 
+
     /**
      * Constructorul care initializeaza splash screen-ul
      */
@@ -25,12 +27,12 @@ public class SplashScreen extends JFrame {
         setLocationRelativeTo(null);
         setUndecorated(true);
         setLayout(null);
-        
+
         imagineFundal = new ImageIcon("images/splash.jpg");
         labelImagine = new JLabel(imagineFundal);
         labelImagine.setBounds(20, 20, 300, 187);
         add(labelImagine);
-        
+
         JLabel labelAutor = new JLabel("Autor Liviu Jianu");
         add(labelAutor);
         labelAutor.setBounds(225, 210, 100, 20);
@@ -40,14 +42,14 @@ public class SplashScreen extends JFrame {
         baraProgres.setMaximum(100);
         baraProgres.setStringPainted(true);
         baraProgres.setForeground(Color.ORANGE);
-        
-        
+
+
         baraProgres.setPreferredSize(new Dimension(294, 20));
         baraProgres.setBounds(20, 240, 300, 20);
         add(baraProgres);
- 
+
         threadPrincipal = new Thread() {
- 
+
             @Override
             public void run() {
                 int i = 0;
@@ -72,6 +74,6 @@ public class SplashScreen extends JFrame {
     public void start() {
         threadPrincipal.start();
     }
-    
+
 
 }

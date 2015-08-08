@@ -2,6 +2,7 @@ package agenda;
 
 import agenda.view.Reclame;
 import database.MySQL;
+
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -49,6 +50,7 @@ import javax.swing.table.TableRowSorter;
 /**
  * Clasa <code>CarteDeTelefon</code>
  * <p>Contine logica aplicatie atat de interfata, cat si de baza de date</p>
+ *
  * @author Liviu Jianu
  */
 public class CarteDeTelefon extends JFrame {
@@ -58,8 +60,8 @@ public class CarteDeTelefon extends JFrame {
     private final transient TipNumarTelefon nrTel = new TipNumarTelefon();
     private final transient Connection conn;
     private transient Statement stmt;
-    private boolean appRegistered  = false;
-    
+    private boolean appRegistered = false;
+
     private DefaultTableModel model;
     private final JTable tabelPopulat = new JTable();
     private static int randSelectat = 0;
@@ -85,13 +87,12 @@ public class CarteDeTelefon extends JFrame {
     private final JMenuItem meniuIesire = new JMenuItem("Iesire", iconIesire);
     private final JMenuItem meniuInregistrare = new JMenuItem("Inregistrare", iconSerial);
 
-    
 
     /**
      * Constructorul clasei in care se deschide conexiunea catre
      * baza de date si se apeleaza metoda de afisare
      */
-        public CarteDeTelefon() {
+    public CarteDeTelefon() {
         conn = MySQL.getConnection();
         afisare();
 
@@ -101,7 +102,7 @@ public class CarteDeTelefon extends JFrame {
      * Clasa <code>ActivareInput</code> pentru activarea aplicatiei
      * <p>Este folosita in momentul in care s-a introdus codul de inregistrare.</p>
      * Efectul este ca activeaza Incarcarea/Salvarea DB, si dezactiveaza meniul
-     * de Inregistrare. De asemenea, activeaza campurile de introducere 
+     * de Inregistrare. De asemenea, activeaza campurile de introducere
      * a datelor.
      */
     class ActivareAplicatie implements ActionListener {
@@ -112,8 +113,8 @@ public class CarteDeTelefon extends JFrame {
         }
     }
 
-     /**
-     * Clasa <code>AbonatPopup</code> pentru afisarea ferestrei de 
+    /**
+     * Clasa <code>AbonatPopup</code> pentru afisarea ferestrei de
      * adaugare/modificare a datelor abonatilor.
      * Foloseste metoda {@link #popupAbonat() popupAbonat}
      */
@@ -126,7 +127,7 @@ public class CarteDeTelefon extends JFrame {
 
     }
 
-     /**
+    /**
      * Clasa <code>AdaugaAbonat</code> pentru adaugarea abonatilor.
      * Foloseste metodele:
      * {@link #adaugareAbonat() adaugareAbonat}
@@ -201,7 +202,7 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Clasa <code>AnuleazaInput</code> pentru 
+     * Clasa <code>AnuleazaInput</code> pentru
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
     class AnuleazaInput implements ActionListener {
@@ -214,7 +215,7 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Clasa <code>CautaAbonat</code> pentru 
+     * Clasa <code>CautaAbonat</code> pentru
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
     class CautaAbonat implements ActionListener {
@@ -227,8 +228,8 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Clasa <code>SelectieTabel</code> pentru selectarea randului din tabel
-     * care implementeaza ListSelectionListener pentru completarea datelor 
-     * in campurile de input dupa selectarea unui rand 
+     * care implementeaza ListSelectionListener pentru completarea datelor
+     * in campurile de input dupa selectarea unui rand
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
     class SelectieTabel implements ListSelectionListener {
@@ -272,12 +273,12 @@ public class CarteDeTelefon extends JFrame {
         @Override
         public void mouseExited(MouseEvent me) {
         }
-        
+
     }
 
     /**
-     * Clasa <code>StergereRandAbonat</code> pentru stergerea abonatului la 
-     * apasarea tastei DELETE. Dupa apasarea tastei, utilizatorul este 
+     * Clasa <code>StergereRandAbonat</code> pentru stergerea abonatului la
+     * apasarea tastei DELETE. Dupa apasarea tastei, utilizatorul este
      * intrebat daca doreste stergerea.
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
@@ -317,6 +318,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda pentru verificarea serialului
+     *
      * @param serial Cheia de inregistrare a aplicatiei
      * @return true daca serialul este valid
      */
@@ -327,6 +329,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda pentru obtinere caii pentru deschiderea/citirea din fisier
+     *
      * @return path Calea catre fisier
      */
     private String getFisierBazaDate() {
@@ -346,7 +349,8 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda pentru afisarea ferestrei de adaugare/editare abonat
-     * @throws HeadlessException 
+     *
+     * @throws HeadlessException
      */
     private void popupAbonat() throws HeadlessException {
         JFrame popupAbonat = new JFrame("Adauga abonat nou");
@@ -358,7 +362,7 @@ public class CarteDeTelefon extends JFrame {
         popupAbonat.pack();
         popupAbonat.setVisible(true);
     }
-    
+
     /**
      * Metoda principala de afisare a tuturor componentelor
      * Tipul de layout folosit: GridBagLayout
@@ -372,7 +376,7 @@ public class CarteDeTelefon extends JFrame {
          */
         aplicatieShareware();
         actualizareTabel();
-        
+
 
         /**
          * Declararea File Menu foloseste atat iconite pentru fiecare element
@@ -409,8 +413,8 @@ public class CarteDeTelefon extends JFrame {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 int dialogButton = JOptionPane.YES_NO_OPTION;
-                int dialogIesire = JOptionPane.showConfirmDialog(null, "Doriti sa iesiti din aplicatie?","Iesire aplicatie", dialogButton);
-                if(dialogIesire == JOptionPane.YES_OPTION) {
+                int dialogIesire = JOptionPane.showConfirmDialog(null, "Doriti sa iesiti din aplicatie?", "Iesire aplicatie", dialogButton);
+                if (dialogIesire == JOptionPane.YES_OPTION) {
                     System.exit(0);
                 }
             }
@@ -469,14 +473,14 @@ public class CarteDeTelefon extends JFrame {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 String serialNumber = JOptionPane.showInputDialog("Codul de inregistrare");
-                if(serialNumber != null) {
+                if (serialNumber != null) {
                     if (isAppRegistered(serialNumber)) {
                         activeazaAplicatie();
                         JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Cod de inregistrare incorect!");
                     }
-                } 
+                }
             }
         });
 
@@ -502,7 +506,7 @@ public class CarteDeTelefon extends JFrame {
 
         setJMenuBar(topMenu);
 
-        
+
         /**
          * Panoul principal care foloseste ca layout manager GridBagLayout
          * Este construit adaugand in interiorul lui celelalte JPanel-uri 
@@ -540,9 +544,9 @@ public class CarteDeTelefon extends JFrame {
         this.setVisible(true);
     }
 
-       /**
-        * Panoul pentru adaugare/modificare abonati
-        */ 
+    /**
+     * Panoul pentru adaugare/modificare abonati
+     */
     private JPanel panouAdaugare() {
         JPanel panouInterfataAdaugare = new JPanel();
         panouInterfataAdaugare.setMinimumSize(new Dimension(200, 200));
@@ -624,7 +628,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Panoul pentru cautarea abonatilor
-     */ 
+     */
     private JPanel panouCautare() {
         JPanel panouInterfataCautare = new JPanel();
         JLabel cautareLabel = new JLabel("Filtrare abonati");
@@ -663,7 +667,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Panoul care contine butoanele principale
-     */ 
+     */
     private JPanel panouButoanePrincipale() {
         JPanel panouButoanePrincipale = new JPanel(new GridBagLayout());
 
@@ -706,7 +710,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Panoul de afisare a butoanelor din fereastra de adaugare/editare
-     */ 
+     */
     private JPanel panouButoaneFereastra() {
         JPanel panouButoaneFereastra = new JPanel(new GridBagLayout());
 
@@ -740,9 +744,9 @@ public class CarteDeTelefon extends JFrame {
         return panouButoaneFereastra;
     }
 
-    
+
     /**
-     * Metoda de activare a input-urilor de introducere a datelor, si a 
+     * Metoda de activare a input-urilor de introducere a datelor, si a
      * meniurilor de incarcare,salvare si dezactivare a meniului de inregistrare
      */
     private void activeazaAplicatie() {
@@ -756,7 +760,7 @@ public class CarteDeTelefon extends JFrame {
 
     }
 
-    
+
     /**
      * Metoda de dezactivare a input-urilor de introducere a datelor si a
      * meniurilor de incarcare si salvare baza de date
@@ -773,7 +777,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda de stergere a input-urilor de introducere a datelor
-     */ 
+     */
     private void stergereInput() {
         cautareText.setText(null);
         numeText.setText(null);
@@ -786,8 +790,8 @@ public class CarteDeTelefon extends JFrame {
      * Incarcarea inregistrarilor bazei de date din fisierul care le contine.
      * Se citeste din fisier linie cu linie, si se foloseste ca delimitator
      * caracterul virgula.
-     * 
-     * Citirea din fisier se face fara verificari suplimentare pentru ca 
+     * <p>
+     * Citirea din fisier se face fara verificari suplimentare pentru ca
      * salvarea datelor se face din baza de date intr-un format predefinit.
      */
     private void incarcareInregistrari() {
@@ -840,12 +844,11 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Salvarea inregistrarilor bazei de date in fisierul 
+     * Salvarea inregistrarilor bazei de date in fisierul
      * <code>inregistrari.db</code>.
-     * 
-     * Salvarea se face din baza de date, intr-un format usor de citit la un 
+     * <p>
+     * Salvarea se face din baza de date, intr-un format usor de citit la un
      * eventual import al datelor, care sa nu presupuna validari suplimentare.
-     * 
      */
     private void salvareInregistrari() {
         ResultSet rs = null;
@@ -882,7 +885,7 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Metoda pentru actualizarea informatiilor din tabel la schimbarea 
+     * Metoda pentru actualizarea informatiilor din tabel la schimbarea
      * datelor (adaugare/modificare/stergere)
      */
     void actualizareTabel() {
@@ -966,6 +969,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda de aflare a indexului randului curent selectat.
+     *
      * @return randCurent randul curent selectat
      */
     private int indexRandSelectat() {
@@ -984,14 +988,14 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Metoda pentru activarea casutelor de input la selectarea prin click 
+     * Metoda pentru activarea casutelor de input la selectarea prin click
      * a unui rand din tabel.
      * <p>In momentul in care a fost selectat un rand din tabel care contine
      * inregistrarile unui abonat, se citeste id-ul inregistrarii si se
      * selecteaza inregistrarile din baza de date in functie de ID-ul citit.
      * Dupa acest lucrur, campurile de adaugare/editare sunt completate
      * automat cu datele din tabel.</p>
-    */ 
+     */
     void selecteazaRand() {
         ResultSet rs = null;
         try {
@@ -1024,10 +1028,10 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda de adaugare abonat
-     * Se construieste un obiect nou de tip abonat in care se verifica daca 
-     * tipul de numar de telefon introdus este mobil sau fix si daca nu incepe 
+     * Se construieste un obiect nou de tip abonat in care se verifica daca
+     * tipul de numar de telefon introdus este mobil sau fix si daca nu incepe
      * cu '07' sau '02' si daca nu are 10 caractere se afiseaza eroare.
-     * Dupa ce s-a facut acest lucru, datele sunt introduse(INSERT) in baza 
+     * Dupa ce s-a facut acest lucru, datele sunt introduse(INSERT) in baza
      * de date
      */
     private void adaugareAbonat() {
@@ -1079,12 +1083,12 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Metoda pentru cautarea abonatului in functie de nume, prenume, cnp 
+     * Metoda pentru cautarea abonatului in functie de nume, prenume, cnp
      * sau telefon.
-     * 
+     * <p>
      * Se citeste din campul de cautare textul introdus si este cautat in baza
      * de date.
-     */ 
+     */
     private void cautareAbonat() {
         ResultSet rs = null;
         try {
@@ -1124,7 +1128,7 @@ public class CarteDeTelefon extends JFrame {
                     cnpText.setText(rs.getString("cnp"));
                     telefonText.setText(rs.getString("telefon"));
                 } else if (rezultate > 1) {
-                    JOptionPane.showMessageDialog(null, "Am gasit : " + rezultate 
+                    JOptionPane.showMessageDialog(null, "Am gasit : " + rezultate
                             + " rezultate. Cautati dupa telefon sau CNP pentru rezultate unice!");
                 } else {
                     JOptionPane.showMessageDialog(null, "Niciun rezultat gasit!");
@@ -1150,15 +1154,15 @@ public class CarteDeTelefon extends JFrame {
     /**
      * Metoda pentru stergerea abonatului din tabel si baza de date.
      * Stergerea se face prin selectarea unui rand din tabelul cu abonati.
-     */ 
+     */
     private void stergeAbonat() {
         int rand = tabelPopulat.getSelectedRow();
         if (rand == -1) {
             JOptionPane.showMessageDialog(null, "Selectati un abonat pentru a fi sters!");
         } else {
             try {
-                int valoareMesaj = JOptionPane.showConfirmDialog(tabelPopulat, 
-                        "Doriti stergerea abonatului?", "Confirmati stergerea", 
+                int valoareMesaj = JOptionPane.showConfirmDialog(tabelPopulat,
+                        "Doriti stergerea abonatului?", "Confirmati stergerea",
                         JOptionPane.YES_NO_OPTION);
                 if (valoareMesaj == JOptionPane.YES_OPTION) {
                     String stergeSQL = "DELETE FROM ABONAT "
@@ -1191,6 +1195,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda pentru verificare campurilor de adaugare/editare
+     *
      * @return true in cazul in care campurile de adaugare sunt completate
      */
     private boolean campuriCompletate() {
@@ -1206,9 +1211,9 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Modificarea datelor unui abonat dupa selectarea/gasirea in tabel
-     * Se verifica daca sunt completate cammpurile de adaugare/editare abonat 
+     * Se verifica daca sunt completate cammpurile de adaugare/editare abonat
      * si se face actualizarea in baza de date.
-     */ 
+     */
     private void actualizeazaAbonat() {
 
         if (campuriCompletate()) {
@@ -1250,6 +1255,7 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda de finalizare pentru inchiderea conexiunii la baza de date
+     *
      * @throws Throwable Exceptie in cazul in care conexiunea este invalida
      */
     @Override
