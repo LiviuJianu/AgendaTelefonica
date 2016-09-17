@@ -63,7 +63,6 @@ public class CarteDeTelefon extends JFrame {
     private final transient TipNumarTelefon nrTel = new TipNumarTelefon();
     private final transient Connection conn;
     private transient Statement stmt;
-    private boolean appRegistered = false;
 
     private DefaultTableModel model;
     private final JTable tabelPopulat = new JTable();
@@ -108,7 +107,7 @@ public class CarteDeTelefon extends JFrame {
      * de Inregistrare. De asemenea, activeaza campurile de introducere
      * a datelor.
      */
-    class ActivareAplicatie implements ActionListener {
+    private class ActivareAplicatie implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -121,7 +120,7 @@ public class CarteDeTelefon extends JFrame {
      * adaugare/modificare a datelor abonatilor.
      * Foloseste metoda {@link #popupAbonat() popupAbonat}
      */
-    class AbonatPopup implements ActionListener {
+    private class AbonatPopup implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -137,7 +136,7 @@ public class CarteDeTelefon extends JFrame {
      * {@link #stergereInput() stergereInput}
      * {@link #actualizareTabel() actualizareTabel}
      */
-    class AdaugaAbonat implements ActionListener {
+    private class AdaugaAbonat implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -152,7 +151,7 @@ public class CarteDeTelefon extends JFrame {
      * Incarcarea se face din fisier aflat la nivel / al proiectului.
      * Foloseste metoda {@link #incarcareInregistrari() incarcareInregistrari}
      */
-    class IncarcaDB implements ActionListener {
+    private class IncarcaDB implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -167,7 +166,7 @@ public class CarteDeTelefon extends JFrame {
      * Salvarea se face intr-un fisier aflat in nivelul / al proiectului.
      * Foloseste metoda {@link #salvareInregistrari() salvareInregistrari}
      */
-    class SalveazaDB implements ActionListener {
+    private class SalveazaDB implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -181,7 +180,7 @@ public class CarteDeTelefon extends JFrame {
      * Clasa <code>StergeAbonat</code> pentru stergerea abonatilor din baza.
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class StergeAbonat implements ActionListener {
+    private class StergeAbonat implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -195,7 +194,7 @@ public class CarteDeTelefon extends JFrame {
      * {@link #actualizeazaAbonat() actualizeazaAbonat}
      * {@link #stergereInput() stergereInput}
      */
-    class ActualizeazaAbonat implements ActionListener {
+    private class ActualizeazaAbonat implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -208,7 +207,7 @@ public class CarteDeTelefon extends JFrame {
      * Clasa <code>AnuleazaInput</code> pentru
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class AnuleazaInput implements ActionListener {
+    private class AnuleazaInput implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -221,7 +220,7 @@ public class CarteDeTelefon extends JFrame {
      * Clasa <code>CautaAbonat</code> pentru
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class CautaAbonat implements ActionListener {
+    private class CautaAbonat implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -235,7 +234,7 @@ public class CarteDeTelefon extends JFrame {
      * in campurile de input dupa selectarea unui rand
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class SelectieTabel implements ListSelectionListener {
+    private class SelectieTabel implements ListSelectionListener {
 
         @Override
         public void valueChanged(ListSelectionEvent e) {
@@ -251,7 +250,7 @@ public class CarteDeTelefon extends JFrame {
      * pe care se vrea modificarea
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class EditareAbonatClick implements MouseListener {
+    private class EditareAbonatClick implements MouseListener {
 
         @Override
         public void mouseClicked(MouseEvent me) {
@@ -285,7 +284,7 @@ public class CarteDeTelefon extends JFrame {
      * intrebat daca doreste stergerea.
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    class StergereRandAbonat implements KeyListener {
+    private class StergereRandAbonat implements KeyListener {
 
         @Override
         public void keyPressed(KeyEvent e) {
@@ -307,14 +306,12 @@ public class CarteDeTelefon extends JFrame {
 
         @Override
         public void keyTyped(KeyEvent e) {
-            // TODO Auto-generated method stub
-
+            System.out.println("No implementation of KeyTyped");
         }
 
         @Override
         public void keyReleased(KeyEvent e) {
-            // TODO Auto-generated method stub
-
+            System.out.println("No implementation of KeyTyped");
         }
 
     }
@@ -326,8 +323,7 @@ public class CarteDeTelefon extends JFrame {
      * @return true daca serialul este valid
      */
     private boolean isAppRegistered(String serial) {
-        appRegistered = serial.equals("123abc");
-        return appRegistered;
+        return serial.equals("123abc");
     }
 
     /**
@@ -352,10 +348,8 @@ public class CarteDeTelefon extends JFrame {
 
     /**
      * Metoda pentru afisarea ferestrei de adaugare/editare abonat
-     *
-     * @throws HeadlessException
      */
-    private void popupAbonat() throws HeadlessException {
+    private void popupAbonat() {
         JFrame popupAbonat = new JFrame("Adauga abonat nou");
         JPanel panouAbonat = new JPanel(new GridBagLayout());
         popupAbonat.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -372,7 +366,7 @@ public class CarteDeTelefon extends JFrame {
      * Contine panourile pentru tabel, butoane si casutele de adaugare abonat
      */
     private void afisare() {
-        /**
+        /*
          * La apelarea metodei se verifica daca aplicatia este inregistrata.
          * Pe langa aceasta verificare, se face si actualizarea dateleor 
          * din tabel.
@@ -381,7 +375,7 @@ public class CarteDeTelefon extends JFrame {
         actualizareTabel();
 
 
-        /**
+        /*
          * Declararea File Menu foloseste atat iconite pentru fiecare element
          * din meniu, dar si mnemonice pentru elementele din meniu. 
          */
@@ -403,7 +397,7 @@ public class CarteDeTelefon extends JFrame {
         meniuSalvareDate.setToolTipText("Salvare baza de date");
         meniuSalvareDate.addActionListener(new SalveazaDB());
 
-        /**
+        /*
          * Cand se doreste iesirea din aplicatie, utilizatorul este intrebat
          * daca se doreste iesirea, caz in care aplicatia se inchide, sau daca
          * nu se doreste iesire, aplicatia functioneaza in continuare.
@@ -464,7 +458,7 @@ public class CarteDeTelefon extends JFrame {
         manual.setToolTipText("Manual de utilizare");
         manual.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.CTRL_MASK));
 
-        /**
+        /*
          * Pentru inregistrarea aplicatiei, utilizatorul trebuie sa intriduca
          * un cod de inregistrare, care din motive de usurinta de testare
          * este urmatorul : 123abc
@@ -510,7 +504,7 @@ public class CarteDeTelefon extends JFrame {
         setJMenuBar(topMenu);
 
 
-        /**
+        /*
          * Panoul principal care foloseste ca layout manager GridBagLayout
          * Este construit adaugand in interiorul lui celelalte JPanel-uri 
          * prin apelarea metodelor de construire a acestora
@@ -891,7 +885,7 @@ public class CarteDeTelefon extends JFrame {
      * Metoda pentru actualizarea informatiilor din tabel la schimbarea
      * datelor (adaugare/modificare/stergere)
      */
-    void actualizareTabel() {
+    private void actualizareTabel() {
         ResultSet rs = null;
         try {
             String[] coloane = {"Nr.#", "Nume", "Prenume", "CNP", "Telefon"};
@@ -900,14 +894,14 @@ public class CarteDeTelefon extends JFrame {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
-            /**
+            /*
              * Folosirea TableRowSorter pentru a ordona datele din tabel prin 
              * selectarea unui cap de coloana
              */
-            final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(model);
+            final TableRowSorter<TableModel> sorter = new TableRowSorter<>(model);
             tabelPopulat.setRowSorter(sorter);
 
-            /**
+            /*
              * Adaugare listener pentru input-ul de cautare pentru filtrarea 
              * datelor din tabel
              */
@@ -978,7 +972,7 @@ public class CarteDeTelefon extends JFrame {
     private int indexRandSelectat() {
         int randCurent = tabelPopulat.getSelectedRow();
 
-        /**
+        /*
          * La afisarea tabelului se foloseste randul selectat. Dupa modificarea
          * datelor, valoarea variabilei "rand" devenea -1 si astfel am folosit
          * variabila statica randSelectat pentru pastarea valorii randului selectat
@@ -999,7 +993,7 @@ public class CarteDeTelefon extends JFrame {
      * Dupa acest lucrur, campurile de adaugare/editare sunt completate
      * automat cu datele din tabel.</p>
      */
-    void selecteazaRand() {
+    private void selecteazaRand() {
         ResultSet rs = null;
         try {
             int rand = indexRandSelectat();
@@ -1097,7 +1091,7 @@ public class CarteDeTelefon extends JFrame {
         try {
             String textCautat = cautareText.getText().trim();
 
-            if (textCautat != null && !textCautat.equals("")) {
+            if (!textCautat.equals("")) {
                 String sql = "SELECT nume,prenume,cnp,telefon from abonat "
                         + "where nume like '%" + textCautat + "%' "
                         + "or prenume like '%" + textCautat + "%' "
@@ -1109,7 +1103,7 @@ public class CarteDeTelefon extends JFrame {
 
                 int rezultate;
                 rezultate = 0;
-                ResultSet rsRezultate = null;
+                ResultSet rsRezultate;
                 rsRezultate = stmt.executeQuery(sqlRezultate);
                 try {
                     rsRezultate.next();
@@ -1173,7 +1167,7 @@ public class CarteDeTelefon extends JFrame {
                     stmt = conn.createStatement();
                     int n = stmt.executeUpdate(stergeSQL);
 
-                    /**
+                    /*
                      * Daca rezultatul <code>n</code> al executiei query-ului 
                      * <code>stergeSQL</code> este mai mare ca 0 inseamna ca 
                      * s-au facut  modificari in baza si trebuie sa se 
