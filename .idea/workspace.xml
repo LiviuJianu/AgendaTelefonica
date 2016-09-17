@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrFix.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrFix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" />
     </list>
     <list id="ad6dd53a-2335-4c14-80ab-06a21b776768" name="Failed commit: Default" comment="LF warning" />
     <ignored path="AgendaTelefonica.iws" />
@@ -868,7 +861,7 @@
       <workItem from="1439020639655" duration="1182000" />
       <workItem from="1439021886037" duration="1200000" />
       <workItem from="1474057256723" duration="1401000" />
-      <workItem from="1474086194426" duration="3158000" />
+      <workItem from="1474086194426" duration="3174000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -891,11 +884,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474089305601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="LF">
+      <created>1474089369960</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1474089369960</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6941000" />
+    <option name="totallyTimeSpent" value="6957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1286" y="24" width="1260" height="898" extended-state="0" />
