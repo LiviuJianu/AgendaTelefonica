@@ -1,47 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="small refactoring">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_0_8_bin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/icon/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Thumbs.db" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/edit.png" afterPath="$PROJECT_DIR$/resources/icon/edit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/exit.png" afterPath="$PROJECT_DIR$/resources/icon/exit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/help.png" afterPath="$PROJECT_DIR$/resources/icon/help.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/key.png" afterPath="$PROJECT_DIR$/resources/icon/key.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/new.png" afterPath="$PROJECT_DIR$/resources/icon/new.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/open.png" afterPath="$PROJECT_DIR$/resources/icon/open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/save.png" afterPath="$PROJECT_DIR$/resources/icon/save.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/search.png" afterPath="$PROJECT_DIR$/resources/icon/search.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/trash.png" afterPath="$PROJECT_DIR$/resources/icon/trash.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/icon/update.png" afterPath="$PROJECT_DIR$/resources/icon/update.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/java1.png" afterPath="$PROJECT_DIR$/resources/images/java1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/java2.png" afterPath="$PROJECT_DIR$/resources/images/java2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/java3.png" afterPath="$PROJECT_DIR$/resources/images/java3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/javar.png" afterPath="$PROJECT_DIR$/resources/images/javar.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/splash.jpg" afterPath="$PROJECT_DIR$/resources/images/splash.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mysql-connector-java-5.0.8-bin.jar" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/StartAplicatie.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/controller/CarteDeTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefon.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/model/Abonat.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/model/NrFix.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrFix.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/model/NrMobil.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/model/NrTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/model/TipNumarTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/TipNumarTelefon.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/view/Reclame.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/agenda/view/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/MySQL.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/agenda.sql" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/agenda.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/backup/agenda.sql" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/backup/agenda.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AgendaTelefonica.iml" afterPath="$PROJECT_DIR$/.idea/AgendaTelefonica.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="fixed crlf">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrFix.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrFix.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/model/Abonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/database/agenda.sql" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/database/backup/agenda.sql" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$1.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$2.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$3.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$AbonatPopup.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$ActivareAplicatie.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$ActualizeazaAbonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$AdaugaAbonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$AnuleazaInput.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$CautaAbonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$EditareAbonatClick.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$IncarcaDB.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$SalveazaDB.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$SelectieTabel.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$StergeAbonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon$StergereRandAbonat.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/controller/CarteDeTelefon.class" />
+    <ignored path="production/AgendaTelefonica/icon/edit.png" />
+    <ignored path="production/AgendaTelefonica/icon/exit.png" />
+    <ignored path="production/AgendaTelefonica/icon/help.png" />
+    <ignored path="production/AgendaTelefonica/images/java1.png" />
+    <ignored path="production/AgendaTelefonica/images/java2.png" />
+    <ignored path="production/AgendaTelefonica/images/java3.png" />
+    <ignored path="production/AgendaTelefonica/images/javar.png" />
+    <ignored path="production/AgendaTelefonica/icon/key.png" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/database/MySQL.class" />
+    <ignored path="production/AgendaTelefonica/icon/new.png" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/model/NrFix.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/model/NrMobil.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/model/NrTelefon.class" />
+    <ignored path="production/AgendaTelefonica/icon/open.png" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/view/Reclame$1.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/view/Reclame.class" />
+    <ignored path="production/AgendaTelefonica/icon/save.png" />
+    <ignored path="production/AgendaTelefonica/icon/search.png" />
+    <ignored path="production/AgendaTelefonica/images/splash.jpg" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/view/SplashScreen$1.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/view/SplashScreen.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/StartAplicatie$1.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/StartAplicatie.class" />
+    <ignored path="production/AgendaTelefonica/com/java/agenda/model/TipNumarTelefon.class" />
+    <ignored path="production/AgendaTelefonica/icon/trash.png" />
+    <ignored path="production/AgendaTelefonica/icon/update.png" />
+    <ignored path="production/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +280,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41264367" />
     <property name="SearchEverywhereHistoryKey" value="optimize im&#9;ACTION&#9;null&#10;javar.png&#9;FILE&#9;file:///Users/liviu/Documents/workspace/AgendaTelefonica/images/javar.png" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/production" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -755,12 +774,20 @@
       <workItem from="1439020639655" duration="1182000" />
       <workItem from="1439021886037" duration="1200000" />
       <workItem from="1474057256723" duration="1401000" />
-      <workItem from="1474086194426" duration="2448000" />
+      <workItem from="1474086194426" duration="2622000" />
     </task>
+    <task id="LOCAL-00001" summary="restructured the project to work in intellij">
+      <created>1474088692622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1474088692623</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6231000" />
+    <option name="totallyTimeSpent" value="6405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1286" y="24" width="1260" height="898" extended-state="0" />
@@ -807,7 +834,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="small refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="small refactoring" />
+    <MESSAGE value="restructured the project to work in intellij" />
+    <MESSAGE value="fixed crlf" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed crlf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
