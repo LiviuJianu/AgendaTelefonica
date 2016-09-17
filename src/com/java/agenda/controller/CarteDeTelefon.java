@@ -1,7 +1,10 @@
-package agenda;
+package com.java.agenda.controller;
 
-import agenda.view.Reclame;
-import database.MySQL;
+import com.java.agenda.model.Abonat;
+import com.java.agenda.model.NrTelefon;
+import com.java.agenda.model.TipNumarTelefon;
+import com.java.agenda.view.Reclame;
+import com.java.agenda.database.MySQL;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;

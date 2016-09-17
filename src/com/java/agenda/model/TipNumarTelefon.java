@@ -1,4 +1,4 @@
-package agenda;
+package com.java.agenda.model;
 
 /**
  * Clasa de construire a obiectelor de tip NrTelefon
