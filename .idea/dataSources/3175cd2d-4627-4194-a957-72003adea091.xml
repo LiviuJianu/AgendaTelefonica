@@ -1,0 +1,38 @@
+<dataSource name="MySQL - lbji_phonebook@lbji.myd.infomaniak.com">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="lbji_phonebook">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema" />
+    <table id="3" parent="1" name="abonat" />
+    <column id="4" parent="3" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="5" parent="3" name="nume">
+      <comment>Nume</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="6" parent="3" name="prenume">
+      <comment>Prenume</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="7" parent="3" name="cnp">
+      <comment>CNP</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(13)|0</data-type>
+    </column>
+    <column id="8" parent="3" name="telefon">
+      <comment>Numar Telefon</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="9" parent="3" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
