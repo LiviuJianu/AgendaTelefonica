@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="deleted comments&#10;&#10;delete comments from self explanatory methods ( get, set, constructors)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefon.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" />
     </list>
     <list id="ad6dd53a-2335-4c14-80ab-06a21b776768" name="Failed commit: Default" comment="LF warning" />
     <ignored path="AgendaTelefonica.iws" />
@@ -915,7 +911,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="176000" />
+      <workItem from="1475007416588" duration="250000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -980,11 +976,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475006414347</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update README.md file&#10;&#10;added a brief description of the project&#10;&#10;--extra : remove additional useless comments">
+      <created>1475007653350</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1475007653350</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17123000" />
+    <option name="totallyTimeSpent" value="17197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1260" height="898" extended-state="0" />
@@ -997,11 +1000,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5032841" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49671593" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.49671593" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1060,8 @@
     <MESSAGE value="provided better encapsulation at the moment&#10;removed dangling javadoc comments by converting them to normal comments" />
     <MESSAGE value="Added a datasource &#10;updated workspace file" />
     <MESSAGE value="deleted comments&#10;&#10;delete comments from self explanatory methods ( get, set, constructors)" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted comments&#10;&#10;delete comments from self explanatory methods ( get, set, constructors)" />
+    <MESSAGE value="update README.md file&#10;&#10;added a brief description of the project&#10;&#10;--extra : remove additional useless comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md file&#10;&#10;added a brief description of the project&#10;&#10;--extra : remove additional useless comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1432,6 +1436,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,6 +1647,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
