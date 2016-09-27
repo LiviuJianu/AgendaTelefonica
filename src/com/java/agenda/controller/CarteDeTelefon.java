@@ -50,12 +50,6 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-/**
- * Clasa <code>CarteDeTelefon</code>
- * <p>Contine logica aplicatie atat de interfata, cat si de baza de date</p>
- *
- * @author Liviu Jianu
- */
 public class CarteDeTelefon extends JFrame {
 
     private static final long serialVersionUID = 1L;
@@ -89,11 +83,6 @@ public class CarteDeTelefon extends JFrame {
     private final JMenuItem meniuIesire = new JMenuItem("Iesire", iconIesire);
     private final JMenuItem meniuInregistrare = new JMenuItem("Inregistrare", iconSerial);
 
-
-    /**
-     * Constructorul clasei in care se deschide conexiunea catre
-     * baza de date si se apeleaza metoda de afisare
-     */
     public CarteDeTelefon() {
         conn = MySQL.getConnection();
         afisare();
