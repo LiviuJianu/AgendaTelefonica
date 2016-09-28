@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,103 +88,33 @@
       <file leaf-file-name="CarteDeTelefonController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="298">
+              <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
               <folding>
-                <marker date="1475086781000" expanded="true" signature="19706:19794" ph="INSERT INTO ABONAT... " />
-                <marker date="1475086781000" expanded="true" signature="21264:21284" ph="select * fro... abonat" />
-                <marker date="1475086781000" expanded="true" signature="22484:22504" ph="select * fro... abonat" />
-                <marker date="1475086781000" expanded="true" signature="26694:26724" ph="select * fro... abonat" />
-                <marker date="1475086781000" expanded="true" signature="28606:28694" ph="INSERT INTO ABONAT... " />
-                <marker date="1475086781000" expanded="true" signature="30248:30559" ph="SELECT nume,... abonat" />
-                <marker date="1475086781000" expanded="true" signature="30601:30690" ph="SELECT COUNT... missingValue" />
-                <marker date="1475086781000" expanded="true" signature="33379:33441" ph="DELETE FROM " />
-                <marker date="1475086781000" expanded="true" signature="35550:35673" ph="UPDATE ABONA... " />
+                <marker date="1475087307000" expanded="true" signature="19690:19778" ph="INSERT INTO ABONAT... " />
+                <marker date="1475087307000" expanded="true" signature="21248:21268" ph="select * fro... abonat" />
+                <marker date="1475087307000" expanded="true" signature="22468:22488" ph="select * fro... abonat" />
+                <marker date="1475087307000" expanded="true" signature="26678:26708" ph="select * fro... abonat" />
+                <marker date="1475087307000" expanded="true" signature="28590:28678" ph="INSERT INTO ABONAT... " />
+                <marker date="1475087307000" expanded="true" signature="30232:30543" ph="SELECT nume,... abonat" />
+                <marker date="1475087307000" expanded="true" signature="30585:30674" ph="SELECT COUNT... missingValue" />
+                <marker date="1475087307000" expanded="true" signature="33363:33425" ph="DELETE FROM " />
+                <marker date="1475087307000" expanded="true" signature="35534:35657" ph="UPDATE ABONA... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaraMeniu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaraMeniu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+            <state relative-caret-position="330">
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1302#1303#0" expanded="true" />
-                <element signature="e#1324#1325#0" expanded="true" />
+                <element signature="e#1340#1341#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarteDeTelefonView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SplashScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivareAplicatie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PanouButoane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarteDeTelefonModel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartAplicatie.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -240,12 +171,12 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefon.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java" />
+        <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java" />
-        <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
-        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -327,6 +258,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agenda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agenda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -864,7 +835,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="7224000" />
+      <workItem from="1475007416588" duration="8096000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -978,11 +949,25 @@
       <option name="project" value="LOCAL" />
       <updated>1475086975231</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="removed the build.xml file as it was inherited from netbeans format">
+      <created>1475087058749</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1475087058749</updated>
+    </task>
+    <task id="LOCAL-00018" summary="use lambda to invoke the runnable and made the init method public&#10;&#10;removed extra bulky comments">
+      <created>1475088079497</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1475088079497</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24171000" />
+    <option name="totallyTimeSpent" value="25043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1260" height="898" extended-state="0" />
@@ -990,17 +975,17 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5032841" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.49671593" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1062,7 +1047,9 @@
     <MESSAGE value="refactor the app for a cleaner and more decoupled code" />
     <MESSAGE value="refactor the app for a cleaner and more decoupled code&#10;&#10;create separate classes for Model, View and Controller&#10;try to extract as much code as possible into its own class" />
     <MESSAGE value="pretty format the readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="pretty format the readme.md" />
+    <MESSAGE value="removed the build.xml file as it was inherited from netbeans format" />
+    <MESSAGE value="use lambda to invoke the runnable and made the init method public&#10;&#10;removed extra bulky comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="use lambda to invoke the runnable and made the init method public&#10;&#10;removed extra bulky comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1148,15 +1135,15 @@
         <state relative-caret-position="3810">
           <caret line="313" column="62" selection-start-line="313" selection-start-column="62" selection-end-line="313" selection-end-column="62" />
           <folding>
-            <marker date="1475086781000" expanded="true" signature="19706:19794" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="21264:21284" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="22484:22504" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="26694:26724" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="28606:28694" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="30248:30559" ph="SELECT nume,... abonat" />
-            <marker date="1475086781000" expanded="true" signature="30601:30690" ph="SELECT COUNT... missingValue" />
-            <marker date="1475086781000" expanded="true" signature="33379:33441" ph="DELETE FROM " />
-            <marker date="1475086781000" expanded="true" signature="35550:35673" ph="UPDATE ABONA... " />
+            <marker date="1475087307000" expanded="true" signature="19690:19778" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="21248:21268" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="22468:22488" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="26678:26708" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="28590:28678" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="30232:30543" ph="SELECT nume,... abonat" />
+            <marker date="1475087307000" expanded="true" signature="30585:30674" ph="SELECT COUNT... missingValue" />
+            <marker date="1475087307000" expanded="true" signature="33363:33425" ph="DELETE FROM " />
+            <marker date="1475087307000" expanded="true" signature="35534:35657" ph="UPDATE ABONA... " />
           </folding>
         </state>
       </provider>
@@ -1248,15 +1235,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1475086781000" expanded="true" signature="19706:19794" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="21264:21284" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="22484:22504" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="26694:26724" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="28606:28694" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="30248:30559" ph="SELECT nume,... abonat" />
-            <marker date="1475086781000" expanded="true" signature="30601:30690" ph="SELECT COUNT... missingValue" />
-            <marker date="1475086781000" expanded="true" signature="33379:33441" ph="DELETE FROM " />
-            <marker date="1475086781000" expanded="true" signature="35550:35673" ph="UPDATE ABONA... " />
+            <marker date="1475087307000" expanded="true" signature="19690:19778" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="21248:21268" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="22468:22488" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="26678:26708" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="28590:28678" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="30232:30543" ph="SELECT nume,... abonat" />
+            <marker date="1475087307000" expanded="true" signature="30585:30674" ph="SELECT COUNT... missingValue" />
+            <marker date="1475087307000" expanded="true" signature="33363:33425" ph="DELETE FROM " />
+            <marker date="1475087307000" expanded="true" signature="35534:35657" ph="UPDATE ABONA... " />
           </folding>
         </state>
       </provider>
@@ -1477,84 +1464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1302#1303#0" expanded="true" />
-            <element signature="e#1324#1325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <marker date="1475086781000" expanded="true" signature="19706:19794" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="21264:21284" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="22484:22504" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="26694:26724" ph="select * fro... abonat" />
-            <marker date="1475086781000" expanded="true" signature="28606:28694" ph="INSERT INTO ABONAT... " />
-            <marker date="1475086781000" expanded="true" signature="30248:30559" ph="SELECT nume,... abonat" />
-            <marker date="1475086781000" expanded="true" signature="30601:30690" ph="SELECT COUNT... missingValue" />
-            <marker date="1475086781000" expanded="true" signature="33379:33441" ph="DELETE FROM " />
-            <marker date="1475086781000" expanded="true" signature="35550:35673" ph="UPDATE ABONA... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1571,12 +1480,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="91" column="10" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+          <folding>
+            <marker date="1475087307000" expanded="true" signature="19690:19778" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="21248:21268" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="22468:22488" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="26678:26708" ph="select * fro... abonat" />
+            <marker date="1475087307000" expanded="true" signature="28590:28678" ph="INSERT INTO ABONAT... " />
+            <marker date="1475087307000" expanded="true" signature="30232:30543" ph="SELECT nume,... abonat" />
+            <marker date="1475087307000" expanded="true" signature="30585:30674" ph="SELECT COUNT... missingValue" />
+            <marker date="1475087307000" expanded="true" signature="33363:33425" ph="DELETE FROM " />
+            <marker date="1475087307000" expanded="true" signature="35534:35657" ph="UPDATE ABONA... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/StartAplicatie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/SplashScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/BaraMeniu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
           </folding>
         </state>
       </provider>

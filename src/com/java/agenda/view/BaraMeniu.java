@@ -7,20 +7,20 @@ import java.awt.event.KeyEvent;
 
 public class BaraMeniu  extends JMenuBar {
 
-    private final ImageIcon iconIncarca = new ImageIcon("../resources/icon/open.png");
-    private final ImageIcon iconSalveaza = new ImageIcon("../resources/icon/save.png");
-    private final ImageIcon iconIesire = new ImageIcon("../resources/icon/exit.png");
-    private final ImageIcon iconSerial = new ImageIcon("../resources/icon/key.png");
+    private final ImageIcon iconIncarca = new ImageIcon("resources/icon/open.png");
+    private final ImageIcon iconSalveaza = new ImageIcon("resources/icon/save.png");
+    private final ImageIcon iconIesire = new ImageIcon("resources/icon/exit.png");
+    private final ImageIcon iconSerial = new ImageIcon("resources/icon/key.png");
 
     private final JMenuItem meniuIncarcaDate = new JMenuItem("Incarcare DB", iconIncarca);
     private final JMenuItem meniuSalvareDate = new JMenuItem("Salvare DB", iconSalveaza);
     private final JMenuItem meniuIesire = new JMenuItem("Iesire", iconIesire);
     private final JMenuItem meniuInregistrare = new JMenuItem("Inregistrare", iconSerial);
-    private ImageIcon iconNou = new ImageIcon("icon/new.png");
-    private ImageIcon iconActualizare = new ImageIcon("icon/update.png");
-    private ImageIcon iconCauta = new ImageIcon("icon/search.png");
-    private ImageIcon iconSterge = new ImageIcon("icon/trash.png");
-    private ImageIcon iconHelp = new ImageIcon("icon/help.png");
+    private ImageIcon iconNou = new ImageIcon("resources/icon/new.png");
+    private ImageIcon iconActualizare = new ImageIcon("resources/icon/update.png");
+    private ImageIcon iconCauta = new ImageIcon("resources/icon/search.png");
+    private ImageIcon iconSterge = new ImageIcon("resources/icon/trash.png");
+    private ImageIcon iconHelp = new ImageIcon("resources/icon/help.png");
 
     JMenu file = new JMenu("Fisier");
 

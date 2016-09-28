@@ -2,6 +2,7 @@ package com.java.agenda.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,9 +18,6 @@ public class SplashScreen extends JFrame {
     private static JProgressBar baraProgres;
     private Thread threadPrincipal = null;
 
-    /**
-     * Constructorul care initializeaza splash screen-ul
-     */
     public SplashScreen() {
         super("Initializare Agenda Telefonica");
         setSize(340, 280);
@@ -28,7 +26,7 @@ public class SplashScreen extends JFrame {
         setUndecorated(true);
         setLayout(null);
 
-        imagineFundal = new ImageIcon("../resources/images/splash.jpg");
+        imagineFundal = new ImageIcon("resources/images/splash.jpg");
         labelImagine = new JLabel(imagineFundal);
         labelImagine.setBounds(20, 20, 300, 187);
         add(labelImagine);
