@@ -21,9 +21,4 @@ public class PanouPrincipal extends JPanel {
         add(panouDreapta);
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-    }
-
 }

@@ -32,13 +32,4 @@ public class PanouDetalii extends JPanel {
         add(telefonLabel);
         add(telefonText);
     }
-
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        setBackground(Color.BLUE);
-    }
-
-
 }

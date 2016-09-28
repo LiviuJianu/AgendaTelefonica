@@ -18,20 +18,13 @@ public class PanouStanga extends JPanel {
         tabelAbonati.setModel(modelTabel);
 
         init();
-
     }
 
     private void init() {
-        setSize(new Dimension(400,600));
+        setSize(new Dimension(400, 600));
         setLayout(new GridLayout(2, 1));
         add(campCautare);
         add(tabelAbonati);
-    }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        setBackground(Color.DARK_GRAY);
     }
 
 }
