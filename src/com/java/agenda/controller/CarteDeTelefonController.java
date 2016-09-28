@@ -77,17 +77,10 @@ public class CarteDeTelefonController extends JFrame {
     private final JTextField telefonText = new JTextField(10);
     private final JTextField cautareText = new JTextField(30);
 
-
-
-
     public CarteDeTelefonController(CarteDeTelefonModel model) {
-
         carteDeTelefonModel = model;
         carteDeTelefonView = new CarteDeTelefonView(this, carteDeTelefonModel);
-
-
     }
-
 
     public void init() {
         afisare();
