@@ -85,11 +85,11 @@ public class CarteDeTelefonController extends JFrame {
         carteDeTelefonModel = model;
         carteDeTelefonView = new CarteDeTelefonView(this, carteDeTelefonModel);
 
-        init();
+
     }
 
 
-    private void init() {
+    public void init() {
         afisare();
         carteDeTelefonView.init();
     }

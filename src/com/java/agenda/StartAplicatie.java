@@ -16,13 +16,7 @@ import javax.swing.SwingUtilities;
  */
 public class StartAplicatie {
 
-    /**
-     * Metoda <code>main</code>
-     *
-     * @param args argumentele cu care se apeleaza metoda main
-     * @throws Exception exceptie in cazul in care nu se poate initializa un nou
-     *                   thread.
-     */
+
     public static void main(String args[]) throws Exception {
         SplashScreen splashScreen = new SplashScreen();
         splashScreen.setVisible(true);
@@ -30,12 +24,10 @@ public class StartAplicatie {
 
         Thread.sleep(4000);
         splashScreen.dispose();
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                CarteDeTelefonModel carteDeTelefonModel = new CarteDeTelefonModel();
-                CarteDeTelefonController agenda = new CarteDeTelefonController(carteDeTelefonModel);
-            }
+        SwingUtilities.invokeLater(() -> {
+            CarteDeTelefonModel carteDeTelefonModel = new CarteDeTelefonModel();
+            CarteDeTelefonController agenda = new CarteDeTelefonController(carteDeTelefonModel);
+            agenda.init();
         });
     }
 
