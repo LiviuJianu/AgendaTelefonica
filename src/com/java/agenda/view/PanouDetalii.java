@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class PanouDetalii extends JPanel {
 
+    private JLabel imagineLabel;
+    private ImageIcon icoanaImagine;
     private JLabel numeLabel;
     private JLabel prenumeLabel;
     private JLabel cnpLabel;
@@ -13,6 +15,8 @@ public class PanouDetalii extends JPanel {
     private JTextField telefonText;
 
     public PanouDetalii() {
+        icoanaImagine = new ImageIcon("resources/icon/noImage.png");
+        imagineLabel = new JLabel(icoanaImagine);
         numeLabel = new JLabel("Nume");
         prenumeLabel = new JLabel("Prenume");
         cnpLabel = new JLabel("CNP: ");
@@ -25,6 +29,7 @@ public class PanouDetalii extends JPanel {
 
     private void init() {
         setLayout(new GridLayout(3,3));
+        add(imagineLabel);
         add(numeLabel);
         add(prenumeLabel);
         add(cnpLabel);
