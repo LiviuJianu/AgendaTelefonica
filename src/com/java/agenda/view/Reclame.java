@@ -29,8 +29,7 @@ public class Reclame extends JPanel {
     private Thread threadPrincipal = null;
 
     /**
-     * Constructorul clasei Se initializeaza un nou thread, care ruleaza
-     * permanent si la fiecare 2 secunde schimba imaginea de fundal
+     * Initializare thread si rotirea imaginilor la 2 secunde
      */
     public Reclame() {
         setSize(468, 60);
