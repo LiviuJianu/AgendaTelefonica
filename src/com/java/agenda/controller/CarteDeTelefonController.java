@@ -1,8 +1,12 @@
 package com.java.agenda.controller;
 
 import com.java.agenda.model.Abonat;
+import com.java.agenda.model.CarteDeTelefonModel;
 import com.java.agenda.model.NrTelefon;
 import com.java.agenda.model.TipNumarTelefon;
+import com.java.agenda.view.BaraMeniu;
+import com.java.agenda.view.CarteDeTelefonView;
+import com.java.agenda.view.PanouButoane;
 import com.java.agenda.view.Reclame;
 import com.java.agenda.database.MySQL;
 
@@ -50,12 +54,17 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-public class CarteDeTelefon extends JFrame {
+public class CarteDeTelefonController extends JFrame {
+
+    private CarteDeTelefonView carteDeTelefonView;
+    private CarteDeTelefonModel carteDeTelefonModel;
+
+
 
     private static final long serialVersionUID = 1L;
 
     private final transient TipNumarTelefon nrTel = new TipNumarTelefon();
-    private final transient Connection conn;
+    private final transient Connection conn = MySQL.getConnection();
     private transient Statement stmt;
 
     private DefaultTableModel model;
@@ -68,25 +77,21 @@ public class CarteDeTelefon extends JFrame {
     private final JTextField telefonText = new JTextField(10);
     private final JTextField cautareText = new JTextField(30);
 
-    private final JButton butonActiveazaInput = new JButton("Activare");
-    private final JButton butonSalveazaAbonat = new JButton("Adauga");
-    private final JButton butonStergeAbonat = new JButton("Sterge");
-    private final JButton butonActualizeazaAbonat = new JButton("Modifica");
-    private final JButton butonAnuleazaInregistrare = new JButton("Anulare");
 
-    private final ImageIcon iconIncarca = new ImageIcon("icon/open.png");
-    private final ImageIcon iconSalveaza = new ImageIcon("icon/save.png");
-    private final ImageIcon iconIesire = new ImageIcon("icon/exit.png");
-    private final ImageIcon iconSerial = new ImageIcon("icon/key.png");
-    private final JMenuItem meniuIncarcaDate = new JMenuItem("Incarcare DB", iconIncarca);
-    private final JMenuItem meniuSalvareDate = new JMenuItem("Salvare DB", iconSalveaza);
-    private final JMenuItem meniuIesire = new JMenuItem("Iesire", iconIesire);
-    private final JMenuItem meniuInregistrare = new JMenuItem("Inregistrare", iconSerial);
 
-    public CarteDeTelefon() {
-        conn = MySQL.getConnection();
+
+    public CarteDeTelefonController(CarteDeTelefonModel model) {
+
+        carteDeTelefonModel = model;
+        carteDeTelefonView = new CarteDeTelefonView(this, carteDeTelefonModel);
+
+        init();
+    }
+
+
+    private void init() {
         afisare();
-
+        carteDeTelefonView.init();
     }
 
     /**
@@ -96,7 +101,7 @@ public class CarteDeTelefon extends JFrame {
      * de Inregistrare. De asemenea, activeaza campurile de introducere
      * a datelor.
      */
-    private class ActivareAplicatie implements ActionListener {
+    public class ActivareAplicatie implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -109,7 +114,7 @@ public class CarteDeTelefon extends JFrame {
      * adaugare/modificare a datelor abonatilor.
      * Foloseste metoda {@link #popupAbonat() popupAbonat}
      */
-    private class AbonatPopup implements ActionListener {
+    public class AbonatPopup implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
@@ -196,7 +201,7 @@ public class CarteDeTelefon extends JFrame {
      * Clasa <code>AnuleazaInput</code> pentru
      * Foloseste metoda {@link #stergeAbonat() stergeAbonat}
      */
-    private class AnuleazaInput implements ActionListener {
+    public class AnuleazaInput implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent arg0) {
@@ -368,128 +373,8 @@ public class CarteDeTelefon extends JFrame {
          * Declararea File Menu foloseste atat iconite pentru fiecare element
          * din meniu, dar si mnemonice pentru elementele din meniu. 
          */
-        JMenuBar topMenu = new JMenuBar();
-        ImageIcon iconNou = new ImageIcon("icon/new.png");
-        ImageIcon iconActualizare = new ImageIcon("icon/update.png");
-        ImageIcon iconCauta = new ImageIcon("icon/search.png");
-        ImageIcon iconSterge = new ImageIcon("icon/trash.png");
-        ImageIcon iconHelp = new ImageIcon("icon/help.png");
 
-        JMenu file = new JMenu("Fisier");
-        file.setMnemonic(KeyEvent.VK_F);
-
-        meniuIncarcaDate.setMnemonic(KeyEvent.VK_D);
-        meniuIncarcaDate.setToolTipText("Incarcare baza de date");
-        meniuIncarcaDate.addActionListener(new IncarcaDB());
-
-        meniuSalvareDate.setMnemonic(KeyEvent.VK_A);
-        meniuSalvareDate.setToolTipText("Salvare baza de date");
-        meniuSalvareDate.addActionListener(new SalveazaDB());
-
-        /*
-         * Cand se doreste iesirea din aplicatie, utilizatorul este intrebat
-         * daca se doreste iesirea, caz in care aplicatia se inchide, sau daca
-         * nu se doreste iesire, aplicatia functioneaza in continuare.
-         */
-        meniuIesire.setMnemonic(KeyEvent.VK_I);
-        meniuIesire.setToolTipText("Iesire din aplicatie");
-        meniuIesire.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, ActionEvent.CTRL_MASK));
-        meniuIesire.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                int dialogButton = JOptionPane.YES_NO_OPTION;
-                int dialogIesire = JOptionPane.showConfirmDialog(null, "Doriti sa iesiti din aplicatie?", "Iesire aplicatie", dialogButton);
-                if (dialogIesire == JOptionPane.YES_OPTION) {
-                    System.exit(0);
-                }
-            }
-        });
-
-        JMenu abonatiMeniu = new JMenu("Abonati");
-        abonatiMeniu.setMnemonic(KeyEvent.VK_B);
-
-        JMenuItem abonatNou = new JMenuItem("Adauga", iconNou);
-        abonatNou.setMnemonic(KeyEvent.VK_A);
-        abonatNou.setToolTipText("Activare introducere abonat nou");
-        abonatNou.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, ActionEvent.CTRL_MASK));
-        abonatNou.addActionListener(new AbonatPopup());
-
-        JMenuItem actualizareAbonat = new JMenuItem("Modifica", iconActualizare);
-        actualizareAbonat.setMnemonic(KeyEvent.VK_U);
-        actualizareAbonat.setToolTipText("Actualizare abonat");
-        actualizareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, ActionEvent.CTRL_MASK));
-        actualizareAbonat.addActionListener(new AbonatPopup());
-
-        JMenuItem cautaAbonat = new JMenuItem("Cauta", iconCauta);
-        cautaAbonat.setMnemonic(KeyEvent.VK_C);
-        cautaAbonat.setToolTipText("Cautare abonat ");
-        cautaAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C, ActionEvent.CTRL_MASK));
-        cautaAbonat.addActionListener(new CautaAbonat());
-
-        JMenuItem salvareAbonat = new JMenuItem("Salveaza", iconSalveaza);
-        salvareAbonat.setMnemonic(KeyEvent.VK_S);
-        salvareAbonat.setToolTipText("Salvare date abonat");
-        salvareAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
-        salvareAbonat.addActionListener(new AdaugaAbonat());
-
-        JMenuItem stergeAbonat = new JMenuItem("Sterge", iconSterge);
-        stergeAbonat.setMnemonic(KeyEvent.VK_R);
-        stergeAbonat.setToolTipText("Sterge abonat");
-        stergeAbonat.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
-        stergeAbonat.addActionListener(new StergeAbonat());
-
-        JMenu helpMenu = new JMenu("Help");
-        helpMenu.setMnemonic(KeyEvent.VK_H);
-
-        JMenuItem manual = new JMenuItem("Manual", iconHelp);
-        manual.setMnemonic(KeyEvent.VK_M);
-        manual.setToolTipText("Manual de utilizare");
-        manual.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, ActionEvent.CTRL_MASK));
-
-        /*
-         * Pentru inregistrarea aplicatiei, utilizatorul trebuie sa intriduca
-         * un cod de inregistrare, care din motive de usurinta de testare
-         * este urmatorul : 123abc
-         */
-        meniuInregistrare.setMnemonic(KeyEvent.VK_R);
-        meniuInregistrare.setToolTipText("Introducere cod inregistrare");
-        meniuInregistrare.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                String serialNumber = JOptionPane.showInputDialog("Codul de inregistrare");
-                if (serialNumber != null) {
-                    if (isAppRegistered(serialNumber)) {
-                        activeazaAplicatie();
-                        JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Cod de inregistrare incorect!");
-                    }
-                }
-            }
-        });
-
-        file.add(meniuIncarcaDate);
-        file.add(meniuSalvareDate);
-        file.addSeparator();
-        file.add(meniuIesire);
-
-        abonatiMeniu.add(abonatNou);
-        abonatiMeniu.add(actualizareAbonat);
-        abonatiMeniu.add(salvareAbonat);
-        abonatiMeniu.add(stergeAbonat);
-        abonatiMeniu.addSeparator();
-        abonatiMeniu.add(cautaAbonat);
-
-        helpMenu.add(meniuInregistrare);
-        helpMenu.addSeparator();
-        helpMenu.add(manual);
-
-        topMenu.add(file);
-        topMenu.add(abonatiMeniu);
-        topMenu.add(helpMenu);
-
+        BaraMeniu topMenu = new BaraMeniu();
         setJMenuBar(topMenu);
 
 
@@ -520,7 +405,7 @@ public class CarteDeTelefon extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 2;
-        panouPrincipal.add(panouButoanePrincipale(), gbc);
+        panouPrincipal.add(new PanouButoane(), gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 3;
@@ -652,49 +537,6 @@ public class CarteDeTelefon extends JFrame {
     }
 
     /**
-     * Panoul care contine butoanele principale
-     */
-    private JPanel panouButoanePrincipale() {
-        JPanel panouButoanePrincipale = new JPanel(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.anchor = GridBagConstraints.NORTHWEST;
-        gbc.insets = new Insets(1, 1, 1, 1);
-
-        butonActiveazaInput.addActionListener(new ActivareAplicatie());
-        butonSalveazaAbonat.addActionListener(new AbonatPopup());
-        butonStergeAbonat.addActionListener(new StergeAbonat());
-        butonActualizeazaAbonat.addActionListener(new AbonatPopup());
-        butonAnuleazaInregistrare.addActionListener(new AnuleazaInput());
-
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouButoanePrincipale.add(butonActiveazaInput, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        panouButoanePrincipale.add(butonSalveazaAbonat, gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        panouButoanePrincipale.add(butonStergeAbonat, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        panouButoanePrincipale.add(butonAnuleazaInregistrare, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.gridwidth = 2;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouButoanePrincipale.add(butonActualizeazaAbonat, gbc);
-
-        return panouButoanePrincipale;
-    }
-
-    /**
      * Panoul de afisare a butoanelor din fereastra de adaugare/editare
      */
     private JPanel panouButoaneFereastra() {
@@ -740,9 +582,7 @@ public class CarteDeTelefon extends JFrame {
         prenumeText.setEnabled(true);
         cnpText.setEnabled(true);
         telefonText.setEnabled(true);
-        meniuIncarcaDate.setEnabled(true);
-        meniuSalvareDate.setEnabled(true);
-        meniuInregistrare.setEnabled(false);
+
 
     }
 
@@ -756,8 +596,7 @@ public class CarteDeTelefon extends JFrame {
         prenumeText.setEnabled(false);
         cnpText.setEnabled(false);
         telefonText.setEnabled(false);
-        meniuIncarcaDate.setEnabled(false);
-        meniuSalvareDate.setEnabled(false);
+
 
     }
 
@@ -823,7 +662,7 @@ public class CarteDeTelefon extends JFrame {
                 try {
                     ps.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -863,7 +702,7 @@ public class CarteDeTelefon extends JFrame {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -947,7 +786,7 @@ public class CarteDeTelefon extends JFrame {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -1005,7 +844,7 @@ public class CarteDeTelefon extends JFrame {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -1059,7 +898,7 @@ public class CarteDeTelefon extends JFrame {
                     try {
                         ps.close();
                     } catch (SQLException ex) {
-                        Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }
@@ -1098,7 +937,7 @@ public class CarteDeTelefon extends JFrame {
                     rsRezultate.next();
                     rezultate = rsRezultate.getInt(1);
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).
                             log(Level.SEVERE, null, ex);
                 } finally {
                     if (rsRezultate != null) {
@@ -1129,7 +968,7 @@ public class CarteDeTelefon extends JFrame {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(CarteDeTelefon.class.getName()).
+                    Logger.getLogger(CarteDeTelefonController.class.getName()).
                             log(Level.SEVERE, null, ex);
                 }
             }
@@ -1230,7 +1069,7 @@ public class CarteDeTelefon extends JFrame {
                     try {
                         ps.close();
                     } catch (SQLException ex) {
-                        Logger.getLogger(CarteDeTelefon.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(CarteDeTelefonController.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }

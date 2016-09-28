@@ -15,7 +15,7 @@ public class SplashScreen extends JFrame {
     private final JLabel labelImagine;
     private final ImageIcon imagineFundal;
     private static JProgressBar baraProgres;
-    Thread threadPrincipal = null;
+    private Thread threadPrincipal = null;
 
     /**
      * Constructorul care initializeaza splash screen-ul
@@ -28,7 +28,7 @@ public class SplashScreen extends JFrame {
         setUndecorated(true);
         setLayout(null);
 
-        imagineFundal = new ImageIcon("images/splash.jpg");
+        imagineFundal = new ImageIcon("../resources/images/splash.jpg");
         labelImagine = new JLabel(imagineFundal);
         labelImagine.setBounds(20, 20, 300, 187);
         add(labelImagine);

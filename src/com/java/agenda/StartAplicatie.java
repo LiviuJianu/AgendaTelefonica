@@ -1,6 +1,7 @@
 package com.java.agenda;
 
-import com.java.agenda.controller.CarteDeTelefon;
+import com.java.agenda.controller.CarteDeTelefonController;
+import com.java.agenda.model.CarteDeTelefonModel;
 import com.java.agenda.view.SplashScreen;
 
 import javax.swing.JFrame;
@@ -9,7 +10,7 @@ import javax.swing.SwingUtilities;
 /**
  * Clasa principala pentru lansarea aplicatiei
  * Foloseste un obiect de tip SplashScreen, dupa care initializeaza
- * aplicatia apeland clasa <code>CarteDeTelefon</code>
+ * aplicatia apeland clasa <code>CarteDeTelefonController</code>
  *
  * @author Liviu Jianu
  */
@@ -32,12 +33,8 @@ public class StartAplicatie {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                CarteDeTelefon agenda = new CarteDeTelefon();
-                agenda.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                agenda.setLocationRelativeTo(null);
-                agenda.setTitle("Agenda Telefonica");
-                agenda.pack();
-                agenda.setVisible(true);
+                CarteDeTelefonModel carteDeTelefonModel = new CarteDeTelefonModel();
+                CarteDeTelefonController agenda = new CarteDeTelefonController(carteDeTelefonModel);
             }
         });
     }
