@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -166,7 +166,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarteDeTelefonModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CarteDeTelefonModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -174,19 +174,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="67">
-                <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -331,6 +318,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="AgendaTelefonica" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -867,7 +864,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="7160000" />
+      <workItem from="1475007416588" duration="7224000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -974,11 +971,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475086852247</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="pretty format the readme.md">
+      <created>1475086975231</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1475086975231</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24107000" />
+    <option name="totallyTimeSpent" value="24171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1260" height="898" extended-state="0" />
@@ -996,7 +1000,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1061,8 @@
     <MESSAGE value="update workspace settings" />
     <MESSAGE value="refactor the app for a cleaner and more decoupled code" />
     <MESSAGE value="refactor the app for a cleaner and more decoupled code&#10;&#10;create separate classes for Model, View and Controller&#10;try to extract as much code as possible into its own class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor the app for a cleaner and more decoupled code&#10;&#10;create separate classes for Model, View and Controller&#10;try to extract as much code as possible into its own class" />
+    <MESSAGE value="pretty format the readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="pretty format the readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1068,160 +1073,6 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="true" />
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <targetFilters>
-        <filter targetName="default" isVisible="true" />
-        <filter targetName="-pre-init" isVisible="false" />
-        <filter targetName="-init-private" isVisible="false" />
-        <filter targetName="-init-user" isVisible="false" />
-        <filter targetName="-init-project" isVisible="false" />
-        <filter targetName="-do-init" isVisible="false" />
-        <filter targetName="-post-init" isVisible="false" />
-        <filter targetName="-init-check" isVisible="false" />
-        <filter targetName="-init-macrodef-property" isVisible="false" />
-        <filter targetName="-init-macrodef-javac-with-processors" isVisible="false" />
-        <filter targetName="-init-macrodef-javac-without-processors" isVisible="false" />
-        <filter targetName="-init-macrodef-javac" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-init" isVisible="false" />
-        <filter targetName="-init-test-properties" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-single" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-batch" isVisible="false" />
-        <filter targetName="-init-macrodef-junit" isVisible="false" />
-        <filter targetName="-init-macrodef-testng" isVisible="false" />
-        <filter targetName="-init-macrodef-test-impl" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-impl" isVisible="false" />
-        <filter targetName="-init-macrodef-testng-impl" isVisible="false" />
-        <filter targetName="-init-macrodef-test" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-debug" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-debug-batch" isVisible="false" />
-        <filter targetName="-init-macrodef-junit-debug-impl" isVisible="false" />
-        <filter targetName="-init-macrodef-testng-debug" isVisible="false" />
-        <filter targetName="-init-macrodef-testng-debug-impl" isVisible="false" />
-        <filter targetName="-init-macrodef-test-debug-junit" isVisible="false" />
-        <filter targetName="-init-macrodef-test-debug-testng" isVisible="false" />
-        <filter targetName="-init-macrodef-test-debug" isVisible="false" />
-        <filter targetName="profile-init" isVisible="false" />
-        <filter targetName="-profile-pre-init" isVisible="false" />
-        <filter targetName="-profile-post-init" isVisible="false" />
-        <filter targetName="-profile-init-macrodef-profile" isVisible="false" />
-        <filter targetName="-profile-init-check" isVisible="false" />
-        <filter targetName="-init-macrodef-nbjpda" isVisible="false" />
-        <filter targetName="-init-debug-args" isVisible="false" />
-        <filter targetName="-init-macrodef-debug" isVisible="false" />
-        <filter targetName="-init-macrodef-java" isVisible="false" />
-        <filter targetName="-init-macrodef-copylibs" isVisible="false" />
-        <filter targetName="-init-presetdef-jar" isVisible="false" />
-        <filter targetName="-init-ap-cmdline-properties" isVisible="false" />
-        <filter targetName="-init-ap-cmdline-supported" isVisible="false" />
-        <filter targetName="-init-ap-cmdline" isVisible="false" />
-        <filter targetName="init" isVisible="false" />
-        <filter targetName="-deps-jar-init" isVisible="false" />
-        <filter targetName="-warn-already-built-jar" isVisible="false" />
-        <filter targetName="deps-jar" isVisible="false" />
-        <filter targetName="-verify-automatic-build" isVisible="false" />
-        <filter targetName="-check-automatic-build" isVisible="false" />
-        <filter targetName="-clean-after-automatic-build" isVisible="false" />
-        <filter targetName="-pre-pre-compile" isVisible="false" />
-        <filter targetName="-pre-compile" isVisible="false" />
-        <filter targetName="-compile-depend" isVisible="false" />
-        <filter targetName="-do-compile" isVisible="false" />
-        <filter targetName="-copy-persistence-xml" isVisible="false" />
-        <filter targetName="-post-compile" isVisible="false" />
-        <filter targetName="compile" isVisible="true" />
-        <filter targetName="-pre-compile-single" isVisible="false" />
-        <filter targetName="-do-compile-single" isVisible="false" />
-        <filter targetName="-post-compile-single" isVisible="false" />
-        <filter targetName="compile-single" isVisible="false" />
-        <filter targetName="-pre-pre-jar" isVisible="false" />
-        <filter targetName="-pre-jar" isVisible="false" />
-        <filter targetName="-do-jar-create-manifest" isVisible="false" />
-        <filter targetName="-do-jar-copy-manifest" isVisible="false" />
-        <filter targetName="-do-jar-set-mainclass" isVisible="false" />
-        <filter targetName="-do-jar-set-profile" isVisible="false" />
-        <filter targetName="-do-jar-set-splashscreen" isVisible="false" />
-        <filter targetName="-do-jar-copylibs" isVisible="false" />
-        <filter targetName="-do-jar-jar" isVisible="false" />
-        <filter targetName="-do-jar-delete-manifest" isVisible="false" />
-        <filter targetName="-do-jar-without-libraries" isVisible="false" />
-        <filter targetName="-do-jar-with-libraries" isVisible="false" />
-        <filter targetName="-post-jar" isVisible="false" />
-        <filter targetName="-do-jar" isVisible="false" />
-        <filter targetName="jar" isVisible="true" />
-        <filter targetName="run" isVisible="true" />
-        <filter targetName="-do-not-recompile" isVisible="false" />
-        <filter targetName="run-single" isVisible="false" />
-        <filter targetName="run-test-with-main" isVisible="false" />
-        <filter targetName="-debug-start-debugger" isVisible="false" />
-        <filter targetName="-debug-start-debugger-main-test" isVisible="false" />
-        <filter targetName="-debug-start-debuggee" isVisible="false" />
-        <filter targetName="debug" isVisible="true" />
-        <filter targetName="-debug-start-debugger-stepinto" isVisible="false" />
-        <filter targetName="debug-stepinto" isVisible="false" />
-        <filter targetName="-debug-start-debuggee-single" isVisible="false" />
-        <filter targetName="debug-single" isVisible="false" />
-        <filter targetName="-debug-start-debuggee-main-test" isVisible="false" />
-        <filter targetName="debug-test-with-main" isVisible="false" />
-        <filter targetName="-pre-debug-fix" isVisible="false" />
-        <filter targetName="-do-debug-fix" isVisible="false" />
-        <filter targetName="debug-fix" isVisible="false" />
-        <filter targetName="-profile-pre72" isVisible="true" />
-        <filter targetName="-profile-single-pre72" isVisible="true" />
-        <filter targetName="-profile-applet-pre72" isVisible="false" />
-        <filter targetName="-profile-test-single-pre72" isVisible="false" />
-        <filter targetName="-profile-check" isVisible="false" />
-        <filter targetName="profile" isVisible="true" />
-        <filter targetName="profile-single" isVisible="true" />
-        <filter targetName="profile-test-single" isVisible="true" />
-        <filter targetName="profile-test" isVisible="true" />
-        <filter targetName="profile-test-with-main" isVisible="true" />
-        <filter targetName="profile-applet" isVisible="false" />
-        <filter targetName="-javadoc-build" isVisible="false" />
-        <filter targetName="-javadoc-browse" isVisible="false" />
-        <filter targetName="javadoc" isVisible="true" />
-        <filter targetName="-pre-pre-compile-test" isVisible="false" />
-        <filter targetName="-pre-compile-test" isVisible="false" />
-        <filter targetName="-compile-test-depend" isVisible="false" />
-        <filter targetName="-do-compile-test" isVisible="false" />
-        <filter targetName="-post-compile-test" isVisible="false" />
-        <filter targetName="compile-test" isVisible="false" />
-        <filter targetName="-pre-compile-test-single" isVisible="false" />
-        <filter targetName="-do-compile-test-single" isVisible="false" />
-        <filter targetName="-post-compile-test-single" isVisible="false" />
-        <filter targetName="compile-test-single" isVisible="false" />
-        <filter targetName="-pre-test-run" isVisible="false" />
-        <filter targetName="-do-test-run" isVisible="false" />
-        <filter targetName="-post-test-run" isVisible="false" />
-        <filter targetName="test-report" isVisible="false" />
-        <filter targetName="-test-browse" isVisible="false" />
-        <filter targetName="test" isVisible="true" />
-        <filter targetName="-pre-test-run-single" isVisible="false" />
-        <filter targetName="-do-test-run-single" isVisible="false" />
-        <filter targetName="-post-test-run-single" isVisible="false" />
-        <filter targetName="test-single" isVisible="true" />
-        <filter targetName="-do-test-run-single-method" isVisible="false" />
-        <filter targetName="-post-test-run-single-method" isVisible="false" />
-        <filter targetName="test-single-method" isVisible="true" />
-        <filter targetName="-debug-start-debuggee-test" isVisible="false" />
-        <filter targetName="-debug-start-debuggee-test-method" isVisible="false" />
-        <filter targetName="-debug-start-debugger-test" isVisible="false" />
-        <filter targetName="debug-test" isVisible="false" />
-        <filter targetName="debug-test-method" isVisible="false" />
-        <filter targetName="-do-debug-fix-test" isVisible="false" />
-        <filter targetName="debug-fix-test" isVisible="false" />
-        <filter targetName="run-applet" isVisible="false" />
-        <filter targetName="-debug-start-debuggee-applet" isVisible="false" />
-        <filter targetName="debug-applet" isVisible="false" />
-        <filter targetName="-deps-clean-init" isVisible="false" />
-        <filter targetName="-warn-already-built-clean" isVisible="false" />
-        <filter targetName="deps-clean" isVisible="false" />
-        <filter targetName="-do-clean" isVisible="false" />
-        <filter targetName="-post-clean" isVisible="false" />
-        <filter targetName="clean" isVisible="true" />
-        <filter targetName="-check-call-dep" isVisible="false" />
-        <filter targetName="-maybe-call-dep" isVisible="false" />
-      </targetFilters>
-      <expanded value="true" />
-    </buildFile>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java">
@@ -1636,16 +1487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
@@ -1727,6 +1568,16 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
