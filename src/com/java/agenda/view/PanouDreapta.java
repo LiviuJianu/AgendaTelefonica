@@ -11,6 +11,8 @@ public class PanouDreapta extends JPanel {
     public PanouDreapta() {
         panouDetalii = new PanouDetalii();
         panouButoane = new PanouButoane();
+
+        init();
     }
 
     private void init() {

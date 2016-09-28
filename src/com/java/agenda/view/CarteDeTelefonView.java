@@ -26,10 +26,12 @@ public class CarteDeTelefonView implements AbonatObserver {
         panouPrincipal = new PanouPrincipal();
         meniu = new BaraMeniu();
 
+        viewFrame.setLayout(new GridLayout(1,1));
         viewFrame.getRootPane().setJMenuBar(meniu);
 
-        viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         viewFrame.setSize(800, 600);
+
+        viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         viewFrame.getContentPane().add(panouPrincipal);
         viewFrame.setVisible(true);
 

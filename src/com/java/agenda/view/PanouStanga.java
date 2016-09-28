@@ -17,6 +17,8 @@ public class PanouStanga extends JPanel {
         modelTabel = new DefaultTableModel(null, coloane);
         tabelAbonati.setModel(modelTabel);
 
+        init();
+
     }
 
     private void init() {
@@ -31,4 +33,5 @@ public class PanouStanga extends JPanel {
         super.paintComponent(g);
         setBackground(Color.DARK_GRAY);
     }
+
 }

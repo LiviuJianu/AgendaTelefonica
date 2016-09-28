@@ -15,42 +15,23 @@ public class PanouButoane extends JPanel {
     private final JButton butonStergeAbonat = new JButton("Sterge");
     private final JButton butonActualizeazaAbonat = new JButton("Modifica");
     private final JButton butonAnuleazaInregistrare = new JButton("Anulare");
-    private JPanel panouButoanePrincipale = new JPanel(new GridBagLayout());
 
     public PanouButoane() {
         init();
     }
 
     private void init() {
+        setLayout(new GridLayout(3,3));
+        add(butonActiveazaInput);
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.anchor = GridBagConstraints.NORTHWEST;
-        gbc.insets = new Insets(1, 1, 1, 1);
+        add(butonSalveazaAbonat);
+        add(butonStergeAbonat);
+
+        add(butonAnuleazaInregistrare);
+
+        add(butonActualizeazaAbonat);
 
 
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 1;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouButoanePrincipale.add(butonActiveazaInput, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        panouButoanePrincipale.add(butonSalveazaAbonat, gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 0;
-        panouButoanePrincipale.add(butonStergeAbonat, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        panouButoanePrincipale.add(butonAnuleazaInregistrare, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.gridwidth = 2;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        panouButoanePrincipale.add(butonActualizeazaAbonat, gbc);
 
     }
 
