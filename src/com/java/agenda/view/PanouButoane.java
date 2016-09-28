@@ -55,4 +55,11 @@ public class PanouButoane extends JPanel {
     }
 
 
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        setBackground(Color.YELLOW);
+    }
+
 }

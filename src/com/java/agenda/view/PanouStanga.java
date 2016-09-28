@@ -25,4 +25,10 @@ public class PanouStanga extends JPanel {
         add(campCautare);
         add(tabelAbonati);
     }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        setBackground(Color.DARK_GRAY);
+    }
 }
