@@ -1,6 +1,6 @@
 package com.java.agenda.view;
 
-`import com.java.agenda.model.Abonat;
+import com.java.agenda.model.Abonat;
 import com.java.agenda.model.ModelTabelAbonati;
 import com.java.agenda.model.NrMobil;
 import com.java.agenda.model.NrTelefon;
@@ -55,6 +55,9 @@ public class PanouStanga extends JPanel {
         gbc.ipadx = 0;
         gbc.gridx = 0;
         gbc.gridy = 1;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.BOTH;
         add(new JScrollPane(tabelAbonati), gbc);
     }
 
