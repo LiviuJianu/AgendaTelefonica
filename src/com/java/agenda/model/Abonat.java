@@ -2,17 +2,28 @@ package com.java.agenda.model;
 
 public class Abonat {
 
+    private long id;
     private String nume;
     private String prenume;
     private String cnp;
     private NrTelefon numarTelefon;
 
-    public Abonat(String numeAbonat, String prenumeAbonat, String cnpAbonat, NrTelefon telefonAbonat) {
+    public Abonat(long id, String numeAbonat, String prenumeAbonat, String cnpAbonat, NrTelefon telefonAbonat) {
+        this.id = id;
         nume = numeAbonat;
         prenume = prenumeAbonat;
         cnp = cnpAbonat;
         numarTelefon = telefonAbonat;
 
+    }
+
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNume() {

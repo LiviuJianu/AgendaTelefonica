@@ -30,20 +30,15 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.PatternSyntaxException;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.KeyStroke;
 import javax.swing.ListSelectionModel;
 import javax.swing.RowFilter;
 import javax.swing.event.DocumentEvent;
@@ -867,7 +862,8 @@ public class CarteDeTelefonController extends JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Eroare: " + e.getMessage());
             }
-            Abonat abonatUnic = new Abonat(nume, prenume, cnp, numar);
+            long id = 1;
+            Abonat abonatUnic = new Abonat(id, nume, prenume, cnp, numar);
             PreparedStatement ps = null;
             try {
                 String adaugaQuery = "INSERT INTO ABONAT(nume,prenume,cnp,telefon)"

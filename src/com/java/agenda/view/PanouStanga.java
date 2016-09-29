@@ -1,23 +1,44 @@
 package com.java.agenda.view;
 
+`import com.java.agenda.model.Abonat;
+import com.java.agenda.model.ModelTabelAbonati;
+import com.java.agenda.model.NrMobil;
+import com.java.agenda.model.NrTelefon;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PanouStanga extends JPanel {
 
     private JTextField campCautare;
     private JTable tabelAbonati;
-    private DefaultTableModel modelTabel;
+    private ModelTabelAbonati modelTabel;
     private String[] coloane = {"Nr.#", "Nume", "Prenume", "CNP", "Telefon"};
 
     public PanouStanga() {
         campCautare = new JTextField("Cautare");
         tabelAbonati = new JTable();
-        modelTabel = new DefaultTableModel(null, coloane);
+        initTabelModel();
+        init();
+    }
+
+    private void initTabelModel() {
+        NrTelefon tel = new NrMobil("0723456789");
+        Abonat a1 = new Abonat(1,"Ion","Popescu","1780909322231", tel);
+        Abonat a2 = new Abonat(2,"Dan","Antonescu","1881109322231", tel);
+        Abonat a3 = new Abonat(3,"Mihai","Moraru","1940315322231", tel);
+        List<Abonat> abonati = new ArrayList<>();
+
+        abonati.add(a1);
+        abonati.add(a2);
+        abonati.add(a3);
+
+        modelTabel = new ModelTabelAbonati(abonati);
         tabelAbonati.setModel(modelTabel);
 
-        init();
     }
 
     private void init() {
@@ -29,7 +50,6 @@ public class PanouStanga extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.ipadx = 100;
-        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(campCautare, gbc);
 
         gbc.ipadx = 0;

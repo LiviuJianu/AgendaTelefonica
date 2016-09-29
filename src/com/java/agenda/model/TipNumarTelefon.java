@@ -21,9 +21,9 @@ public class TipNumarTelefon {
      * @throws Exception exceptie in cazul in care numarul de telefon
      *                   introdus este incorect.
      */
-    public NrTelefon getTipNumarTel(String numarTel) throws Exception {
+    public NrTelefon getTipNumarTel(String numarTel) throws RuntimeException {
         if ((numarTel == null) || (numarTel.length() != LUNGIME_NUMAR)) {
-            throw new Exception("Formatul numarului introdus este incorect!");
+            throw new RuntimeException("Formatul numarului introdus este incorect!");
         }
 
         if (numarTel.startsWith(identificareNumarMobil)) {
@@ -31,7 +31,7 @@ public class TipNumarTelefon {
         } else if (numarTel.startsWith(identificareNumarFix)) {
             return new NrFix(numarTel);
         } else {
-            throw new Exception("Formatul numarului introdus este incorect!");
+            throw new RuntimeException("Formatul numarului introdus este incorect!");
         }
     }
 }
