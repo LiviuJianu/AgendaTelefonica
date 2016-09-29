@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
@@ -85,6 +84,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CarteDeTelefonController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="395" column="36" selection-start-line="395" selection-start-column="31" selection-end-line="395" selection-end-column="36" />
+              <folding>
+                <marker date="1475088800000" expanded="true" signature="19683:19771" ph="INSERT INTO ABONAT... " />
+                <marker date="1475088800000" expanded="true" signature="21241:21261" ph="select * fro... abonat" />
+                <marker date="1475088800000" expanded="true" signature="22461:22481" ph="select * fro... abonat" />
+                <marker date="1475088800000" expanded="true" signature="26671:26701" ph="select * fro... abonat" />
+                <marker date="1475088800000" expanded="true" signature="28583:28671" ph="INSERT INTO ABONAT... " />
+                <marker date="1475088800000" expanded="true" signature="30225:30536" ph="SELECT nume,... abonat" />
+                <marker date="1475088800000" expanded="true" signature="30578:30667" ph="SELECT COUNT... missingValue" />
+                <marker date="1475088800000" expanded="true" signature="33356:33418" ph="DELETE FROM " />
+                <marker date="1475088800000" expanded="true" signature="35527:35650" ph="UPDATE ABONA... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ActivareAplicatie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,8 +179,8 @@
       <file leaf-file-name="PanouStanga.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+            <state relative-caret-position="294">
+              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -213,7 +232,6 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="FORCE_PUSH_ALLOWED" value="true" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -974,7 +992,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="18681000" />
+      <workItem from="1475007416588" duration="19207000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -1165,11 +1183,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475123324553</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="changed layout manager&#10;&#10;the left panel is now using GridBagLayout manager to display its components">
+      <created>1475123779195</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1475123779195</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35628000" />
+    <option name="totallyTimeSpent" value="36154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1243,7 +1268,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restructured the project to work in intellij" />
     <MESSAGE value="fixed crlf" />
     <MESSAGE value="LF warning" />
     <MESSAGE value="LF" />
@@ -1268,7 +1292,8 @@
     <MESSAGE value="add a jlabel to hold an icon preview &#10;&#10;add the image to the resources folder" />
     <MESSAGE value="change the layout manager of the details panel PanouDetalii.java&#10;&#10;it now uses the GridBagLayout to arrange the components" />
     <MESSAGE value="reprganized the details panel to properly align and display the fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="reprganized the details panel to properly align and display the fields" />
+    <MESSAGE value="changed layout manager&#10;&#10;the left panel is now using GridBagLayout manager to display its components" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed layout manager&#10;&#10;the left panel is now using GridBagLayout manager to display its components" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1665,24 +1690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="354" column="17" selection-start-line="354" selection-start-column="17" selection-end-line="354" selection-end-column="17" />
-          <folding>
-            <marker date="1475088800000" expanded="true" signature="19683:19771" ph="INSERT INTO ABONAT... " />
-            <marker date="1475088800000" expanded="true" signature="21241:21261" ph="select * fro... abonat" />
-            <marker date="1475088800000" expanded="true" signature="22461:22481" ph="select * fro... abonat" />
-            <marker date="1475088800000" expanded="true" signature="26671:26701" ph="select * fro... abonat" />
-            <marker date="1475088800000" expanded="true" signature="28583:28671" ph="INSERT INTO ABONAT... " />
-            <marker date="1475088800000" expanded="true" signature="30225:30536" ph="SELECT nume,... abonat" />
-            <marker date="1475088800000" expanded="true" signature="30578:30667" ph="SELECT COUNT... missingValue" />
-            <marker date="1475088800000" expanded="true" signature="33356:33418" ph="DELETE FROM " />
-            <marker date="1475088800000" expanded="true" signature="35527:35650" ph="UPDATE ABONA... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1697,16 +1704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1772,10 +1769,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="395" column="36" selection-start-line="395" selection-start-column="31" selection-end-line="395" selection-end-column="36" />
+          <folding>
+            <marker date="1475088800000" expanded="true" signature="19683:19771" ph="INSERT INTO ABONAT... " />
+            <marker date="1475088800000" expanded="true" signature="21241:21261" ph="select * fro... abonat" />
+            <marker date="1475088800000" expanded="true" signature="22461:22481" ph="select * fro... abonat" />
+            <marker date="1475088800000" expanded="true" signature="26671:26701" ph="select * fro... abonat" />
+            <marker date="1475088800000" expanded="true" signature="28583:28671" ph="INSERT INTO ABONAT... " />
+            <marker date="1475088800000" expanded="true" signature="30225:30536" ph="SELECT nume,... abonat" />
+            <marker date="1475088800000" expanded="true" signature="30578:30667" ph="SELECT COUNT... missingValue" />
+            <marker date="1475088800000" expanded="true" signature="33356:33418" ph="DELETE FROM " />
+            <marker date="1475088800000" expanded="true" signature="35527:35650" ph="UPDATE ABONA... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="294">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

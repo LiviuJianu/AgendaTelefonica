@@ -25,6 +25,7 @@ public class PanouStanga extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
 
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.ipadx = 100;
@@ -34,7 +35,7 @@ public class PanouStanga extends JPanel {
         gbc.ipadx = 0;
         gbc.gridx = 0;
         gbc.gridy = 1;
-        add(tabelAbonati, gbc);
+        add(new JScrollPane(tabelAbonati), gbc);
     }
 
 }
