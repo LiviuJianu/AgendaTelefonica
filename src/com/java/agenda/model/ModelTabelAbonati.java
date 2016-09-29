@@ -79,7 +79,7 @@ public class ModelTabelAbonati extends AbstractTableModel {
             case 3:
                 abonat.setCnp((String) aValue);
             case 4:
-                abonat.setNumarTelefon(new TipNumarTelefon().getTipNumarTel((String) aValue));
+                abonat.setNumarTelefon(new NrMobil((String) aValue));
         }
 
         fireTableCellUpdated(rowIndex,columnIndex);

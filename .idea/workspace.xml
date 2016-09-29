@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -172,8 +172,8 @@
       <file leaf-file-name="ModelTabelAbonati.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+            <state relative-caret-position="343">
+              <caret line="81" column="66" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#404#405#0" expanded="true" />
@@ -186,10 +186,10 @@
                 <element signature="e#1020#1021#0" expanded="true" />
                 <element signature="e#1081#1082#0" expanded="true" />
                 <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#2363#2364#0" expanded="true" />
-                <element signature="e#2401#2402#0" expanded="true" />
-                <element signature="e#2470#2471#0" expanded="true" />
-                <element signature="e#2529#2530#0" expanded="true" />
+                <element signature="e#2338#2339#0" expanded="true" />
+                <element signature="e#2376#2377#0" expanded="true" />
+                <element signature="e#2445#2446#0" expanded="true" />
+                <element signature="e#2504#2505#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -282,8 +282,8 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/TipNumarTelefon.java" />
-        <option value="$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
+        <option value="$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java" />
       </list>
     </option>
   </component>
@@ -942,7 +942,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="21905000" />
+      <workItem from="1475007416588" duration="21998000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -1154,11 +1154,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475178579676</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="the left panel PanouStanga.java is now allowing its components to fill the entire empty space">
+      <created>1475178895355</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1475178895355</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38852000" />
+    <option name="totallyTimeSpent" value="38945000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1185,7 +1192,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1232,7 +1239,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LF" />
     <MESSAGE value="provided better encapsulation at the moment&#10;removed dangling javadoc comments by converting them to normal comments" />
     <MESSAGE value="Added a datasource &#10;updated workspace file" />
     <MESSAGE value="deleted comments&#10;&#10;delete comments from self explanatory methods ( get, set, constructors)" />
@@ -1257,7 +1263,8 @@
     <MESSAGE value="changed layout manager&#10;&#10;the left panel is now using GridBagLayout manager to display its components" />
     <MESSAGE value="made the search box use the entire width &amp; add the JTable to the JScrollPane to make it visible" />
     <MESSAGE value="implement a custom TabelModel to handle the data&#10;&#10;- defined a new AbstractTabelModel that now holds a List&lt;Abonat&gt; and it has the column names hardcoded inside&#10;&#10;- changed the TipNumarTelefon.java to throw RuntimeException instead of Exception&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement a custom TabelModel to handle the data&#10;&#10;- defined a new AbstractTabelModel that now holds a List&lt;Abonat&gt; and it has the column names hardcoded inside&#10;&#10;- changed the TipNumarTelefon.java to throw RuntimeException instead of Exception&#10;" />
+    <MESSAGE value="the left panel PanouStanga.java is now allowing its components to fill the entire empty space" />
+    <option name="LAST_COMMIT_MESSAGE" value="the left panel PanouStanga.java is now allowing its components to fill the entire empty space" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1753,8 +1760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+        <state relative-caret-position="343">
+          <caret line="81" column="66" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#404#405#0" expanded="true" />
@@ -1767,10 +1774,10 @@
             <element signature="e#1020#1021#0" expanded="true" />
             <element signature="e#1081#1082#0" expanded="true" />
             <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#2363#2364#0" expanded="true" />
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2470#2471#0" expanded="true" />
-            <element signature="e#2529#2530#0" expanded="true" />
+            <element signature="e#2338#2339#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
           </folding>
         </state>
       </provider>
