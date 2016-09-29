@@ -34,7 +34,6 @@ public class PanouDetalii extends JPanel {
 
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.ipadx = 0;
         gbc.insets = new Insets(0,0,50,30);
         add(imagineLabel, gbc);
 

@@ -12,7 +12,7 @@ public class PanouStanga extends JPanel {
     private String[] coloane = {"Nr.#", "Nume", "Prenume", "CNP", "Telefon"};
 
     public PanouStanga() {
-        campCautare = new JTextField(10);
+        campCautare = new JTextField("Cautare");
         tabelAbonati = new JTable();
         modelTabel = new DefaultTableModel(null, coloane);
         tabelAbonati.setModel(modelTabel);
@@ -22,9 +22,19 @@ public class PanouStanga extends JPanel {
 
     private void init() {
         setSize(new Dimension(400, 600));
-        setLayout(new GridLayout(2, 1));
-        add(campCautare);
-        add(tabelAbonati);
+        GridBagConstraints gbc = new GridBagConstraints();
+        setLayout(new GridBagLayout());
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.ipadx = 100;
+        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
+        add(campCautare, gbc);
+
+        gbc.ipadx = 0;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        add(tabelAbonati, gbc);
     }
 
 }

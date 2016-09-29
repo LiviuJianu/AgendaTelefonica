@@ -4,6 +4,7 @@
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -144,11 +145,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PanouDetalii.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PanouDetalii.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PanouStanga.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -240,11 +253,11 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouDreapta.java" />
-        <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouPrincipal.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouButoane.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/Reclame.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java" />
+        <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
       </list>
     </option>
   </component>
@@ -961,7 +974,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="18254000" />
+      <workItem from="1475007416588" duration="18681000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -1145,11 +1158,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475098229525</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="reprganized the details panel to properly align and display the fields">
+      <created>1475123324553</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1475123324553</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35201000" />
+    <option name="totallyTimeSpent" value="35628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1223,7 +1243,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="small refactoring" />
     <MESSAGE value="restructured the project to work in intellij" />
     <MESSAGE value="fixed crlf" />
     <MESSAGE value="LF warning" />
@@ -1248,7 +1267,8 @@
     <MESSAGE value="minor comment edit" />
     <MESSAGE value="add a jlabel to hold an icon preview &#10;&#10;add the image to the resources folder" />
     <MESSAGE value="change the layout manager of the details panel PanouDetalii.java&#10;&#10;it now uses the GridBagLayout to arrange the components" />
-    <option name="LAST_COMMIT_MESSAGE" value="change the layout manager of the details panel PanouDetalii.java&#10;&#10;it now uses the GridBagLayout to arrange the components" />
+    <MESSAGE value="reprganized the details panel to properly align and display the fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="reprganized the details panel to properly align and display the fields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1663,16 +1683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1755,7 +1765,17 @@
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouDetalii.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
