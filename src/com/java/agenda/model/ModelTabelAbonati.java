@@ -10,7 +10,7 @@ import java.util.List;
 public class ModelTabelAbonati extends AbstractTableModel {
 
     private List<Abonat> listaAbonati;
-    private String[] titluColoane = {"Id","Nume","Prenume","CNP","Telefon"};
+    private String[] titluColoane = {"Id", "Nume", "Prenume", "CNP", "Telefon"};
 
     public ModelTabelAbonati(List<Abonat> listaAbonati) {
         this.listaAbonati = listaAbonati;
@@ -22,7 +22,7 @@ public class ModelTabelAbonati extends AbstractTableModel {
     }
 
     public void removeAbonat(Abonat abonat) {
-        if(listaAbonati.contains(abonat)) {
+        if (listaAbonati.contains(abonat)) {
             listaAbonati.remove(abonat);
         }
         fireTableDataChanged();
@@ -51,7 +51,7 @@ public class ModelTabelAbonati extends AbstractTableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Abonat abonat = listaAbonati.get(rowIndex);
-        switch(columnIndex) {
+        switch (columnIndex) {
             case 0:
                 return abonat.getId();
             case 1:
@@ -69,20 +69,24 @@ public class ModelTabelAbonati extends AbstractTableModel {
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         Abonat abonat = listaAbonati.get(rowIndex);
-        switch(columnIndex) {
+        switch (columnIndex) {
             case 0:
                 throw new RuntimeException("ID Not Editable");
             case 1:
                 abonat.setNume((String) aValue);
+                break;
             case 2:
                 abonat.setPrenume((String) aValue);
+                break;
             case 3:
                 abonat.setCnp((String) aValue);
+                break;
             case 4:
                 abonat.setNumarTelefon(new NrMobil((String) aValue));
+                break;
         }
 
-        fireTableCellUpdated(rowIndex,columnIndex);
+        fireTableCellUpdated(rowIndex, columnIndex);
     }
 
     @Override
