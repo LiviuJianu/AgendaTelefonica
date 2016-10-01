@@ -1,14 +1,12 @@
 package com.java.agenda.view;
 
-import com.java.agenda.model.*;
+import com.java.agenda.controller.AbonatObserver;
+import com.java.agenda.model.CarteDeTelefonModel;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class PanouStanga extends JPanel {
+public class PanouStanga extends JPanel implements AbonatObserver {
 
     private JTextField campCautare;
     private JTable tabelAbonati;
@@ -16,8 +14,11 @@ public class PanouStanga extends JPanel {
 
     public PanouStanga(CarteDeTelefonModel carteDeTelefonModel) {
         this.carteDeTelefonModel = carteDeTelefonModel;
+        this.carteDeTelefonModel.registerObserver(this);
+
         campCautare = new JTextField("Cautare");
         tabelAbonati = new JTable();
+
         initTabelModel();
         init();
     }
@@ -47,4 +48,8 @@ public class PanouStanga extends JPanel {
         add(new JScrollPane(tabelAbonati), gbc);
     }
 
+    @Override
+    public void uppdateAbonat() {
+
+    }
 }

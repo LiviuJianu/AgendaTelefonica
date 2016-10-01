@@ -1,5 +1,7 @@
 package com.java.agenda.view;
 
+import com.java.agenda.model.CarteDeTelefonModel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,8 +10,8 @@ public class PanouDreapta extends JPanel {
     private PanouDetalii panouDetalii;
     private PanouButoane panouButoane;
 
-    public PanouDreapta() {
-        panouDetalii = new PanouDetalii();
+    public PanouDreapta(CarteDeTelefonModel carteDeTelefonModel) {
+        panouDetalii = new PanouDetalii(carteDeTelefonModel);
         panouButoane = new PanouButoane();
 
         init();

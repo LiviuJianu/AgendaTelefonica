@@ -32,6 +32,7 @@ public class CarteDeTelefonModel {
     public void addAbonat(Abonat abonat) {
         listaAbonati.add(abonat);
         modelTabelAbonati.abonatAdded();
+        notifyAbonatObservers();
     }
 
 
@@ -39,6 +40,7 @@ public class CarteDeTelefonModel {
         if(listaAbonati.contains(abonat)){
             listaAbonati.remove(abonat);
             modelTabelAbonati.abonatRemoved();
+            notifyAbonatObservers();
         }
     }
 
@@ -57,9 +59,8 @@ public class CarteDeTelefonModel {
         }
     }
 
-    public void notifyAbonatObservers() {
-        for (int i = 0; i < abonatObservers.size(); i++) {
-            AbonatObserver abonatObserver = abonatObservers.get(i);
+    private void notifyAbonatObservers() {
+        for (AbonatObserver abonatObserver : abonatObservers) {
             abonatObserver.uppdateAbonat();
         }
     }

@@ -1,9 +1,14 @@
 package com.java.agenda.view;
 
+import com.java.agenda.controller.AbonatObserver;
+import com.java.agenda.model.CarteDeTelefonModel;
+
 import javax.swing.*;
 import java.awt.*;
 
-public class PanouDetalii extends JPanel {
+public class PanouDetalii extends JPanel implements AbonatObserver {
+
+    private CarteDeTelefonModel carteDeTelefonModel;
 
     private JLabel imagineLabel;
     private ImageIcon icoanaImagine;
@@ -14,7 +19,10 @@ public class PanouDetalii extends JPanel {
     private JLabel telefonLabel;
     private JTextField telefonText;
 
-    public PanouDetalii() {
+    public PanouDetalii(CarteDeTelefonModel carteDeTelefonModel) {
+        this.carteDeTelefonModel = carteDeTelefonModel;
+        this.carteDeTelefonModel.registerObserver(this);
+
         icoanaImagine = new ImageIcon("resources/icon/noImage.png");
         imagineLabel = new JLabel(icoanaImagine);
         numeText = new JTextField("Nume");
@@ -66,5 +74,10 @@ public class PanouDetalii extends JPanel {
         gbc.gridy = 2;
         gbc.ipadx = 100;
         add(telefonText, gbc);
+    }
+
+    @Override
+    public void uppdateAbonat() {
+
     }
 }

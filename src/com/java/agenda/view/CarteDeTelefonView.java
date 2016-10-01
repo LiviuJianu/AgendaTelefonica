@@ -7,18 +7,18 @@ import com.java.agenda.model.CarteDeTelefonModel;
 import javax.swing.*;
 import java.awt.*;
 
-public class CarteDeTelefonView implements AbonatObserver {
+public class CarteDeTelefonView {
+
+    private JFrame viewFrame;
+    private BaraMeniu meniu;
+    private PanouPrincipal panouPrincipal;
 
     private CarteDeTelefonController carteDeTelefonController;
     private CarteDeTelefonModel carteDeTelefonModel;
-    private JFrame viewFrame;
-    private PanouPrincipal panouPrincipal;
-    private BaraMeniu meniu;
 
     public CarteDeTelefonView(CarteDeTelefonController carteDeTelefonController, CarteDeTelefonModel carteDeTelefonModel) {
         this.carteDeTelefonController = carteDeTelefonController;
         this.carteDeTelefonModel = carteDeTelefonModel;
-        this.carteDeTelefonModel.registerObserver(this);
     }
 
     public void init() {
@@ -37,10 +37,4 @@ public class CarteDeTelefonView implements AbonatObserver {
 
     }
 
-    @Override
-    public void uppdateAbonat() {
-        if (carteDeTelefonModel != null) {
-            System.out.println("Actualizare abonat");
-        }
-    }
 }

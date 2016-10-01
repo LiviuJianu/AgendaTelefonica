@@ -12,7 +12,7 @@ public class PanouPrincipal extends JPanel {
 
     public PanouPrincipal(CarteDeTelefonModel carteDeTelefonModel) {
         panouStanga = new PanouStanga(carteDeTelefonModel);
-        panouDreapta = new PanouDreapta();
+        panouDreapta = new PanouDreapta(carteDeTelefonModel);
 
         init();
     }
