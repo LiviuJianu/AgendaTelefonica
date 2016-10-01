@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,15 +88,16 @@
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
               <folding>
+                <element signature="e#2047#2048#0" expanded="true" />
                 <element signature="e#2088#2089#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarteDeTelefonInitial.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CarteDeTelefonInitial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-14601">
@@ -191,15 +189,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarteDeTelefonModel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CarteDeTelefonModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="312">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -279,10 +277,10 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouDreapta.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/ModelTabelAbonati.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
-        <option value="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/CarteDeTelefonView.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java" />
+        <option value="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" />
       </list>
     </option>
   </component>
@@ -985,7 +983,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="31087000" />
+      <workItem from="1475007416588" duration="31283000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -1225,11 +1223,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475305774387</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="moved the old code to a separate class for reference&#10;&#10;made the CarteDeTelefonModel.java hold the list of Abonat &#10;small refactor on variables names">
+      <created>1475312373644</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1475312373644</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48034000" />
+    <option name="totallyTimeSpent" value="48230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1256,7 +1261,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1303,7 +1308,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update README.md file&#10;&#10;added a brief description of the project&#10;&#10;--extra : remove additional useless comments" />
     <MESSAGE value="update workspace.xml file" />
     <MESSAGE value="delete old netbeans nbproject and eclipse .settings folders" />
     <MESSAGE value="update workspace settings" />
@@ -1328,7 +1332,8 @@
     <MESSAGE value="set the phone number Numar Telefon directly from the value received in the edited cell" />
     <MESSAGE value="bugfix: changing a value in the table would result in all the columns be set to the same value&#10;&#10;the switch statement was missing the break statements" />
     <MESSAGE value="removed the case for the first column&#10;&#10;the first column is not editable so there is no need to have a case in the switch that throws a Runtime Exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed the case for the first column&#10;&#10;the first column is not editable so there is no need to have a case in the switch that throws a Runtime Exception" />
+    <MESSAGE value="moved the old code to a separate class for reference&#10;&#10;made the CarteDeTelefonModel.java hold the list of Abonat &#10;small refactor on variables names" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved the old code to a separate class for reference&#10;&#10;made the CarteDeTelefonModel.java hold the list of Abonat &#10;small refactor on variables names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1410,6 +1415,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#2047#2048#0" expanded="true" />
             <element signature="e#2088#2089#0" expanded="true" />
           </folding>
         </state>
@@ -1797,18 +1803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -1829,16 +1823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <element signature="e#2088#2089#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14601">
@@ -1854,6 +1838,29 @@
             <marker date="1475312278000" expanded="true" signature="29218:29307" ph="SELECT COUNT... missingValue" />
             <marker date="1475312278000" expanded="true" signature="31996:32058" ph="DELETE FROM " />
             <marker date="1475312278000" expanded="true" signature="34163:34286" ph="UPDATE ABONA... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+          <folding>
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
           </folding>
         </state>
       </provider>
