@@ -9,16 +9,16 @@ import java.awt.*;
 
 public class CarteDeTelefonView implements AbonatObserver {
 
-    private CarteDeTelefonController controller;
-    private CarteDeTelefonModel model;
+    private CarteDeTelefonController carteDeTelefonController;
+    private CarteDeTelefonModel carteDeTelefonModel;
     private JFrame viewFrame;
     private PanouPrincipal panouPrincipal;
     private BaraMeniu meniu;
 
     public CarteDeTelefonView(CarteDeTelefonController carteDeTelefonController, CarteDeTelefonModel carteDeTelefonModel) {
-        controller = carteDeTelefonController;
-        model = carteDeTelefonModel;
-        model.registerObserver(this);
+        this.carteDeTelefonController = carteDeTelefonController;
+        this.carteDeTelefonModel = carteDeTelefonModel;
+        this.carteDeTelefonModel.registerObserver(this);
     }
 
     public void init() {
@@ -39,7 +39,7 @@ public class CarteDeTelefonView implements AbonatObserver {
 
     @Override
     public void uppdateAbonat() {
-        if (model != null) {
+        if (carteDeTelefonModel != null) {
             System.out.println("Actualizare abonat");
         }
     }
