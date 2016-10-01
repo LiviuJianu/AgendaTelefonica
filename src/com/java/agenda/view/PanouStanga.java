@@ -26,10 +26,11 @@ public class PanouStanga extends JPanel {
     }
 
     private void initTabelModel() {
+        tabelAbonati.setAutoCreateRowSorter(true);
         NrTelefon tel = new NrMobil("0723456789");
-        Abonat a1 = new Abonat(1,"Ion","Popescu","1780909322231", tel);
-        Abonat a2 = new Abonat(2,"Dan","Antonescu","1881109322231", tel);
-        Abonat a3 = new Abonat(3,"Mihai","Moraru","1940315322231", tel);
+        Abonat a1 = new Abonat("1","Ion","Popescu","1780909322231", tel);
+        Abonat a2 = new Abonat("2","Dan","Antonescu","1881109322231", tel);
+        Abonat a3 = new Abonat("3","Mihai","Moraru","1940315322231", tel);
         List<Abonat> abonati = new ArrayList<>();
 
         abonati.add(a1);

@@ -823,7 +823,7 @@ public class CarteDeTelefonInitial extends JFrame {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Eroare: " + e.getMessage());
             }
-            long id = 1;
+            String id = "1";
             Abonat abonatUnic = new Abonat(id, nume, prenume, cnp, numar);
             PreparedStatement ps = null;
             try {
