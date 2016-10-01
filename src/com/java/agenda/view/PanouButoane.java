@@ -7,13 +7,16 @@ import java.awt.*;
 
 public class PanouButoane extends JPanel {
 
+    CarteDeTelefonController carteDeTelefonController;
+
     private final JButton butonActiveazaInput = new JButton("Activare");
     private final JButton butonSalveazaAbonat = new JButton("Adauga");
     private final JButton butonStergeAbonat = new JButton("Sterge");
     private final JButton butonActualizeazaAbonat = new JButton("Modifica");
     private final JButton butonAnuleazaInregistrare = new JButton("Anulare");
 
-    public PanouButoane() {
+    public PanouButoane(CarteDeTelefonController carteDeTelefonController) {
+        this.carteDeTelefonController = carteDeTelefonController;
         init();
     }
 
