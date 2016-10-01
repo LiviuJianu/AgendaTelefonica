@@ -70,8 +70,6 @@ public class ModelTabelAbonati extends AbstractTableModel {
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         Abonat abonat = listaAbonati.get(rowIndex);
         switch (columnIndex) {
-            case 0:
-                throw new RuntimeException("ID Not Editable");
             case 1:
                 abonat.setNume((String) aValue);
                 break;
