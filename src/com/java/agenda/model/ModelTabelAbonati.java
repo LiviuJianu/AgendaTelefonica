@@ -4,34 +4,22 @@ import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by liviu on 29/09/16.
- */
-public class ModelTabelAbonati extends AbstractTableModel {
+class ModelTabelAbonati extends AbstractTableModel {
 
     private List<Abonat> listaAbonati;
     private String[] titluColoane = {"Id", "Nume", "Prenume", "CNP", "Telefon"};
 
-    public ModelTabelAbonati(List<Abonat> listaAbonati) {
+    ModelTabelAbonati(List<Abonat> listaAbonati) {
         this.listaAbonati = listaAbonati;
     }
 
-    public void addAbonat(Abonat abonat) {
-        listaAbonati.add(abonat);
+    public void abonatAdded() {
         fireTableDataChanged();
     }
 
-    public void removeAbonat(Abonat abonat) {
-        if (listaAbonati.contains(abonat)) {
-            listaAbonati.remove(abonat);
-        }
+    public void abonatRemoved() {
         fireTableDataChanged();
     }
-
-    public List<Abonat> getAbonati() {
-        return new ArrayList<>(listaAbonati);
-    }
-
 
     @Override
     public int getRowCount() {

@@ -33,17 +33,15 @@ public class SplashScreen extends JFrame {
 
         JLabel labelAutor = new JLabel("Autor Liviu Jianu");
         add(labelAutor);
-        labelAutor.setBounds(225, 210, 100, 20);
+        labelAutor.setBounds(215, 210, 150, 20);
 
         baraProgres = new JProgressBar();
         baraProgres.setMinimum(0);
         baraProgres.setMaximum(100);
         baraProgres.setStringPainted(true);
-        baraProgres.setForeground(Color.ORANGE);
+        baraProgres.setBackground(Color.ORANGE);
 
-
-        baraProgres.setPreferredSize(new Dimension(294, 20));
-        baraProgres.setBounds(20, 240, 300, 20);
+        baraProgres.setBounds(20, 240, 300, 40);
         add(baraProgres);
 
         threadPrincipal = new Thread() {

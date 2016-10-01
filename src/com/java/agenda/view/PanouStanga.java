@@ -1,9 +1,6 @@
 package com.java.agenda.view;
 
-import com.java.agenda.model.Abonat;
-import com.java.agenda.model.ModelTabelAbonati;
-import com.java.agenda.model.NrMobil;
-import com.java.agenda.model.NrTelefon;
+import com.java.agenda.model.*;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -15,10 +12,10 @@ public class PanouStanga extends JPanel {
 
     private JTextField campCautare;
     private JTable tabelAbonati;
-    private ModelTabelAbonati modelTabel;
-    private String[] coloane = {"Nr.#", "Nume", "Prenume", "CNP", "Telefon"};
+    private CarteDeTelefonModel carteDeTelefonModel;
 
-    public PanouStanga() {
+    public PanouStanga(CarteDeTelefonModel carteDeTelefonModel) {
+        this.carteDeTelefonModel = carteDeTelefonModel;
         campCautare = new JTextField("Cautare");
         tabelAbonati = new JTable();
         initTabelModel();
@@ -27,19 +24,7 @@ public class PanouStanga extends JPanel {
 
     private void initTabelModel() {
         tabelAbonati.setAutoCreateRowSorter(true);
-        NrTelefon tel = new NrMobil("0723456789");
-        Abonat a1 = new Abonat("1","Ion","Popescu","1780909322231", tel);
-        Abonat a2 = new Abonat("2","Dan","Antonescu","1881109322231", tel);
-        Abonat a3 = new Abonat("3","Mihai","Moraru","1940315322231", tel);
-        List<Abonat> abonati = new ArrayList<>();
-
-        abonati.add(a1);
-        abonati.add(a2);
-        abonati.add(a3);
-
-        modelTabel = new ModelTabelAbonati(abonati);
-        tabelAbonati.setModel(modelTabel);
-
+        tabelAbonati.setModel(carteDeTelefonModel.getModelTabelAbonati());
     }
 
     private void init() {

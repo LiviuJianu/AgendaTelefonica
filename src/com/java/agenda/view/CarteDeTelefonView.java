@@ -23,7 +23,7 @@ public class CarteDeTelefonView implements AbonatObserver {
 
     public void init() {
         viewFrame = new JFrame("Agenda telefonica");
-        panouPrincipal = new PanouPrincipal();
+        panouPrincipal = new PanouPrincipal(carteDeTelefonModel);
         meniu = new BaraMeniu();
 
         viewFrame.setLayout(new GridLayout(1,1));
