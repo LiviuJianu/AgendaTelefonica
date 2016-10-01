@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dcfdbe8-5585-41ad-aeba-39ba206b3ebb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" afterPath="$PROJECT_DIR$/src/com/java/agenda/view/PanouStanga.java" />
     </list>
     <ignored path="AgendaTelefonica.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Abonat.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Abonat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-51">
@@ -159,6 +156,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -203,7 +210,6 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/NrMobil.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/NrTelefon.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/database/MySQL.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefon.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/AbonatObserver.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/view/ActivareAplicatie.java" />
@@ -225,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/com/java/agenda/controller/CarteDeTelefonInitial.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/CarteDeTelefonModel.java" />
         <option value="$PROJECT_DIR$/src/com/java/agenda/model/Abonat.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -390,6 +397,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgendaTelefonica" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -927,7 +948,7 @@
       <workItem from="1474086194426" duration="5364000" />
       <workItem from="1474574322554" duration="17000" />
       <workItem from="1474574412598" duration="7783000" />
-      <workItem from="1475007416588" duration="32600000" />
+      <workItem from="1475007416588" duration="32809000" />
     </task>
     <task id="LOCAL-00001" summary="restructured the project to work in intellij">
       <created>1474088692622</created>
@@ -1181,11 +1202,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475312530044</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="use a default row sorter for the table&#10;&#10;changed the Abonat to receive the ID as a String as well&#10;overridden the hashcode and equals methods for the Abonat as it will be held in collections">
+      <created>1475313972913</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1475313972913</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49547000" />
+    <option name="totallyTimeSpent" value="49756000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1212,7 +1240,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1259,7 +1287,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="delete old netbeans nbproject and eclipse .settings folders" />
     <MESSAGE value="update workspace settings" />
     <MESSAGE value="refactor the app for a cleaner and more decoupled code" />
     <MESSAGE value="refactor the app for a cleaner and more decoupled code&#10;&#10;create separate classes for Model, View and Controller&#10;try to extract as much code as possible into its own class" />
@@ -1284,7 +1311,8 @@
     <MESSAGE value="removed the case for the first column&#10;&#10;the first column is not editable so there is no need to have a case in the switch that throws a Runtime Exception" />
     <MESSAGE value="moved the old code to a separate class for reference&#10;&#10;made the CarteDeTelefonModel.java hold the list of Abonat &#10;small refactor on variables names" />
     <MESSAGE value="moved the array fill to a separate method" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved the array fill to a separate method" />
+    <MESSAGE value="use a default row sorter for the table&#10;&#10;changed the Abonat to receive the ID as a String as well&#10;overridden the hashcode and equals methods for the Abonat as it will be held in collections" />
+    <option name="LAST_COMMIT_MESSAGE" value="use a default row sorter for the table&#10;&#10;changed the Abonat to receive the ID as a String as well&#10;overridden the hashcode and equals methods for the Abonat as it will be held in collections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1516,14 +1544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1811,6 +1831,14 @@
             <element signature="e#548#549#0" expanded="true" />
             <element signature="e#576#577#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
