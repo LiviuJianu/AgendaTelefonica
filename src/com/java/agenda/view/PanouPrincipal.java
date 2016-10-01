@@ -24,4 +24,19 @@ public class PanouPrincipal extends JPanel {
         add(panouDreapta);
     }
 
+    public PanouStanga getPanouStanga() {
+        return panouStanga;
+    }
+
+    public void setPanouStanga(PanouStanga panouStanga) {
+        this.panouStanga = panouStanga;
+    }
+
+    public PanouDreapta getPanouDreapta() {
+        return panouDreapta;
+    }
+
+    public void setPanouDreapta(PanouDreapta panouDreapta) {
+        this.panouDreapta = panouDreapta;
+    }
 }

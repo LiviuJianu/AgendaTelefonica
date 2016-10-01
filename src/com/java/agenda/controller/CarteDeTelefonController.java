@@ -20,5 +20,8 @@ public class CarteDeTelefonController {
     }
 
 
+    public void deleteAbonat() {
+        carteDeTelefonView.deleteAbonat();
 
+    }
 }

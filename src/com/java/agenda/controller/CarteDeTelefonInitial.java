@@ -354,7 +354,7 @@ public class CarteDeTelefonInitial extends JFrame {
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.gridwidth = 2;
-        panouPrincipal.add(new PanouButoane(), gbc);
+        panouPrincipal.add(new PanouButoane(null), gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 3;

@@ -31,4 +31,19 @@ public class PanouDreapta extends JPanel {
         setBackground(Color.GRAY);
     }
 
+    public PanouDetalii getPanouDetalii() {
+        return panouDetalii;
+    }
+
+    public void setPanouDetalii(PanouDetalii panouDetalii) {
+        this.panouDetalii = panouDetalii;
+    }
+
+    public PanouButoane getPanouButoane() {
+        return panouButoane;
+    }
+
+    public void setPanouButoane(PanouButoane panouButoane) {
+        this.panouButoane = panouButoane;
+    }
 }

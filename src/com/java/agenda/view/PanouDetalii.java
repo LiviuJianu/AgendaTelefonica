@@ -80,4 +80,12 @@ public class PanouDetalii extends JPanel implements AbonatObserver {
     public void uppdateAbonat() {
 
     }
+
+    public void clearInputs() {
+        numeText.setText("");
+        prenumeText.setText("");
+        cnpText.setText("");
+        telefonText.setText("");
+
+    }
 }

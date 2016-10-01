@@ -37,4 +37,7 @@ public class CarteDeTelefonView {
 
     }
 
+    public void deleteAbonat() {
+        panouPrincipal.getPanouDreapta().getPanouDetalii().clearInputs();
+    }
 }

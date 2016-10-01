@@ -4,6 +4,8 @@ import com.java.agenda.controller.CarteDeTelefonController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PanouButoane extends JPanel {
 
@@ -24,9 +26,21 @@ public class PanouButoane extends JPanel {
         setLayout(new GridLayout(3,3));
         add(butonActiveazaInput);
         add(butonSalveazaAbonat);
+
+        addDeleteButtonListener();
         add(butonStergeAbonat);
         add(butonAnuleazaInregistrare);
         add(butonActualizeazaAbonat);
     }
+
+    private void addDeleteButtonListener() {
+        butonStergeAbonat.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carteDeTelefonController.deleteAbonat();
+            }
+        });
+    }
+
 
 }
