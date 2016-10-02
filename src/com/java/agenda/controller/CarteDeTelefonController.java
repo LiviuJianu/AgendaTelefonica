@@ -26,14 +26,19 @@ public class CarteDeTelefonController {
     }
 
     public void activate() {
+        System.out.println("Activated");
     }
 
     public void save() {
+        System.out.println("Saved");
     }
 
     public void cancelInput() {
+        System.out.println("Cancelled");
     }
 
     public void update() {
+        System.out.println("Updated");
+
     }
 }
