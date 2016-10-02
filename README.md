@@ -3,7 +3,7 @@ AgendaTelefonica
 
 **DESCRIERE**
  
-Cartea de telefoane este formata din abonati. Fiecare abonat este de fapt o persoana care are asociat un numar de telefon. 
+Cartea de telefoane este formata din abonati. Fiecare contact este de fapt o persoana care are asociat un numar de telefon. 
 Numerele de telefon pot fi de fix sau de mobil. Vom putea adauga/sterge/edita/ordona abonati, iar informatia se salveaza pe hard-disk la iesirea din program si se incarca la pornire, fiind de asemenea salvata periodic. Manevrarea informatiei se face prin intermediul unei interfete grafice (GUI).
 
 **CLASELE PREZENTE IN PROIECT**
@@ -12,7 +12,7 @@ Numerele de telefon pot fi de fix sau de mobil. Vom putea adauga/sterge/edita/or
 2. NrTel - clasa abstracta
 3. NrFix si NrMobil
 4. CarteDeTelefon - este de fapt clasa de pornire care depoziteaza abonatii si metodele de manevrare a acestora, asa-numitul "model" (din arhitectura **MVC**)
-5. Clasele corespunzatoare interfetelor grafice  – care sa permita introducere abonat, modificare abonat, stergere abonat, cautare abonat dupa diverse criterii, afisare abonati sortati dupa un anume criteriu specificat de utilizator etc. Aici numarul, tipul si denumirile claselor le alegeti voi cum doriti.
+5. Clasele corespunzatoare interfetelor grafice  – care sa permita introducere contact, modificare contact, stergere contact, cautare contact dupa diverse criterii, afisare abonati sortati dupa un anume criteriu specificat de utilizator etc. Aici numarul, tipul si denumirile claselor le alegeti voi cum doriti.
 
 
 **INTERFATA GRAFICA**
@@ -28,7 +28,7 @@ salvarea si incarcarea bazei de date sunt dezactivate (dezactivati elementele Op
     * (Separator)
     * Iesire – acelasi rol ca si butonul Iesire din fereastra principala; afiseaza un dialog de confirmare ("Doriti sa parasiti aplicatia?" Butoane: Da/Nu)
   * **Abonati**
-    * Adauga… - are acelasi efect ca si butonul de adaugare din fereastra principala, si anume afisarea ferestrei/dialogului de adaugare de abonat
+    * Adauga… - are acelasi efect ca si butonul de adaugare din fereastra principala, si anume afisarea ferestrei/dialogului de adaugare de contact
     * Cauta… - analog
     * Sterge… - analog
     * Modifica… - analog
