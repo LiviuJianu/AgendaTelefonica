@@ -33,14 +33,27 @@ public class PanouButoane extends JPanel {
         add(butonActualizeazaAbonat);
     }
 
-    private void addDeleteButtonListener() {
-        butonStergeAbonat.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                carteDeTelefonController.deleteAbonat();
-            }
-        });
+    private void addActivateButtonListener() {
+        butonActiveazaInput.addActionListener(e -> carteDeTelefonController.activate());
     }
+
+    private void addSaveButtonListener() {
+        butonSalveazaAbonat.addActionListener(e -> carteDeTelefonController.save());
+    }
+
+    private void addDeleteButtonListener() {
+        butonStergeAbonat.addActionListener(e -> carteDeTelefonController.deleteAbonat());
+    }
+
+    private void addCancelButtonListener() {
+        butonAnuleazaInregistrare.addActionListener(e-> carteDeTelefonController.cancelInput());
+    }
+
+    private void addUpdateButtonListener() {
+        butonActualizeazaAbonat.addActionListener(e -> carteDeTelefonController.update());
+    }
+
+
 
 
 }

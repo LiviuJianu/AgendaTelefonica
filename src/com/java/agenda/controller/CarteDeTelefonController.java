@@ -24,4 +24,16 @@ public class CarteDeTelefonController {
         carteDeTelefonView.deleteAbonat();
 
     }
+
+    public void activate() {
+    }
+
+    public void save() {
+    }
+
+    public void cancelInput() {
+    }
+
+    public void update() {
+    }
 }
