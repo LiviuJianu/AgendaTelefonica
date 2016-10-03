@@ -47,4 +47,8 @@ public class ContactsView {
         mainPanel.getLeftPanel().addContactToModel(contactToInsert);
         detailsPanel.clearInputs();
     }
+
+    public void deleteContactFromTable() {
+        mainPanel.getLeftPanel().deleteContactFromModel();
+    }
 }

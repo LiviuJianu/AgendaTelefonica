@@ -57,4 +57,12 @@ public class LeftPanel extends JPanel implements ContactObserver {
     public void uppdateContact() {
 
     }
+
+    public void deleteContactFromModel() {
+        int selectedContactPosition = contactsTable.getSelectedRow();
+        if(selectedContactPosition != -1) {
+            contactsModel.removeAbonatEntryAt(selectedContactPosition);
+        }
+
+    }
 }

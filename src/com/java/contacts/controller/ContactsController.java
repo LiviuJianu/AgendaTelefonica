@@ -22,6 +22,7 @@ public class ContactsController {
 
     public void deleteContact() {
         contactsView.deleteContactFromView();
+        contactsView.deleteContactFromTable();
 
     }
 

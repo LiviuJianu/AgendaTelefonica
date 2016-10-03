@@ -35,15 +35,6 @@ public class ContactsModel {
         notifyAbonatObservers();
     }
 
-
-    public void removeAbonat(Contact contact) {
-        if(contactList.contains(contact)){
-            contactList.remove(contact);
-            contactsTableModel.abonatRemoved();
-            notifyAbonatObservers();
-        }
-    }
-
     public List<Contact> getContactList() {
         return contactList;
     }
@@ -67,5 +58,12 @@ public class ContactsModel {
 
     public ContactsTableModel getContactsTableModel() {
         return contactsTableModel;
+    }
+
+    public void removeAbonatEntryAt(int selectedContactPosition) {
+        contactList.remove(selectedContactPosition);
+        contactsTableModel.abonatRemoved();
+        notifyAbonatObservers();
+
     }
 }
