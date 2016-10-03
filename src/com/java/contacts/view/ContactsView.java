@@ -37,7 +37,7 @@ public class ContactsView {
 
     }
 
-    public void deleteContact() {
+    public void deleteContactFromView() {
         mainPanel.getRightPanel().getDetailsPanel().clearInputs();
     }
 
