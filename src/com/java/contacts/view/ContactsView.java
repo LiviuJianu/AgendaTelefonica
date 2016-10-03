@@ -1,6 +1,7 @@
 package com.java.contacts.view;
 
 import com.java.contacts.controller.ContactsController;
+import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
@@ -38,5 +39,12 @@ public class ContactsView {
 
     public void deleteContact() {
         mainPanel.getRightPanel().getDetailsPanel().clearInputs();
+    }
+
+    public void addContactFromView() {
+        DetailsPanel detailsPanel = mainPanel.getRightPanel().getDetailsPanel();
+        Contact contactToInsert = detailsPanel.getContactToInsert();
+        mainPanel.getLeftPanel().addContactToModel(contactToInsert);
+        detailsPanel.clearInputs();
     }
 }

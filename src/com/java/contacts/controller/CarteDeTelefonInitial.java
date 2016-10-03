@@ -586,7 +586,7 @@ public class CarteDeTelefonInitial extends JFrame {
                 nume = linie.split(",")[1];
                 prenume = linie.split(",")[2];
                 cnp = linie.split(",")[3];
-                numar = nrTel.getTipNumarTel(linie.split(",")[4]);
+                numar = nrTel.getPhoneNumberType(linie.split(",")[4]);
 
                 String adaugaQuery = "INSERT INTO ABONAT(nume,prenume,cnp,telefon)"
                         + "VALUES(?,?,?,?)";
@@ -819,7 +819,7 @@ public class CarteDeTelefonInitial extends JFrame {
         if (campuriCompletate()) {
 
             try {
-                numar = nrTel.getTipNumarTel(telefon);
+                numar = nrTel.getPhoneNumberType(telefon);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Eroare: " + e.getMessage());
             }

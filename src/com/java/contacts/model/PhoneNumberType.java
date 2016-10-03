@@ -21,7 +21,7 @@ public class PhoneNumberType {
      * @throws Exception exceptie in cazul in care numarul de telefon
      *                   introdus este incorect.
      */
-    public Phone getTipNumarTel(String numarTel) throws RuntimeException {
+    public Phone getPhoneNumberType(String numarTel) throws RuntimeException {
         if ((numarTel == null) || (numarTel.length() != LUNGIME_NUMAR)) {
             throw new RuntimeException("Formatul numarului introdus este incorect!");
         }

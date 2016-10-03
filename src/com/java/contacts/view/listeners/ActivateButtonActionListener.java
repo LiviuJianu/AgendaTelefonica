@@ -15,6 +15,6 @@ public class ActivateButtonActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        contactsController.activate();
+        contactsController.addContact();
     }
 }

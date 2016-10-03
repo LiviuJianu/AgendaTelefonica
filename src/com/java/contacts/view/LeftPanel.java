@@ -1,6 +1,7 @@
 package com.java.contacts.view;
 
 import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
@@ -46,6 +47,10 @@ public class LeftPanel extends JPanel implements ContactObserver {
         gbc.weighty = 1;
         gbc.fill = GridBagConstraints.BOTH;
         add(new JScrollPane(contactsTable), gbc);
+    }
+
+    public void addContactToModel(Contact contact) {
+        contactsModel.addContact(contact);
     }
 
     @Override

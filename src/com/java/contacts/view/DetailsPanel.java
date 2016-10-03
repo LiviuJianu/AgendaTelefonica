@@ -1,7 +1,10 @@
 package com.java.contacts.view;
 
 import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
+import com.java.contacts.model.Phone;
+import com.java.contacts.model.PhoneNumberType;
 
 import javax.swing.*;
 import java.awt.*;
@@ -87,5 +90,13 @@ public class DetailsPanel extends JPanel implements ContactObserver {
         cnpText.setText("");
         phoneText.setText("");
 
+    }
+
+    public Contact getContactToInsert() {
+        PhoneNumberType phoneNumberType = new PhoneNumberType();
+        Phone phoneNumber = phoneNumberType.getPhoneNumberType(phoneText.getText());
+        Contact contactToInsert = new Contact("333", firstNameText.getText(), lastNameText.getText(), cnpText.getText(), phoneNumber);
+        
+        return contactToInsert;
     }
 }

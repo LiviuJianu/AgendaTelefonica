@@ -37,7 +37,7 @@ public class ButtonsPanel extends JPanel {
     }
 
     private void addActivateButtonListener() {
-        butonActiveazaInput.addActionListener(e -> contactsController.activate());
+        butonActiveazaInput.addActionListener(e -> contactsController.addContact());
     }
 
     private void addSaveButtonListener() {

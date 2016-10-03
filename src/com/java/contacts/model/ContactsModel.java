@@ -8,11 +8,11 @@ import java.util.List;
 public class ContactsModel {
 
     private List<ContactObserver> contactObservers = new ArrayList<>();
-    private List<Contact> listaAbonati;
+    private List<Contact> contactList;
     private ContactsTableModel contactsTableModel;
 
     public ContactsModel() {
-        listaAbonati = new ArrayList<>();
+        contactList = new ArrayList<>();
         init();
     }
 
@@ -22,30 +22,30 @@ public class ContactsModel {
         Contact a2 = new Contact("2", "Dan", "Antonescu", "1881109322231", tel);
         Contact a3 = new Contact("3", "Mihai", "Moraru", "1940315322231", tel);
 
-        listaAbonati.add(a1);
-        listaAbonati.add(a2);
-        listaAbonati.add(a3);
+        contactList.add(a1);
+        contactList.add(a2);
+        contactList.add(a3);
 
-        contactsTableModel = new ContactsTableModel(listaAbonati);
+        contactsTableModel = new ContactsTableModel(contactList);
     }
 
-    public void addAbonat(Contact contact) {
-        listaAbonati.add(contact);
+    public void addContact(Contact contact) {
+        contactList.add(contact);
         contactsTableModel.abonatAdded();
         notifyAbonatObservers();
     }
 
 
     public void removeAbonat(Contact contact) {
-        if(listaAbonati.contains(contact)){
-            listaAbonati.remove(contact);
+        if(contactList.contains(contact)){
+            contactList.remove(contact);
             contactsTableModel.abonatRemoved();
             notifyAbonatObservers();
         }
     }
 
-    public List<Contact> getListaAbonati() {
-        return listaAbonati;
+    public List<Contact> getContactList() {
+        return contactList;
     }
 
 

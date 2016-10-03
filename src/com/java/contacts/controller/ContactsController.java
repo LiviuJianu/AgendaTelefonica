@@ -25,8 +25,8 @@ public class ContactsController {
 
     }
 
-    public void activate() {
-        System.out.println("Activated");
+    public void addContact() {
+        contactsView.addContactFromView();
     }
 
     public void save() {
