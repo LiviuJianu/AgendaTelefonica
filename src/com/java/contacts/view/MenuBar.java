@@ -1,6 +1,7 @@
 package com.java.contacts.view;
 
 import com.java.contacts.view.listeners.ExitAppActionListener;
+import com.java.contacts.view.listeners.RegisterAppActionListener;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -149,24 +150,14 @@ public class MenuBar extends JMenuBar {
     private void setupRegisterMenu() {
         registerButton.setMnemonic(KeyEvent.VK_R);
         registerButton.setToolTipText("Enter registration code");
-        registerButton.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                String serialNumber = JOptionPane.showInputDialog("Registration code");
-                if (serialNumber != null) {
-                    if (serialNumber.equals(123)) {
-                        isAppRegistered = true;
-                        loadButton.setEnabled(isAppRegistered);
-                        saveButton.setEnabled(isAppRegistered);
-                        registerButton.setEnabled(!isAppRegistered);
-                        JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Cod de inregistrare incorect!");
-                    }
-                }
-            }
-        });
+        registerButton.addActionListener(new RegisterAppActionListener(this));
     }
 
+    public void activateAppMenu() {
+        isAppRegistered = true;
+        loadButton.setEnabled(isAppRegistered);
+        saveButton.setEnabled(isAppRegistered);
+        registerButton.setEnabled(!isAppRegistered);
+
+    }
 }

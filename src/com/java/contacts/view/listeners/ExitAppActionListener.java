@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by liviu on 13/10/16.
- */
 public class ExitAppActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
