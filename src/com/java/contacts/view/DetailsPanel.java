@@ -93,8 +93,7 @@ public class DetailsPanel extends JPanel implements ContactObserver {
     }
 
     public Contact getContactToInsert() {
-        PhoneNumberType phoneNumberType = new PhoneNumberType();
-        Phone phoneNumber = phoneNumberType.getPhoneNumberType(phoneText.getText());
+        Phone phoneNumber = PhoneNumberType.getPhoneNumberType(phoneText.getText());
         Contact contactToInsert = new Contact("333", firstNameText.getText(), lastNameText.getText(), cnpText.getText(), phoneNumber);
         
         return contactToInsert;
