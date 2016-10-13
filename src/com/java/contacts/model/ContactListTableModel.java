@@ -67,7 +67,7 @@ class ContactListTableModel extends AbstractTableModel {
                 contact.setCnp((String) aValue);
                 break;
             case 4:
-                contact.setNumarTelefon(new MobilePhone((String) aValue));
+                contact.setNumarTelefon(PhoneNumberType.getPhoneNumberType((String) aValue));
                 break;
         }
 
