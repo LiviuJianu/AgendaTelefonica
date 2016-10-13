@@ -26,7 +26,7 @@ public class LeftPanel extends JPanel implements ContactObserver {
 
     private void initTabelModel() {
         contactsTable.setAutoCreateRowSorter(true);
-        contactsTable.setModel(contactsModel.getContactsTableModel());
+        contactsTable.setModel(contactsModel.getContactListTableModel());
     }
 
     private void init() {

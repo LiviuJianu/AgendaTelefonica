@@ -3,12 +3,12 @@ package com.java.contacts.model;
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
-class ContactsTableModel extends AbstractTableModel {
+class ContactListTableModel extends AbstractTableModel {
 
     private List<Contact> listaAbonati;
     private String[] titluColoane = {"Id", "First Name", "Last Name", "CNP", "Phone"};
 
-    ContactsTableModel(List<Contact> listaAbonati) {
+    ContactListTableModel(List<Contact> listaAbonati) {
         this.listaAbonati = listaAbonati;
     }
 

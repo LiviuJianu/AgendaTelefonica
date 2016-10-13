@@ -9,7 +9,7 @@ public class ContactsModel {
 
     private List<ContactObserver> contactObservers = new ArrayList<>();
     private List<Contact> contactList;
-    private ContactsTableModel contactsTableModel;
+    private ContactListTableModel contactListTableModel;
 
     public ContactsModel() {
         contactList = new ArrayList<>();
@@ -26,12 +26,12 @@ public class ContactsModel {
         contactList.add(a2);
         contactList.add(a3);
 
-        contactsTableModel = new ContactsTableModel(contactList);
+        contactListTableModel = new ContactListTableModel(contactList);
     }
 
     public void addContact(Contact contact) {
         contactList.add(contact);
-        contactsTableModel.abonatAdded();
+        contactListTableModel.abonatAdded();
         notifyAbonatObservers();
     }
 
@@ -56,13 +56,13 @@ public class ContactsModel {
         }
     }
 
-    public ContactsTableModel getContactsTableModel() {
-        return contactsTableModel;
+    public ContactListTableModel getContactListTableModel() {
+        return contactListTableModel;
     }
 
     public void removeAbonatEntryAt(int selectedContactPosition) {
         contactList.remove(selectedContactPosition);
-        contactsTableModel.abonatRemoved();
+        contactListTableModel.abonatRemoved();
         notifyAbonatObservers();
 
     }
