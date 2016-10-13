@@ -1,7 +1,7 @@
 package com.java.contacts.view.buttons;
 
 import com.java.contacts.controller.ContactsController;
-import com.java.contacts.view.listeners.ActivateButtonActionListener;
+import com.java.contacts.view.listeners.AddButtonActionListener;
 
 import javax.swing.*;
 
@@ -12,7 +12,7 @@ public class AddButton extends JButton {
     public AddButton(ContactsController controller) {
         super("Add");
         contactsController = controller;
-        addActionListener(new ActivateButtonActionListener(contactsController));
+        addActionListener(new AddButtonActionListener(contactsController));
     }
 
 }
