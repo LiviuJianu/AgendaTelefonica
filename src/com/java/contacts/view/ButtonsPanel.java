@@ -8,48 +8,58 @@ import java.awt.*;
 
 public class ButtonsPanel extends JPanel {
 
-    private final AddButton butonActiveazaInput;
-    private final SaveButton butonSalveazaAbonat;
-    private final DeleteButton butonStergeAbonat;
-    private final UpdateButton butonActualizeazaAbonat;
-    private final CancelButton butonAnuleazaInregistrare;
-    ContactsController contactsController;
+    private final AddButton addButton;
+    private final SaveButton saveButton;
+    private final DeleteButton deleteButton;
+    private final UpdateButton updateButton;
+    private final CancelButton cancelButton;
+    private ContactsController contactsController;
 
     public ButtonsPanel(ContactsController contactsController) {
         this.contactsController = contactsController;
 
-        butonActiveazaInput = new AddButton(contactsController);
-        butonStergeAbonat = new DeleteButton(contactsController);
-        butonSalveazaAbonat = new SaveButton(contactsController);
-        butonActualizeazaAbonat = new UpdateButton(contactsController);
-        butonAnuleazaInregistrare = new CancelButton(contactsController);
+        addButton = new AddButton(contactsController);
+        deleteButton = new DeleteButton(contactsController);
+        saveButton = new SaveButton(contactsController);
+        updateButton = new UpdateButton(contactsController);
+        cancelButton = new CancelButton(contactsController);
         init();
     }
 
     private void init() {
         setLayout(new GridLayout(3, 3));
-        add(butonActiveazaInput);
-        add(butonSalveazaAbonat);
+        add(addButton);
+        add(saveButton);
 
-        add(butonStergeAbonat);
-        add(butonAnuleazaInregistrare);
-        add(butonActualizeazaAbonat);
+        add(deleteButton);
+        add(cancelButton);
+        add(updateButton);
+
+        addAddButtonListener();
+        addSaveButtonListener();
+        addCancelButtonListener();
+        addUpdateButtonListener();
+        addDeleteButtonListener();
     }
 
-    private void addActivateButtonListener() {
-        butonActiveazaInput.addActionListener(e -> contactsController.addContact());
+    private void addAddButtonListener() {
+        addButton.addActionListener(e -> contactsController.addContact());
     }
 
     private void addSaveButtonListener() {
-        butonSalveazaAbonat.addActionListener(e -> contactsController.save());
+        saveButton.addActionListener(e -> contactsController.save());
     }
 
     private void addCancelButtonListener() {
-        butonAnuleazaInregistrare.addActionListener(e -> contactsController.cancelInput());
+        cancelButton.addActionListener(e -> contactsController.cancelInput());
     }
 
     private void addUpdateButtonListener() {
-        butonActualizeazaAbonat.addActionListener(e -> contactsController.update());
+        updateButton.addActionListener(e -> contactsController.update());
+    }
+
+    private void addDeleteButtonListener() {
+        deleteButton.addActionListener(e -> contactsController.deleteContact());
     }
 
 

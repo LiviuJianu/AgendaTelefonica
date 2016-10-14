@@ -18,9 +18,9 @@ public class ContactsModel {
 
     private void init() {
         Phone tel = new MobilePhone("0723456789");
-        Contact a1 = new Contact("1", "Ion", "Popescu", "1780909322231", tel);
-        Contact a2 = new Contact("2", "Dan", "Antonescu", "1881109322231", tel);
-        Contact a3 = new Contact("3", "Mihai", "Moraru", "1940315322231", tel);
+        Contact a1 = new Contact("Ion", "Popescu", "1780909322231", tel);
+        Contact a2 = new Contact("Dan", "Antonescu", "1881109322231", tel);
+        Contact a3 = new Contact("Mihai", "Moraru", "1940315322231", tel);
 
         contactList.add(a1);
         contactList.add(a2);

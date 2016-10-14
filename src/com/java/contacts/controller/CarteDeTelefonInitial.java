@@ -824,7 +824,7 @@ public class CarteDeTelefonInitial extends JFrame {
                 JOptionPane.showMessageDialog(null, "Eroare: " + e.getMessage());
             }
             String id = "1";
-            Contact contactUnic = new Contact(id, nume, prenume, cnp, numar);
+            Contact contactUnic = new Contact(nume, prenume, cnp, numar);
             PreparedStatement ps = null;
             try {
                 String adaugaQuery = "INSERT INTO ABONAT(nume,prenume,cnp,telefon)"

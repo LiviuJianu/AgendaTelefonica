@@ -8,7 +8,7 @@ public class Contact {
     private String cnp;
     private Phone numarTelefon;
 
-    public Contact(String id, String numeAbonat, String prenumeAbonat, String cnpAbonat, Phone telefonAbonat) {
+    public Contact(String numeAbonat, String prenumeAbonat, String cnpAbonat, Phone telefonAbonat) {
         this.id = id;
         nume = numeAbonat;
         prenume = prenumeAbonat;

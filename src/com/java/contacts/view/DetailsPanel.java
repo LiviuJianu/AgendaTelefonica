@@ -8,6 +8,8 @@ import com.java.contacts.model.PhoneNumberType;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class DetailsPanel extends JPanel implements ContactObserver {
 
@@ -93,9 +95,56 @@ public class DetailsPanel extends JPanel implements ContactObserver {
     }
 
     public Contact getContactToInsert() {
-        Phone phoneNumber = PhoneNumberType.getPhoneNumberType(phoneText.getText());
-        Contact contactToInsert = new Contact("333", firstNameText.getText(), lastNameText.getText(), cnpText.getText(), phoneNumber);
-        
+        String firstName = firstNameText.getText();
+        String lastName = lastNameText.getText();
+        String cnp = cnpText.getText();
+        String phone = phoneText.getText();
+
+        validateInput(firstName, lastName, cnp, phone);
+
+        Phone phoneNumber = PhoneNumberType.getPhoneNumberType(phone);
+
+        Contact contactToInsert = new Contact(firstNameText.getText(), lastNameText.getText(), cnpText.getText(), phoneNumber);
         return contactToInsert;
+    }
+
+    private void validateInput(String firstName, String lastName, String cnp, String phoneNumber) {
+        validateName(firstName, lastName);
+        validateCNP(cnp);
+        validatePhoneNumber(phoneNumber);
+    }
+
+    private void validateName(String firstName, String lastName) {
+        if(firstName.length() == 0 && lastName.length() == 0) {
+            JOptionPane.showMessageDialog(null, "Completati numele si prenumele!", "Nume si prenume lipsa!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("Nume si prenume lipsa!");
+        }
+    }
+
+    private void validateCNP(String cnp) {
+        if (cnp.length() != 13 && (!cnp.startsWith("1") || !cnp.startsWith("2"))) {
+            JOptionPane.showMessageDialog(null, "Introduceti CNP-ul corect!", "CNP Invalid!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("CNP invalid!");
+        }
+        validateCNPDate(cnp);
+    }
+
+    private void validateCNPDate(String cnp) {
+        String dataDinCNP = cnp.substring(1, 7);
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd");
+            sdf.setLenient(false);
+            sdf.parse(dataDinCNP);
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(null, "Data de nastere invalida!", "Atentie!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    private void validatePhoneNumber(String phoneNumber) {
+        if(phoneNumber.length() != 10) {
+            JOptionPane.showMessageDialog(null, "Numar telefon invalid!", "Atentie!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("Numar telefon invalid!");
+        }
     }
 }
