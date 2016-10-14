@@ -31,7 +31,7 @@ public class DetailsPanel extends JPanel implements ContactObserver {
         imageLabelIcon = new ImageIcon("resources/icon/noImage.png");
         imageLabel = new JLabel(imageLabelIcon);
         firstNameText = new JTextField("First Name");
-        lastNameText = new JTextField("Last  Name");
+        lastNameText = new JTextField("Last Name");
         cnpLabel = new JLabel("CNP: ");
         cnpText = new JTextField(13);
         phoneLabel = new JLabel("Phone");
@@ -115,16 +115,16 @@ public class DetailsPanel extends JPanel implements ContactObserver {
     }
 
     private void validateName(String firstName, String lastName) {
-        if(firstName.length() == 0 && lastName.length() == 0) {
-            JOptionPane.showMessageDialog(null, "Completati numele si prenumele!", "Nume si prenume lipsa!", JOptionPane.WARNING_MESSAGE);
-            throw new RuntimeException("Nume si prenume lipsa!");
+        if((firstName.length() == 0 && lastName.length() == 0) || (firstName.equals("First Name") && lastName.equals("Last Name")) ){
+            JOptionPane.showMessageDialog(null, "Fill in the complete name!", "Missing name details!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("Missing name details!");
         }
     }
 
     private void validateCNP(String cnp) {
         if (cnp.length() != 13 && (!cnp.startsWith("1") || !cnp.startsWith("2"))) {
-            JOptionPane.showMessageDialog(null, "Introduceti CNP-ul corect!", "CNP Invalid!", JOptionPane.WARNING_MESSAGE);
-            throw new RuntimeException("CNP invalid!");
+            JOptionPane.showMessageDialog(null, "Fill in the correct CNP!", "CNP Incorrect!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("CNP Incorrect!");
         }
         validateCNPDate(cnp);
     }
@@ -136,15 +136,15 @@ public class DetailsPanel extends JPanel implements ContactObserver {
             sdf.setLenient(false);
             sdf.parse(dataDinCNP);
         } catch (ParseException ex) {
-            JOptionPane.showMessageDialog(null, "Data de nastere invalida!", "Atentie!", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Fill in the correct birthdate!", "Birthdate incorrect!", JOptionPane.WARNING_MESSAGE);
             throw new RuntimeException(ex);
         }
     }
 
     private void validatePhoneNumber(String phoneNumber) {
         if(phoneNumber.length() != 10) {
-            JOptionPane.showMessageDialog(null, "Numar telefon invalid!", "Atentie!", JOptionPane.WARNING_MESSAGE);
-            throw new RuntimeException("Numar telefon invalid!");
+            JOptionPane.showMessageDialog(null, "Fill in the correct phone number!", "Phone number incorrect!", JOptionPane.WARNING_MESSAGE);
+            throw new RuntimeException("Phone number incorrect!");
         }
     }
 }
