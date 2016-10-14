@@ -31,7 +31,7 @@ public class ContactsController {
     }
 
     public void save() {
-        System.out.println("Saved");
+
     }
 
     public void cancelInput() {
