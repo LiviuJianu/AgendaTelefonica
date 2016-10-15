@@ -1,9 +1,10 @@
 /**
- * Pachet view pentru <code>SplashScreen</code> si <code>Ads</code>
+ * Pachet view pentru <code>SplashScreen</code> si <code>AdsPanel</code>
  */
 package com.java.contacts.view;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
  *
  * @author Liviu Jianu
  */
-public class Ads extends JPanel {
+public class AdsPanel extends JPanel {
 
     private JLabel imageLabel;
     private ImageIcon adImage1;
@@ -31,14 +32,13 @@ public class Ads extends JPanel {
     /**
      * Initializare thread si rotirea imaginilor la 2 secunde
      */
-    public Ads() {
-        setSize(468, 60);
-
-        adImage1 = new ImageIcon("images/java1.png");
-        adImage2 = new ImageIcon("images/java2.png");
-        adImage3 = new ImageIcon("images/java3.png");
+    public AdsPanel() {
+        setSize(390, 100);
+        adImage1 = new ImageIcon("resources/images/ad1.jpg");
+        adImage2 = new ImageIcon("resources/images/ad2.png");
+        adImage3 = new ImageIcon("resources/images/ad3.png");
         imageLabel = new JLabel(adImage1);
-        imageLabel.setBounds(0, 0, 468, 60);
+        imageLabel.setBounds(0, 0, 390, 90);
         add(imageLabel);
 
         mainAdsThread = new Thread() {

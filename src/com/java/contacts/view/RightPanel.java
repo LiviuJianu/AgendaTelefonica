@@ -10,19 +10,36 @@ public class RightPanel extends JPanel {
 
     private DetailsPanel detailsPanel;
     private ButtonsPanel panouButoane;
+    private AdsPanel adsPanel;
 
     public RightPanel(ContactsController contactsController, ContactsModel contactsModel) {
         detailsPanel = new DetailsPanel(contactsModel);
         panouButoane = new ButtonsPanel(contactsController);
+        adsPanel = new AdsPanel();
 
         init();
     }
 
     private void init() {
         setSize(new Dimension(400,600));
-        setLayout(new GridLayout(2, 1));
-        add(detailsPanel);
-        add(panouButoane);
+
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        add(detailsPanel, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        add(panouButoane, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        add(adsPanel, gbc);
     }
 
     @Override
@@ -33,17 +50,5 @@ public class RightPanel extends JPanel {
 
     public DetailsPanel getDetailsPanel() {
         return detailsPanel;
-    }
-
-    public void setDetailsPanel(DetailsPanel detailsPanel) {
-        this.detailsPanel = detailsPanel;
-    }
-
-    public ButtonsPanel getPanouButoane() {
-        return panouButoane;
-    }
-
-    public void setPanouButoane(ButtonsPanel panouButoane) {
-        this.panouButoane = panouButoane;
     }
 }

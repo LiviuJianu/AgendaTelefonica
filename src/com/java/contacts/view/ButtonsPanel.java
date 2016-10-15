@@ -9,7 +9,6 @@ import java.awt.*;
 public class ButtonsPanel extends JPanel {
 
     private final AddButton addButton;
-    private final SaveButton saveButton;
     private final DeleteButton deleteButton;
     private final UpdateButton updateButton;
     private final CancelButton cancelButton;
@@ -20,7 +19,6 @@ public class ButtonsPanel extends JPanel {
 
         addButton = new AddButton(contactsController);
         deleteButton = new DeleteButton(contactsController);
-        saveButton = new SaveButton(contactsController);
         updateButton = new UpdateButton(contactsController);
         cancelButton = new CancelButton(contactsController);
         init();
@@ -29,14 +27,12 @@ public class ButtonsPanel extends JPanel {
     private void init() {
         setLayout(new GridLayout(3, 3));
         add(addButton);
-        add(saveButton);
+        add(updateButton);
 
         add(deleteButton);
         add(cancelButton);
-        add(updateButton);
 
         addAddButtonListener();
-        addSaveButtonListener();
         addCancelButtonListener();
         addUpdateButtonListener();
         addDeleteButtonListener();
@@ -44,10 +40,6 @@ public class ButtonsPanel extends JPanel {
 
     private void addAddButtonListener() {
         addButton.addActionListener(e -> contactsController.addContact());
-    }
-
-    private void addSaveButtonListener() {
-        saveButton.addActionListener(e -> contactsController.save());
     }
 
     private void addCancelButtonListener() {

@@ -30,10 +30,6 @@ public class ContactsController {
         contactsView.addContactFromView();
     }
 
-    public void save() {
-
-    }
-
     public void cancelInput() {
         System.out.println("Cancelled");
     }

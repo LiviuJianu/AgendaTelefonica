@@ -4,9 +4,9 @@ import com.java.contacts.database.MySQL;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.Phone;
 import com.java.contacts.model.PhoneNumberType;
+import com.java.contacts.view.AdsPanel;
 import com.java.contacts.view.MenuBar;
 import com.java.contacts.view.ButtonsPanel;
-import com.java.contacts.view.Ads;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -358,7 +358,7 @@ public class CarteDeTelefonInitial extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 3;
-        panouPrincipal.add(new Ads(), gbc);
+        panouPrincipal.add(new AdsPanel(), gbc);
 
         this.pack();
         this.setVisible(true);
