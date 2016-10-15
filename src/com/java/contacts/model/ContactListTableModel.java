@@ -31,8 +31,6 @@ public class ContactListTableModel extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         Contact contact = contactList.get(rowIndex);
         switch (columnIndex) {
-            case 0:
-                return contact.getId();
             case 1:
                 return contact.getFirstName();
             case 2:
@@ -50,16 +48,16 @@ public class ContactListTableModel extends AbstractTableModel {
         Contact contact = contactList.get(rowIndex);
         switch (columnIndex) {
             case 1:
-                contact.setNume((String) aValue);
+                contact.setFirstName((String) aValue);
                 break;
             case 2:
-                contact.setPrenume((String) aValue);
+                contact.setLastName((String) aValue);
                 break;
             case 3:
                 contact.setCnp((String) aValue);
                 break;
             case 4:
-                contact.setNumarTelefon(PhoneNumberType.getPhoneNumberType((String) aValue));
+                contact.setPhoneNumber(PhoneNumberType.getPhoneNumberType((String) aValue));
                 break;
         }
 

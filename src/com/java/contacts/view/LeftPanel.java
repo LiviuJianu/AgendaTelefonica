@@ -129,15 +129,22 @@ public class LeftPanel extends JPanel {
 
     public void notifyLeftPanelObservers() {
         for(LeftPanelObserver observer : leftPanelObserverList) {
-            observer.selectedContactDidChanged(getSelectedContactFromTable());
+            Optional<Contact> maybeContactSelected = getSelectedContactFromTable();
+            if(maybeContactSelected.isPresent()) {
+                observer.selectedContactDidChanged(maybeContactSelected.get());
+            }
         }
     }
 
-    public Contact getSelectedContactFromTable() {
+    public Optional<Contact> getSelectedContactFromTable() {
         int selectedRow = contactsTable.getSelectedRow();
-        ContactListTableModel model = (ContactListTableModel) contactsTable.getModel();
-        Contact selectedContact = model.getContactAt(selectedRow);
-        return selectedContact;
+        if(selectedRow != -1) {
+            ContactListTableModel model = (ContactListTableModel) contactsTable.getModel();
+            Contact selectedContact = model.getContactAt(selectedRow);
+            return Optional.of(selectedContact);
+        } else {
+            return Optional.empty();
+        }
     }
 
 }
