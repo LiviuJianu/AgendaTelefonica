@@ -3,12 +3,12 @@ package com.java.contacts.model;
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
-class ContactListTableModel extends AbstractTableModel {
+public class ContactListTableModel extends AbstractTableModel {
 
     private List<Contact> listaAbonati;
     private String[] titluColoane = {"Id", "First Name", "Last Name", "CNP", "Phone"};
 
-    ContactListTableModel(List<Contact> listaAbonati) {
+    public ContactListTableModel(List<Contact> listaAbonati) {
         this.listaAbonati = listaAbonati;
     }
 
@@ -64,6 +64,10 @@ class ContactListTableModel extends AbstractTableModel {
         }
 
         fireTableCellUpdated(rowIndex, columnIndex);
+    }
+
+    public Contact getContactAt(int selectedRow) {
+        return listaAbonati.get(selectedRow);
     }
 
     @Override

@@ -1,15 +1,20 @@
 package com.java.contacts.view;
 
-import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.controller.LeftPanelObserver;
 import com.java.contacts.model.Contact;
+import com.java.contacts.model.ContactListTableModel;
 import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
+import java.util.*;
+import java.util.List;
 import java.util.regex.PatternSyntaxException;
 
 public class LeftPanel extends JPanel {
@@ -17,6 +22,7 @@ public class LeftPanel extends JPanel {
     private JTextField searchField;
     private JTable contactsTable;
     private ContactsModel contactsModel;
+    private List<LeftPanelObserver> leftPanelObserverList = new ArrayList<>();
 
     public LeftPanel(ContactsModel contactsModel) {
         this.contactsModel = contactsModel;
@@ -52,6 +58,12 @@ public class LeftPanel extends JPanel {
     private void initTabelModel() {
         contactsTable.setAutoCreateRowSorter(true);
         contactsTable.setModel(contactsModel.getContactListTableModel());
+        contactsTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                notifyLeftPanelObservers();
+            }
+        });
     }
 
     private void initSearchFieldFiltering() {
@@ -104,4 +116,28 @@ public class LeftPanel extends JPanel {
         }
 
     }
+
+    public void registerObserver(LeftPanelObserver leftPanelObserver) {
+        leftPanelObserverList.add(leftPanelObserver);
+    }
+
+    public void removeObserver(LeftPanelObserver leftPanelObserver) {
+        if(leftPanelObserverList.contains(leftPanelObserver)) {
+            leftPanelObserverList.remove(leftPanelObserver);
+        }
+    }
+
+    public void notifyLeftPanelObservers() {
+        for(LeftPanelObserver observer : leftPanelObserverList) {
+            observer.selectedContactDidChanged(getSelectedContactFromTable());
+        }
+    }
+
+    public Contact getSelectedContactFromTable() {
+        int selectedRow = contactsTable.getSelectedRow();
+        ContactListTableModel model = (ContactListTableModel) contactsTable.getModel();
+        Contact selectedContact = model.getContactAt(selectedRow);
+        return selectedContact;
+    }
+
 }

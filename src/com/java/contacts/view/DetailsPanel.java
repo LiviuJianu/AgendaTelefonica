@@ -1,6 +1,7 @@
 package com.java.contacts.view;
 
 import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.controller.LeftPanelObserver;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 import com.java.contacts.model.Phone;
@@ -11,7 +12,7 @@ import java.awt.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class DetailsPanel extends JPanel {
+public class DetailsPanel extends JPanel implements LeftPanelObserver{
 
     private ContactsModel contactsModel;
 
@@ -140,5 +141,17 @@ public class DetailsPanel extends JPanel {
             JOptionPane.showMessageDialog(null, "Fill in the correct phone number!", "Phone number incorrect!", JOptionPane.WARNING_MESSAGE);
             throw new RuntimeException("Phone number incorrect!");
         }
+    }
+
+    @Override
+    public void selectedContactDidChanged(Contact aContact) {
+        updateInputsFromSelectedContact(aContact);
+    }
+
+    private void updateInputsFromSelectedContact(Contact aSelectedContact) {
+        firstNameText.setText(aSelectedContact.getNume());
+        lastNameText.setText(aSelectedContact.getPrenume());
+        cnpText.setText(aSelectedContact.getCnp());
+        phoneText.setText(aSelectedContact.getNumarTelefon().toString());
     }
 }

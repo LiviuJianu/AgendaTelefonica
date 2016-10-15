@@ -15,6 +15,7 @@ public class MainPanel extends JPanel {
         leftPanel = new LeftPanel(contactsModel);
         rightPanel = new RightPanel(contactsController, contactsModel);
 
+        registerLeftPanelObservers();
         init();
     }
 
@@ -28,15 +29,11 @@ public class MainPanel extends JPanel {
         return leftPanel;
     }
 
-    public void setLeftPanel(LeftPanel leftPanel) {
-        this.leftPanel = leftPanel;
-    }
-
     public RightPanel getRightPanel() {
         return rightPanel;
     }
 
-    public void setRightPanel(RightPanel rightPanel) {
-        this.rightPanel = rightPanel;
+    public void registerLeftPanelObservers() {
+        leftPanel.registerObserver(rightPanel.getDetailsPanel());
     }
 }
