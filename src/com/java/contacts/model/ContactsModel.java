@@ -47,7 +47,6 @@ public class ContactsModel {
     public void removeObserver(ContactObserver contactObserver) {
         if (contactObservers.contains(contactObserver)) {
             contactObservers.remove(contactObserver);
-            notifyContactRemovedObservers();
         }
     }
 
@@ -72,6 +71,5 @@ public class ContactsModel {
         contactList.remove(selectedContactPosition);
         contactListTableModel.fireTableDataChanged();
         notifyContactRemovedObservers();
-
     }
 }
