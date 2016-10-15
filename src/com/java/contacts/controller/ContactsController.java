@@ -31,7 +31,7 @@ public class ContactsController {
     }
 
     public void cancelInput() {
-        System.out.println("Cancelled");
+        contactsView.deleteContactFromView();
     }
 
     public void update() {
