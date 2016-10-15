@@ -12,7 +12,7 @@ public class ButtonsPanel extends JPanel {
     private final DeleteButton deleteButton;
     private final UpdateButton updateButton;
     private final CancelButton cancelButton;
-    private ContactsController contactsController;
+    private final ContactsController contactsController;
 
     public ButtonsPanel(ContactsController contactsController) {
         this.contactsController = contactsController;
@@ -32,27 +32,8 @@ public class ButtonsPanel extends JPanel {
         add(deleteButton);
         add(cancelButton);
 
-        addAddButtonListener();
-        addCancelButtonListener();
-        addUpdateButtonListener();
-        addDeleteButtonListener();
     }
 
-    private void addAddButtonListener() {
-        addButton.addActionListener(e -> contactsController.addContact());
-    }
-
-    private void addCancelButtonListener() {
-        cancelButton.addActionListener(e -> contactsController.cancelInput());
-    }
-
-    private void addUpdateButtonListener() {
-        updateButton.addActionListener(e -> contactsController.update());
-    }
-
-    private void addDeleteButtonListener() {
-        deleteButton.addActionListener(e -> contactsController.deleteContact());
-    }
 
 
 }
