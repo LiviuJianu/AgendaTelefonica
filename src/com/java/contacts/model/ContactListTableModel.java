@@ -5,49 +5,49 @@ import java.util.List;
 
 public class ContactListTableModel extends AbstractTableModel {
 
-    private List<Contact> listaAbonati;
-    private String[] titluColoane = {"Id", "First Name", "Last Name", "CNP", "Phone"};
+    private List<Contact> contactList;
+    private String[] columnsTitles = {"Id", "First Name", "Last Name", "CNP", "Phone"};
 
-    public ContactListTableModel(List<Contact> listaAbonati) {
-        this.listaAbonati = listaAbonati;
+    public ContactListTableModel(List<Contact> contactList) {
+        this.contactList = contactList;
     }
 
     @Override
     public int getRowCount() {
-        return listaAbonati.size();
+        return contactList.size();
     }
 
     @Override
     public int getColumnCount() {
-        return titluColoane.length;
+        return columnsTitles.length;
     }
 
     @Override
     public String getColumnName(int column) {
-        return titluColoane[column];
+        return columnsTitles[column];
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        Contact contact = listaAbonati.get(rowIndex);
+        Contact contact = contactList.get(rowIndex);
         switch (columnIndex) {
             case 0:
                 return contact.getId();
             case 1:
-                return contact.getNume();
+                return contact.getFirstName();
             case 2:
-                return contact.getPrenume();
+                return contact.getLastName();
             case 3:
                 return contact.getCnp();
             case 4:
-                return contact.getNumarTelefon();
+                return contact.getPhoneNumber();
         }
         return null;
     }
 
     @Override
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-        Contact contact = listaAbonati.get(rowIndex);
+        Contact contact = contactList.get(rowIndex);
         switch (columnIndex) {
             case 1:
                 contact.setNume((String) aValue);
@@ -67,7 +67,7 @@ public class ContactListTableModel extends AbstractTableModel {
     }
 
     public Contact getContactAt(int selectedRow) {
-        return listaAbonati.get(selectedRow);
+        return contactList.get(selectedRow);
     }
 
     @Override
@@ -77,6 +77,6 @@ public class ContactListTableModel extends AbstractTableModel {
 
     @Override
     public Class<?> getColumnClass(int columnIndex) {
-        return titluColoane[columnIndex].getClass();
+        return columnsTitles[columnIndex].getClass();
     }
 }

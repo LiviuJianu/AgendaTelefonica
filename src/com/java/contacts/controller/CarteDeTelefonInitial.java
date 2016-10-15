@@ -830,10 +830,10 @@ public class CarteDeTelefonInitial extends JFrame {
                 String adaugaQuery = "INSERT INTO ABONAT(nume,prenume,cnp,telefon)"
                         + "VALUES(?,?,?,?)";
                 ps = conn.prepareStatement(adaugaQuery);
-                ps.setString(1, contactUnic.getNume());
-                ps.setString(2, contactUnic.getPrenume());
+                ps.setString(1, contactUnic.getFirstName());
+                ps.setString(2, contactUnic.getLastName());
                 ps.setString(3, contactUnic.getCnp());
-                ps.setString(4, contactUnic.getNumarTelefon().toString());
+                ps.setString(4, contactUnic.getPhoneNumber().toString());
 
                 int n = ps.executeUpdate();
                 if (n > 0) {

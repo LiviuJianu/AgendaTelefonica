@@ -1,6 +1,5 @@
 package com.java.contacts.view;
 
-import com.java.contacts.controller.ContactObserver;
 import com.java.contacts.controller.LeftPanelObserver;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
@@ -149,9 +148,9 @@ public class DetailsPanel extends JPanel implements LeftPanelObserver{
     }
 
     private void updateInputsFromSelectedContact(Contact aSelectedContact) {
-        firstNameText.setText(aSelectedContact.getNume());
-        lastNameText.setText(aSelectedContact.getPrenume());
+        firstNameText.setText(aSelectedContact.getFirstName());
+        lastNameText.setText(aSelectedContact.getLastName());
         cnpText.setText(aSelectedContact.getCnp());
-        phoneText.setText(aSelectedContact.getNumarTelefon().toString());
+        phoneText.setText(aSelectedContact.getPhoneNumber().toString());
     }
 }
