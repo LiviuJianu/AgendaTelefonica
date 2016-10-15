@@ -1,14 +1,12 @@
 package com.java.contacts.view;
 
-import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.observers.ContactObserver;
 import com.java.contacts.controller.ContactsController;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Observable;
-import java.util.Observer;
 
 public class ContactsView implements ContactObserver{
 

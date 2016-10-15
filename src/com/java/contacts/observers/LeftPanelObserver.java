@@ -1,4 +1,4 @@
-package com.java.contacts.controller;
+package com.java.contacts.observers;
 
 
 import com.java.contacts.model.Contact;

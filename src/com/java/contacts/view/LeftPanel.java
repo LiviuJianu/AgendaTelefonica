@@ -1,6 +1,6 @@
 package com.java.contacts.view;
 
-import com.java.contacts.controller.LeftPanelObserver;
+import com.java.contacts.observers.LeftPanelObserver;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactListTableModel;
 import com.java.contacts.model.ContactsModel;

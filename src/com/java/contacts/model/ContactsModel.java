@@ -1,6 +1,6 @@
 package com.java.contacts.model;
 
-import com.java.contacts.controller.ContactObserver;
+import com.java.contacts.observers.ContactObserver;
 
 import java.util.ArrayList;
 import java.util.List;

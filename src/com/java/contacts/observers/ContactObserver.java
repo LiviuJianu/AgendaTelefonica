@@ -1,4 +1,4 @@
-package com.java.contacts.controller;
+package com.java.contacts.observers;
 
 public interface ContactObserver {
 
