@@ -11,7 +11,7 @@ import java.awt.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class DetailsPanel extends JPanel implements ContactObserver {
+public class DetailsPanel extends JPanel {
 
     private ContactsModel contactsModel;
 
@@ -26,7 +26,6 @@ public class DetailsPanel extends JPanel implements ContactObserver {
 
     public DetailsPanel(ContactsModel contactsModel) {
         this.contactsModel = contactsModel;
-        this.contactsModel.registerObserver(this);
 
         imageLabelIcon = new ImageIcon("resources/icon/noImage.png");
         imageLabel = new JLabel(imageLabelIcon);
@@ -79,11 +78,6 @@ public class DetailsPanel extends JPanel implements ContactObserver {
         gbc.gridy = 2;
         gbc.ipadx = 100;
         add(phoneText, gbc);
-    }
-
-    @Override
-    public void uppdateContact() {
-
     }
 
     public void clearInputs() {

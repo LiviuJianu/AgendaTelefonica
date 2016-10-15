@@ -31,8 +31,8 @@ public class ContactsModel {
 
     public void addContact(Contact contact) {
         contactList.add(contact);
-        contactListTableModel.abonatAdded();
-        notifyAbonatObservers();
+        contactListTableModel.fireTableDataChanged();
+        notifyContactAddedObservers();
     }
 
     public List<Contact> getContactList() {
@@ -47,12 +47,20 @@ public class ContactsModel {
     public void removeObserver(ContactObserver contactObserver) {
         if (contactObservers.contains(contactObserver)) {
             contactObservers.remove(contactObserver);
+            notifyContactRemovedObservers();
         }
     }
 
-    private void notifyAbonatObservers() {
+    private void notifyContactAddedObservers() {
         for (ContactObserver contactObserver : contactObservers) {
-            contactObserver.uppdateContact();
+            contactObserver.updateViewOnContactAdded();
+        }
+    }
+
+
+    private void notifyContactRemovedObservers() {
+        for (ContactObserver contactObserver : contactObservers) {
+            contactObserver.updateViewOnContactRemoved();
         }
     }
 
@@ -62,8 +70,8 @@ public class ContactsModel {
 
     public void removeAbonatEntryAt(int selectedContactPosition) {
         contactList.remove(selectedContactPosition);
-        contactListTableModel.abonatRemoved();
-        notifyAbonatObservers();
+        contactListTableModel.fireTableDataChanged();
+        notifyContactRemovedObservers();
 
     }
 }

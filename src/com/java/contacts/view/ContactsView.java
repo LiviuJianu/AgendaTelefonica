@@ -1,13 +1,16 @@
 package com.java.contacts.view;
 
+import com.java.contacts.controller.ContactObserver;
 import com.java.contacts.controller.ContactsController;
 import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Observable;
+import java.util.Observer;
 
-public class ContactsView {
+public class ContactsView implements ContactObserver{
 
     private JFrame viewFrame;
     private MenuBar menuBar;
@@ -45,10 +48,21 @@ public class ContactsView {
         DetailsPanel detailsPanel = mainPanel.getRightPanel().getDetailsPanel();
         Contact contactToInsert = detailsPanel.getContactToInsert();
         mainPanel.getLeftPanel().addContactToModel(contactToInsert);
-        detailsPanel.clearInputs();
     }
 
     public void deleteContactFromTable() {
         mainPanel.getLeftPanel().deleteContactFromModel();
+    }
+
+    @Override
+    public void updateViewOnContactAdded() {
+        System.out.println("contact added notification");
+        mainPanel.getRightPanel().getDetailsPanel().clearInputs();
+    }
+
+    @Override
+    public void updateViewOnContactRemoved() {
+        System.out.println("contact removed notification");
+        mainPanel.getRightPanel().getDetailsPanel().clearInputs();
     }
 }

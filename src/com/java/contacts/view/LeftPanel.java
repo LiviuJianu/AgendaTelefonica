@@ -12,7 +12,7 @@ import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.util.regex.PatternSyntaxException;
 
-public class LeftPanel extends JPanel implements ContactObserver {
+public class LeftPanel extends JPanel {
 
     private JTextField searchField;
     private JTable contactsTable;
@@ -20,7 +20,6 @@ public class LeftPanel extends JPanel implements ContactObserver {
 
     public LeftPanel(ContactsModel contactsModel) {
         this.contactsModel = contactsModel;
-        this.contactsModel.registerObserver(this);
 
         searchField = new JTextField("Search");
         contactsTable = new JTable();
@@ -97,10 +96,6 @@ public class LeftPanel extends JPanel implements ContactObserver {
         contactsModel.addContact(contact);
     }
 
-    @Override
-    public void uppdateContact() {
-
-    }
 
     public void deleteContactFromModel() {
         int selectedContactPosition = contactsTable.getSelectedRow();

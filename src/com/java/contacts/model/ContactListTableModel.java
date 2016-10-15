@@ -12,14 +12,6 @@ class ContactListTableModel extends AbstractTableModel {
         this.listaAbonati = listaAbonati;
     }
 
-    public void abonatAdded() {
-        fireTableDataChanged();
-    }
-
-    public void abonatRemoved() {
-        fireTableDataChanged();
-    }
-
     @Override
     public int getRowCount() {
         return listaAbonati.size();

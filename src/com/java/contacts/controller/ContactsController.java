@@ -13,6 +13,7 @@ public class ContactsController {
     public ContactsController(ContactsModel model) {
         contactsModel = model;
         contactsView = new ContactsView(this, contactsModel);
+        registerContactObservers();
     }
 
     public void init() {
@@ -21,7 +22,6 @@ public class ContactsController {
 
 
     public void deleteContact() {
-        contactsView.deleteContactFromView();
         contactsView.deleteContactFromTable();
 
     }
@@ -37,5 +37,9 @@ public class ContactsController {
     public void update() {
         System.out.println("Updated");
 
+    }
+
+    private void registerContactObservers() {
+        contactsModel.registerObserver(contactsView);
     }
 }

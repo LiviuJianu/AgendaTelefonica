@@ -117,7 +117,7 @@ public class MenuBar extends JMenuBar {
         updateContact.setMnemonic(KeyEvent.VK_U);
         updateContact.setToolTipText("Update contact");
         updateContact.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_U, ActionEvent.CTRL_MASK));
-//        updateContact.addActionListener(new AbonatPopup());
+//        updateViewOnContactAdded.addActionListener(new AbonatPopup());
     }
 
     private void setupSearchContactMenu() {
