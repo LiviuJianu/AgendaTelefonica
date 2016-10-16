@@ -18,7 +18,7 @@ public class RegisterAppActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String serialNumber = JOptionPane.showInputDialog("Registration code");
         if (serialNumber != null) {
-            if (serialNumber.equals(123)) {
+            if (serialNumber.equals("123")) {
                 JOptionPane.showMessageDialog(null, "Aplicatia a fost inregistrata!");
                 menuBar.activateAppMenu();
             } else {
