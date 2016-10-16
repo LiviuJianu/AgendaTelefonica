@@ -7,6 +7,7 @@ import com.java.contacts.model.ContactsModel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Optional;
 
 public class ContactsView implements ContactObserver{
 
@@ -38,7 +39,7 @@ public class ContactsView implements ContactObserver{
 
     }
 
-    public void deleteContactFromView() {
+    public void clearContactDetailsInput() {
         mainPanel.getRightPanel().getDetailsPanel().clearInputs();
     }
 
@@ -62,5 +63,13 @@ public class ContactsView implements ContactObserver{
     public void updateViewOnContactRemoved() {
         System.out.println("contact removed notification");
         mainPanel.getRightPanel().getDetailsPanel().clearInputs();
+    }
+
+    public Contact getContactFromDetailsPanel() {
+        return mainPanel.getRightPanel().getDetailsPanel().getContactToInsert();
+    }
+
+    public Optional<Contact> getSelectedContactFromTable() {
+        return mainPanel.getLeftPanel().getSelectedContactFromTable();
     }
 }

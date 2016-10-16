@@ -1,7 +1,10 @@
 package com.java.contacts.controller;
 
+import com.java.contacts.model.Contact;
 import com.java.contacts.model.ContactsModel;
 import com.java.contacts.view.ContactsView;
+
+import java.util.Optional;
 
 public class ContactsController {
 
@@ -30,12 +33,18 @@ public class ContactsController {
         contactsView.addContactFromView();
     }
 
-    public void cancelInput() {
-        contactsView.deleteContactFromView();
+    public void clearInputs() {
+        contactsView.clearContactDetailsInput();
     }
 
     public void update() {
         System.out.println("Updated");
+        Contact contactFromDetailsPanel = contactsView.getContactFromDetailsPanel();
+        Optional<Contact> selectedContactFromTable = contactsView.getSelectedContactFromTable();
+        if(selectedContactFromTable.isPresent()) {
+            contactsModel.updateContact(selectedContactFromTable.get(), contactFromDetailsPanel);
+            clearInputs();
+        }
 
     }
 

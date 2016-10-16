@@ -138,7 +138,7 @@ public class MenuBar extends JMenuBar {
         deleteContact.setMnemonic(KeyEvent.VK_R);
         deleteContact.setToolTipText("Delete contact");
         deleteContact.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
-//        deleteContactFromView.addActionListener(new StergeAbonat());
+//        clearContactDetailsInput.addActionListener(new StergeAbonat());
     }
 
     private void setupManualMenu() {

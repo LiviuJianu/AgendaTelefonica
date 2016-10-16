@@ -72,4 +72,12 @@ public class ContactsModel {
         contactListTableModel.fireTableDataChanged();
         notifyContactRemovedObservers();
     }
+
+    public void updateContact(Contact selectedContactFromTable, Contact contactFromDetailsPanel) {
+        if(contactList.contains(selectedContactFromTable)) {
+            contactList.set(contactList.indexOf(selectedContactFromTable), contactFromDetailsPanel);
+            contactListTableModel.fireTableDataChanged();
+        }
+
+    }
 }

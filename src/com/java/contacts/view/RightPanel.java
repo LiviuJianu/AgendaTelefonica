@@ -9,12 +9,12 @@ import java.awt.*;
 public class RightPanel extends JPanel {
 
     private DetailsPanel detailsPanel;
-    private ButtonsPanel panouButoane;
+    private ButtonsPanel buttonsPanel;
     private AdsPanel adsPanel;
 
     public RightPanel(ContactsController contactsController, ContactsModel contactsModel) {
         detailsPanel = new DetailsPanel(contactsModel);
-        panouButoane = new ButtonsPanel(contactsController);
+        buttonsPanel = new ButtonsPanel(contactsController);
         adsPanel = new AdsPanel();
 
         init();
@@ -35,7 +35,7 @@ public class RightPanel extends JPanel {
 
         gbc.gridx = 0;
         gbc.gridy = 1;
-        add(panouButoane, gbc);
+        add(buttonsPanel, gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 2;
